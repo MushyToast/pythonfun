@@ -1,6 +1,6 @@
 import openai
 import webbrowser
-key = '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'
+key = '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'
 openai.api_key = key
 
 while True:
