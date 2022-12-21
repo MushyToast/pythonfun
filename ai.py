@@ -1,8 +1,10 @@
 import webbrowser
 import openai
 from getkey import getkey, keys
+import os
 
-key = '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'
+key = os.getenv('DALLEAPIKEY')
+
 openai.api_key = key
 time = 0
 lastinput = ''
