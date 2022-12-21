@@ -2,22 +2,23 @@ import webbrowser
 import openai
 from getkey import getkey, keys
 
-key = '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'
+key = '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'
 openai.api_key = key
 time = 0
+lastinput = ''
 while True:
     time = time + 1
-    lastinput = ''
     ai_prompt = ''
     uselastprompt = False
-    print("Use last prompt? Y for yes, N for no.")
     if time != 1:
+        print("Use last prompt? Y for yes, N for no.")
         key = getkey()
         if key == 'y':
             uselastprompt = True
             ai_prompt = lastinput
-    ai_prompt = input("Enter in an image prompt: ")
-    lastinput = ai_prompt
+    if uselastprompt == False:
+        ai_prompt = input("Enter in an image prompt: ")
+        lastinput = ai_prompt
     print('Generating..')
     response = openai.Image.create(
         prompt=ai_prompt,
