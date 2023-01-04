@@ -1,0 +1,23 @@
+{
+  "name": "cs",
+  "version": "1.0.0",
+  "description": "yay",
+  "main": "mavascript.js",
+  "type": "module",
+  "scripts": {
+    "test": "help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "kaka"
+  ],
+  
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^11.5.0"
+  }
+}

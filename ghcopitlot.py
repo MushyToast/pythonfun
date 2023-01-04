@@ -15,3 +15,5 @@ def main(text):
     print(colors.cyan + text)
 
 main("i <3 python")
+
+
