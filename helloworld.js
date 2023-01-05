@@ -1,5 +1,8 @@
 let names = ['Alice', 'Bob', 'Carol', 'Dave', 'Quandale Dingle'];
 
 for (let name of names) {
-  console.log(name);
+    function printName() {
+        console.log(name);
+    }
+    setTimeout(printName, 1000);
 }
