@@ -1,4 +1,7 @@
-let names = ['Alice', 'Bob', 'Carol', 'Dave', 'Quandale Dingle'];
+var count = 0
+function hw() {
+  count += 1
+  console.log('Hello World ' + count)
+}
 
-wait(100000);
-console.log(names[0]);
+setInterval(hw, 2)
