@@ -1,13 +1,33 @@
-class HelloWorld {
-    constructor() {
-      this.message = "Hello, World!";
-    }
+((() => {
+    const message = "Hello, World!";
   
-    printMessage() {
-      console.log(this.message);
-    }
-  }
+    const printMessage = () => {
+      console.log(message);
+    };
   
-  const hello = new HelloWorld();
-  hello.printMessage();
+    const delay = (ms) => {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+      });
+    };
   
+    const printWithDelay = async (delayTime) => {
+      await delay(delayTime);
+      printMessage();
+    };
+  
+    const delays = [1000, 2000, 3000, 4000, 5000];
+    const printAll = async () => {
+      for (const delayTime of delays) {
+        await printWithDelay(delayTime);
+      }
+    };
+  
+    const runNTimes = async (n) => {
+      for (let i = 0; i < n; i++) {
+        await printAll();
+      }
+    };
+  
+    runNTimes(5);
+  }))();
