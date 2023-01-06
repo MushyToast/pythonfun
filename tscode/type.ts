@@ -1,1 +1,1 @@
-console.log("Welcome, to typescript!")
+const string = "string";
