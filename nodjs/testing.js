@@ -5,11 +5,12 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let username = '';
 
-var username = rl.question('What is your name? ', (name) => {
+rl.question('What is your name? ', (name) => {
   console.log(`Hello, ${name}`);
-  rl.close();
-  return name
+  username = name;
 });
 
 console.log(username)
+rl.close();
