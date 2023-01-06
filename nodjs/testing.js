@@ -8,14 +8,17 @@ const rl = readline.createInterface({
 });
 
 async function askName() {
-    await rl.question('What is your name? ', (input) => {
-        name = input;
-        rl.close();
-      });
+  return new Promise((resolve, reject) => {
+    rl.question('What is your name? ', (input) => {
+      name = input;
+      rl.close();
+      resolve();
+    });
+  });
 }
 
-rl.on('close', () => {
+(async function() {
+  await askName();
   console.log(`Hello, ${name}`);
-});
-
-setInterval(function(){console.log(name)},)
+  
+})();
