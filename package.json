@@ -14,10 +14,10 @@
   "keywords": [
     "kaka"
   ],
-  
   "author": "me",
   "license": "ISC",
   "dependencies": {
+    "http": "^0.0.1-security",
     "mathjs": "^11.5.0"
   }
 }
