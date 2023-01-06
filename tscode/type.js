@@ -1,8 +1,5 @@
-var userData2 = {
+const userData2 = {
     name: 'John',
     age: 35
 };
-
-userData2.name = true;
-
-console.log(userData2.name);
+//# sourceMappingURL=type.js.map
