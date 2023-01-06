@@ -7,13 +7,17 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('What is your name? ', (input) => {
-  name = input;
-  rl.close();
-});
+function askName() {
+  return new Promise((resolve, reject) => {
+    rl.question('What is your name? ', (input) => {
+      name = input;
+      rl.close();
+      resolve();
+    });
+  });
+}
 
-rl.on('close', () => {
+askName().then(() => {
   console.log(`Hello, ${name}`);
 });
-
 setInterval(function(){console.log(name)}, 10)
