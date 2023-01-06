@@ -1,9 +1,4 @@
-import {
-    atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
-  } from 'mathjs'
-
-function roundnumber(number) {
-    return round(number, 1);
+let str = "Buzz";
+for (let i = 0; i < str.length; i++) {
+  console.log(str[i]);
 }
-
-console.log(roundnumber(1.23456789));

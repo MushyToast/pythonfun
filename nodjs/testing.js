@@ -20,5 +20,7 @@ async function askName() {
 (async function() {
   await askName();
   console.log(`Hello, ${name}`);
-  
+  for (let i = 0; i < name.length; i++) {
+  console.log(name[i]);
+}
 })();
