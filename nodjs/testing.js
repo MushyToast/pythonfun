@@ -16,8 +16,4 @@ rl.on('close', () => {
   console.log(`Hello, ${name}`);
 });
 
-function printName(nameToPrint) {
-    console.log(nameToPrint);
-}
-
-setInterval(printName(name), 10)
+setInterval(function(){console.log(name)}, 10)
