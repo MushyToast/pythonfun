@@ -1,5 +1,5 @@
 const http = require('https');
-
+const fs = require('fs');
 const url = 'https://mushytoast.github.io/';
 
 http.get(url, (response) => {
@@ -10,7 +10,10 @@ http.get(url, (response) => {
   });
 
   response.on('end', () => {
-    console.log(data);
+    fs.writeFile(
+        'export.html',
+        data
+    )
   });
 }).on('error', (error) => {
   console.error(error);
