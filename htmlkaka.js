@@ -1,6 +1,6 @@
 const http = require('http');
 
-const url = 'https://mushytoast.github.io/';
+const url = 'http://mushytoast.github.io/';
 
 http.get(url, (response) => {
   let data = '';

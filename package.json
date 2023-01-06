@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "yay",
   "main": "mavascript.js",
-  "type": "module",
   "scripts": {
     "test": "help"
   },
