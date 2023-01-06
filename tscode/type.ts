@@ -1,1 +1,4 @@
-console.log("Hello, world!");
+interface mon {
+    name: string;
+    age: number;
+}
