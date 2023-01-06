@@ -1,4 +1,1 @@
-interface mon {
-    name: string;
-    age: number;
-}
+console.log("typescript")
