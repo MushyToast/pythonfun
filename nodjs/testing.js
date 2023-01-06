@@ -6,10 +6,10 @@ const rl = readline.createInterface({
 });
 
 
-rl.question('What is your name? ', (name) => {
+var username = rl.question('What is your name? ', (name) => {
   console.log(`Hello, ${name}`);
-  var username = name;
   rl.close();
+  return name
 });
 
 console.log(username)
