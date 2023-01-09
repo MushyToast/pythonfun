@@ -6,6 +6,9 @@ const intf = readline.createInterface({
     output: process.stdout
 });
 
+function getkey() {
+  
+}
 
 function type(text) {
     let index = 0;
