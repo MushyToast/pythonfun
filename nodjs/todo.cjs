@@ -6,7 +6,7 @@ const intf = readline.createInterface({
     output: process.stdout
 });
 
-async function getkey() {
+function getkey() {
   var stdin = process.stdin;
 
 // without this, we would only get streams once enter is pressed
