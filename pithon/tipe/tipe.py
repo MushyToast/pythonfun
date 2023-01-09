@@ -2,8 +2,11 @@ import pyquery as pi
 import random
 import json
 
-words = 0
+words = []
 
-with open('words.json', 'r') as f:
+with open('pithon/tipe/words.json', 'r') as f:
     total = json.load(f)
-    print(total)
+    for x in range(1, 10):
+        words.append(random.choice(total))
+for x in words:
+    print(x)
