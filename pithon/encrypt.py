@@ -1,3 +1,6 @@
+def toBinary(text):
+    return ''.join(format(ord(i), '08b') for i in text)
+
 wordflip = {
     'a': 'z',
     'b': 'y',
