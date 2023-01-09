@@ -21,6 +21,7 @@ async function askName() {
   await askName();
   console.log(`Hello, ${name}`);
   for (let i = 0; i < name.length; i++) {
-  console.log(name[i], "\r");
+  console.log(name[i], "\r
+  [");
 }
 })();
