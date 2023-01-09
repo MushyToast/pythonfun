@@ -32,6 +32,9 @@ text = input("Enter in text to be encrypted\n")
 newtext = ""
 
 for char in text:
-    newtext += wordflip[char.lower()]
+    if char.isalpha() == True:
+        newtext += wordflip[char.lower()]
+    else:
+        newtext += char
 
 print(f"Encrypted text: {newtext}")
