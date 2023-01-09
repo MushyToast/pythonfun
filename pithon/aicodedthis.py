@@ -5,7 +5,7 @@ def typing_test(sentence):
     user_input = input(f"Type the following sentence:\n{sentence}\n")
     end_time = time.time()
     elapsed_time = end_time - start_time
-    if user_input == sentence:
+    if user_input.lower() == sentence.lower():
         print("Correct!")
     else:
         print("Incorrect!")
