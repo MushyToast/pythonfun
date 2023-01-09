@@ -1,3 +1,5 @@
+import pyperclip
+
 def toBinary(text):
     return  ' '.join(format(ord(x), 'b') for x in text)
 
@@ -41,4 +43,4 @@ for char in text:
         newtext += char
     newtext = toBinary(newtext)
 
-print(f"Encrypted text: {newtext}")
+print(f"Encrypted text: {newtext} (Copied to clipboard)")
