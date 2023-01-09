@@ -6,6 +6,16 @@ const intf = readline.createInterface({
     output: process.stdout
 });
 
-function typewriteText() {
-    
+
+const text = "Hello, World!";
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    process.stdout.write(text[index]);
+    index++;
+    setTimeout(type, 50);
+  }
 }
+
+type();
