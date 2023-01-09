@@ -6,28 +6,32 @@ const intf = readline.createInterface({
     output: process.stdout
 });
 
-function getkey() {
-  var stdin = process.stdin;
 
-// without this, we would only get streams once enter is pressed
-  stdin.setRawMode( true );
+function* getKeystroke() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
 
-// resume stdin in the parent process (node app won't quit all by itself
-// unless an error or process.exit() happens)
-  stdin.resume();
+  // Yield the code here until a key is pressed
+  const key = yield new Promise(resolve => rl.once('line', resolve));
 
-// i don't want binary, do you?
-  stdin.setEncoding( 'utf8' );
+  // Close the readline interface
+  rl.close();
 
-// on any data into stdin
-  stdin.on( 'data', function( key ){
-  // ctrl-c ( end of text )
-  if ( key === '\u0003' ) {
-    process.exit();
-  }
-  return key
-});
+  // Return the key that was pressed
+  return key;
 }
+
+const generator = getKeystroke();
+
+// Start the generator and get the promise that is returned
+const keyPromise = generator.next().value;
+
+// Wait for the key to be pressed and then log it to the console
+keyPromise.then(key => {
+  console.log(key);
+});
 
 function type(text) {
     let index = 0;
@@ -44,4 +48,4 @@ function type(text) {
   }
   
 type("Welcome to the command line todo list. \n");
-console.log(getkey())
+console.log(getKeystroke())
