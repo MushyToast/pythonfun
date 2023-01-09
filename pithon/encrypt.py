@@ -39,5 +39,6 @@ for char in text:
         newtext += wordflip[char.lower()]
     else:
         newtext += char
+    newtext = toBinary(newtext)
 
 print(f"Encrypted text: {newtext}")
