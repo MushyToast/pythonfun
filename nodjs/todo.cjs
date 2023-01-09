@@ -22,3 +22,4 @@ function type(text) {
   }
   
 type("Welcome to the command line todo list. \n");
+
