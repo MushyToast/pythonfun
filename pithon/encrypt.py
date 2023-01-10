@@ -61,14 +61,16 @@ wordum = {
 text = input("Enter in text to be encrypted\n")
 
 newtext = ""
+nText = 0
 
 for char in text:
     if char.isalpha() == True:
         newtext += wordflip[char.lower()]
+        nText += wordum[char.lower()]
     else:
         newtext += char
-
+newtext = nText
 print(f"Encrypted text: {newtext}")
 with open("encrypted.txt", "w") as f:
-    f.write(newtext)
+    f.write(str(newtext))
 print("Saved to encrypted.txt")
