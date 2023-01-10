@@ -1,3 +1,5 @@
+import json
+
 wordflip = {
     'a': 'z',
     'b': 'y',
@@ -37,4 +39,7 @@ for char in text:
     else:
         newtext += char
 
-print(f"Encrypted text: {newtext} (Copied to clipboard)")
+print(f"Encrypted text: {newtext}")
+with open("encrypted.txt", "w") as f:
+    f.write(newtext)
+print("Saved to encrypted.txt")
