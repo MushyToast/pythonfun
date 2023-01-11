@@ -1,11 +1,5 @@
 from Crypto.Cipher import AES
-
-message = input("Enter your message: ")
-key = input("Enter your key: ")
-
-obj = AES.new(key)
-text = obj.encrypt(message)
-
-print(text)
-with open ('encrypted.txt', 'w') as f:
-    f.write(str(text))
+obj = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
+message = "The answer is no"
+ciphertext = obj.encrypt(message)
+ciphertext
