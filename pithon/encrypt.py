@@ -58,6 +58,7 @@ wordum = {
     'z': 26
 }
 
+
 text = input("Enter in text to be encrypted\n")
 
 newtext = ""
