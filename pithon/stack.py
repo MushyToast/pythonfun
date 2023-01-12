@@ -108,7 +108,7 @@ def run():
                             output.append(str(stack[len(stack)-1]))
                             stack.pop(len(stack)-1)
                         else:
-                            error(f"Error: \'{value}\' is not a valid value for command \'{command}\'")
+                            error(f"Error: \'{value}\' is not a v3alid value for command \'{command}\'")
                     case "redirect":
                         try:
                             redirect = int(value)
