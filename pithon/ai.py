@@ -2,7 +2,7 @@ import webbrowser
 import openai
 from getkey import getkey, keys
 import os
-from time import sleep
+from time import sleep as wait
 
 key = os.getenv('DALLEAPIKEY')
 
@@ -39,7 +39,7 @@ while True:
     urls.append(image_url4)
     for x in urls:
         webbrowser.open_new_tab(x)
-        sleep(0.1)
+        wait(0.1)
 
     print("Successfully generated!")
 
