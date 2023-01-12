@@ -82,6 +82,8 @@ def run():
                         stack.pop(len(stack)-1)
                         stack.pop(len(stack)-1)
                         stack.append(num)
+                    case "set":
+                        stack.append(value)
                     case "duplicate":
                         stack.append(stack[len(stack)-1])
                     case "swap":

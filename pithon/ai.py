@@ -2,6 +2,7 @@ import webbrowser
 import openai
 from getkey import getkey, keys
 import os
+from time import sleep
 
 key = os.getenv('DALLEAPIKEY')
 
@@ -24,10 +25,21 @@ while True:
     print('Generating..')
     response = openai.Image.create(
         prompt=ai_prompt,
-        n=1,
+        n=4,
         size="1024x1024"
     )
-    image_url = response['data'][0]['url']
-    webbrowser.open_new_tab(image_url)
+    urls = []
+    image_url1 = response['data'][0]['url']
+    image_url2 = response['data'][1]['url']
+    image_url3 = response['data'][2]['url']
+    image_url4 = response['data'][3]['url']
+    urls.append(image_url1)
+    urls.append(image_url2)
+    urls.append(image_url3)
+    urls.append(image_url4)
+    for x in urls:
+        webbrowser.open_new_tab(x)
+        sleep(0.1)
+
     print("Successfully generated!")
 
