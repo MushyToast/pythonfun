@@ -208,7 +208,8 @@ while True:
         if key == " ":
             fail = False
             win = False
-            print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
+            if v3 == 1:
+                shotpos = plrpos
             if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos):
                 win = True
                 print("EEEEE")
