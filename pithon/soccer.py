@@ -208,12 +208,21 @@ while True:
         if key == " ":
             fail = False
             win = False
+            suddenfail = False
             if v3 == 1:
                 shotpos = plrpos
+                suddenfail = True
             if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos):
                 win = True
-                print("EEEEE")
-            if win == True:
-                print('pass')
-            else:
-                print('fail')
+            if suddenfail == True:
+                deline(99)
+                print("Current score:", score, "Opponent score:", oppscore)
+                printgoal()
+                printgoalie(plrpos)
+                printarrow(plrpos)
+                for x in range(0, 4):
+                    deline(2)
+                    offset(plrpos)
+                    print("⚽")
+                    wait(random.choice(speeds))
+                
