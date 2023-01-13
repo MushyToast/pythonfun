@@ -262,7 +262,7 @@ while True:
                 deline(99)
                 break
             elif win == False:
-                print(Fore.RED + f"Aw man, the ball got past you. Sucks for you! Your opponents score is now {oppscore}")
+                print(Fore.RED + f"Aw man, the ball got past you. Sucks for you! Your opponents score is now {oppscore}" + Fore.RESET)
                 wait(1.5)
                 deline(99)
                 break
