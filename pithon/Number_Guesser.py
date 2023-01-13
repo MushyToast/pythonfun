@@ -1,6 +1,7 @@
 import random
-from getkey import getkey, keys
 import sys
+from getkey import getkey
+import pyfiglet
 maxnumber = 999
 
 def deleteline(lines):
@@ -14,6 +15,7 @@ while True:
     tries = 0
     
     while True:
+        deleteline(69)
         guess = int(input("Guess a number between 1 and %s: " % maxnumber))
         tries += 1
         if guess == rnumber:
