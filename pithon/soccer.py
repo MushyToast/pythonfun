@@ -201,10 +201,8 @@ while True:
             if v3 == 1:
                 shotpos = plrpos
                 printarrow(shotpos)
-                print(shotpos)
             else:
                 printarrow(shotpos)
-                print(shotpos)
         elif key == "d":
             shotpos = random.randint(1, 14)
             print("You can't go any further!")
