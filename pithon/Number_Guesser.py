@@ -1,9 +1,12 @@
 import random
-import time
 from getkey import getkey, keys
-
+import sys
 maxnumber = 999
 
+def deleteline(lines):
+    for x in range(1, lines):
+        sys.stdout.write("\033[F")
+        sys.stdout.write("\033[K")
 
 while True:
     rnumber = random.randint(1,maxnumber)
