@@ -1,8 +1,13 @@
 import random
 import sys
+import time
 from getkey import getkey
 import pyfiglet
 maxnumber = 999
+
+print(pyfiglet.figlet_format("Number Guesser", font = "big" ))
+
+time.sleep(3)
 
 def deleteline(lines):
     for x in range(1, lines):
