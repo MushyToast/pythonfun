@@ -238,7 +238,6 @@ while True:
                 printgoal()
                 printgoalie(plrpos)
                 printarrow(plrpos)
-                score += 1
                 for x in range(0, 4):
                     deline(2)
                     offset(plrpos)
@@ -258,7 +257,7 @@ while True:
                     print("⚽")
                     wait(random.choice(speeds))
             if win == True:
-                print(Fore.GREEN + f"Congrats, you saved the ball! Your score is now", str(score) + Fore.RESET)
+                print(Fore.GREEN + f"Congrats, you saved the ball!" + Fore.RESET)
                 wait(1.5)
                 deline(99)
                 break
