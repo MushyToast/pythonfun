@@ -188,7 +188,6 @@ while True:
             else:
                 printarrow(shotpos)
                 print(shotpos)
-            print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
         elif key == "a":
             shotpos = random.randint(1, 14)
             print("You can't go any further!")
@@ -206,7 +205,6 @@ while True:
             else:
                 printarrow(shotpos)
                 print(shotpos)
-            print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
         elif key == "d":
             shotpos = random.randint(1, 14)
             print("You can't go any further!")
