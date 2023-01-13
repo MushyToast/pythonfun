@@ -207,7 +207,7 @@ while True:
             win = False
             if v3 == 1:
                 shotpos = plrpos
-            if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos):
+            if (plrpos == shotpos):
                 win = True
                 print("EEEEE")
             if win == True:
