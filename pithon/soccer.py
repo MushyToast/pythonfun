@@ -217,7 +217,7 @@ while True:
             if v3 == 1:
                 shotpos = plrpos
                 suddenfail = True
-            if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos):
+            if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos) and suddenfail != True:
                 win = True
             if suddenfail == True:
                 deline(99)
