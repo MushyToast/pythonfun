@@ -173,7 +173,7 @@ while True:
         if (key == "a" and plrpos - 1 != -1):
             deline(99)
             plrpos = plrpos - 1
-            print(plrpos)
+            print(plrpos, shotpos)
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             printgoalie(plrpos)
@@ -189,7 +189,7 @@ while True:
         if (key == "d" and plrpos + 1 != 14):
             deline(99)
             plrpos = plrpos + 1
-            print(plrpos)
+            print(plrpos, shotpos)
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             printgoalie(plrpos)
