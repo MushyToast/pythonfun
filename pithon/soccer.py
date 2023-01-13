@@ -153,6 +153,7 @@ while True:
                 deline(2)
                 offset(pos)
                 print("⚽")
+                print("Suk on a kaka!")
                 wait(random.choice(speeds))
 
     if fail == True:
