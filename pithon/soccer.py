@@ -12,6 +12,11 @@ from colorama import Fore
 print(figlet_format("Soccer", font="big"))
 print("A and D to aim your shot. Space to shoot. Watch for that goalie")
 #FUNCTIONS
+def specialGenNumber(notnumber, min, max):
+    while True:
+        number = random.randint(min, max)
+        if number != notnumber:
+            return number
 def deline(amount):
     for x in range(0, amount):
         sys.stdout.write("\033[F")
@@ -219,10 +224,11 @@ while True:
                 print("Current score:", score, "Opponent score:", oppscore)
                 printgoal()
                 printgoalie(plrpos)
-                printarrow(plrpos)
+                suddenfailarrowpos = specialGenNumber(plrpos, 1, 13)
+                printarrow(suddenfailarrowpos)
                 for x in range(0, 4):
                     deline(2)
-                    offset(plrpos)
+                    offset(suddenfailarrowpos)
                     print("⚽")
                     wait(random.choice(speeds))
                 
