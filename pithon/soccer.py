@@ -167,10 +167,10 @@ while True:
     printgoalie(0)
     printarrow(0)
     while True: #plr goalie mode
-        shotpos = random.randint(1, 14)
         v3 = random.randint(0, 5)
         key = getkey()
         if (key == "a" and plrpos - 1 != -1):
+            shotpos = random.randint(1, 14)
             deline(99)
             plrpos = plrpos - 1
             print("Current score:", score, "Opponent score:", oppscore)
@@ -185,8 +185,10 @@ while True:
                 print(shotpos)
             print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
         elif key == "a":
+            shotpos = random.randint(1, 14)
             print("You can't go any further!")
         if (key == "d" and plrpos + 1 != 14):
+            shotpos = random.randint(1, 14)
             deline(99)
             plrpos = plrpos + 1
             print("Current score:", score, "Opponent score:", oppscore)
@@ -201,12 +203,13 @@ while True:
                 print(shotpos)
             print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
         elif key == "d":
+            shotpos = random.randint(1, 14)
             print("You can't go any further!")
         if key == " ":
             fail = False
             win = False
             print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
-            if plrpos == shotpos:
+            if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos):
                 win = True
                 print("EEEEE")
             if win == True:
