@@ -224,6 +224,7 @@ while True:
                 printgoalie(plrpos)
                 suddenfailarrowpos = specialGenNumber(plrpos, 1, 13)
                 printarrow(suddenfailarrowpos)
+                oppscore += 1
                 for x in range(0, 4):
                     deline(2)
                     offset(suddenfailarrowpos)
@@ -235,17 +236,20 @@ while True:
                 printgoal()
                 printgoalie(plrpos)
                 printarrow(plrpos)
+                score += 1
                 for x in range(0, 5):
                     deline(2)
                     offset(plrpos)
                     print("⚽")
                     wait(random.choice(speeds))
+                
             elif win == False:
                 deline(99)
                 print("Current score:", score, "Opponent score:", oppscore)
                 printgoal()
                 printgoalie(plrpos)
                 printarrow(shotpos)
+                oppscore += 1
                 for x in range(0, 4):
                     deline(2)
                     offset(shotpos)
