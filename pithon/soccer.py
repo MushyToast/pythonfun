@@ -205,9 +205,8 @@ while True:
         if key == " ":
             fail = False
             win = False
-            if v3 == 1:
-                shotpos = plrpos
-            if (plrpos == shotpos):
+            
+            if plrpos == shotpos:
                 win = True
                 print("EEEEE")
             if win == True:
