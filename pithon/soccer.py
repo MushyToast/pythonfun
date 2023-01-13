@@ -205,7 +205,7 @@ while True:
         if key == " ":
             fail = False
             win = False
-            
+            print(plrpos, shotpos, "Pos 1: Plr, Pos 2: Shot")
             if plrpos == shotpos:
                 win = True
                 print("EEEEE")
