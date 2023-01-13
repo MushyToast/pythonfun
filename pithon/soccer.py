@@ -231,4 +231,26 @@ while True:
                     offset(suddenfailarrowpos)
                     print("⚽")
                     wait(random.choice(speeds))
+            elif win == True:
+                deline(99)
+                print("Current score:", score, "Opponent score:", oppscore)
+                printgoal()
+                printgoalie(plrpos)
+                printarrow(plrpos)
+                for x in range(0, 5):
+                    deline(2)
+                    offset(plrpos)
+                    print("⚽")
+                    wait(random.choice(speeds))
+            elif win == False:
+                deline(99)
+                print("Current score:", score, "Opponent score:", oppscore)
+                printgoal()
+                printgoalie(plrpos)
+                printarrow(shotpos)
+                for x in range(0, 4):
+                    deline(2)
+                    offset(shotpos)
+                    print("⚽")
+                    wait(random.choice(speeds))
                 
