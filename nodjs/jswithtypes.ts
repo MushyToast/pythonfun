@@ -5,7 +5,10 @@ while (booleanValue){
     counter++;
     console.log(counter);
     let determiner = Math.random();
-    if (determiner == 1){
+    console.log(determiner + ": determiner")
+    if (determiner > 0.95){
         booleanValue = false;
     }
 }
+
+console.log("Hello, WOrld!")
