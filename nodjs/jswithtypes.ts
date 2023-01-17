@@ -1,5 +1,9 @@
 var booleanValue: boolean = true;
 
-if (booleanValue) {
-    console.log("booleanValue is true");
+while (booleanValue){
+    console.log("Hello World");
+    let determiner = Math.random();
+    if (determiner == 1){
+        booleanValue = false;
+    }
 }
