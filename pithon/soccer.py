@@ -8,6 +8,10 @@ import colorama
 from colorama import Fore
 
 #SUUUUUUUUUUUUUUUUUUUUUUUUUUUUu
+#Christiano Ronaldo
+#SUUUUUUEYYYYYYYYYY
+#AND WHERE'S RONALDO?? HES CRYING IN HIS CAR! POOR RONALDO!
+
 #PYFIGLET AND INFO
 
 print(figlet_format("Soccer", font="big"))
