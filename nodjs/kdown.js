@@ -1,9 +1,17 @@
 const readLine = require('readline');
 const fs = require('fs');
+const { string } = require('mathjs');
 var age = 0
 var name = ""
 
-//create a function that asks for the users name, and returns it in promise form so it wont run until the user has inputted their name
+function writeFile(filename, data) {
+    fs.writeFile(filename, data, (err) => {
+        if (err) {
+            console.log(err);
+        }
+    })
+}
+
 function getName() {
     return new Promise((resolve, reject) => {
         const rl = readLine.createInterface({
@@ -37,12 +45,11 @@ name = getName()
 
 name.then(() => {
     console.log(`Hello, ${name}`)
-})
-
-name.then(() => {
     age = getAge()
     age.then(() => {
         console.log(`You are ${age} years old`)
+        console.log("Haha! Leaking your info... (This may take a while)")
+        const data = `Name: ${name} Age: ${age}`
+        setTimeout(writeFile("info.txt", data), 10000)
     })
-    setTimeout()
 })
