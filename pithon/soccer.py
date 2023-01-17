@@ -182,7 +182,7 @@ while True:
     printgoal()
     printgoalie(0)
     printarrow(0)
-    print("Your turn to be the goalie!")
+    scrollText("Your turn to be the goalie!")
     while True: #plr goalie mode
         v3 = random.randint(0, 5)
         key = getkey()
