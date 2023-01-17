@@ -14,6 +14,8 @@ function getName() {
     return name
 }
 
+
+
 name = getName()
 
 console.log("Welcome,", name)
