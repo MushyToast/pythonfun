@@ -31,7 +31,6 @@ def deline(amount):
     for x in range(0, amount):
         sys.stdout.write("\033[F")
         sys.stdout.write("\033[K")
-    os.system('cls')
 def printarrow(offset):
     for x in range(0, offset):
         sys.stdout.write(" ")
@@ -75,7 +74,7 @@ v3 = 0
 speeds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.01, 0.05, 0.001]
 scrollText("Game starting momentarily..")
 wait(2)
-deline(99)
+os.system('cls')
 #ACTUAL CODE
 while True:
     suddenfail = False
@@ -92,10 +91,10 @@ while True:
         key = getkey()
         if (key == "d" and pos + 1 != 14):
             if v1 == True:
-                deline(99)
+                os.system('cls')
                 v1 = False
             else:
-                deline(99)
+                os.system('cls')
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             pos = pos + 1
@@ -108,10 +107,10 @@ while True:
             printarrow(pos)
         elif (key == "a" and pos - 1 != -1):
             if v1 == True:
-                deline(99)
+                os.system('cls')
                 v1 = False
             else:
-                deline(99)
+                os.system('cls')
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             pos = pos - 1
