@@ -3,6 +3,7 @@ from pyfiglet import figlet_format
 from getkey import getkey, keys
 import random
 import sys
+import os
 from time import sleep
 import colorama
 from colorama import Fore
@@ -30,6 +31,7 @@ def deline(amount):
     for x in range(0, amount):
         sys.stdout.write("\033[F")
         sys.stdout.write("\033[K")
+    os.system('cls')
 def printarrow(offset):
     for x in range(0, offset):
         sys.stdout.write(" ")
