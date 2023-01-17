@@ -11,15 +11,15 @@ from colorama import Fore
 #Christiano Ronaldo
 #SUUUUUUEYYYYYYYYYY
 #AND WHERE'S RONALDO?? HES CRYING IN HIS CAR! POOR RONALDO!
-def scrollText(text):
+def scrollText(text, delay=0.1):
     for i in text:
         print(i, end='')
         sys.stdout.flush()
-        sleep(0.1)
+        sleep(delay)
 
 #PYFIGLET AND INFO
 
-scrollText(figlet_format("Soccer", font="big"))
+scrollText(figlet_format("Soccer", font="big"), 0.01)
 #FUNCTIONS
 def specialGenNumber(notnumber, min, max):
     while True:
