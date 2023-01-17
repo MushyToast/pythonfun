@@ -11,14 +11,16 @@ from colorama import Fore
 #Christiano Ronaldo
 #SUUUUUUEYYYYYYYYYY
 #AND WHERE'S RONALDO?? HES CRYING IN HIS CAR! POOR RONALDO!
-
+def scrollText(text):
+    for i in text:
+        print(i, end='')
+        sys.stdout.flush()
+        sleep(0.1)
 
 #PYFIGLET AND INFO
 
-print(figlet_format("Soccer", font="big"))
+scrollText(figlet_format("Soccer", font="big"))
 #FUNCTIONS
-
-
 def specialGenNumber(notnumber, min, max):
     while True:
         number = random.randint(min, max)
@@ -69,7 +71,7 @@ pos = 0
 v2 = 0
 v3 = 0
 speeds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.01, 0.05, 0.001]
-print("Game starting momentarily..")
+scrollText("Game starting momentarily..")
 wait(2)
 deline(99)
 #ACTUAL CODE
