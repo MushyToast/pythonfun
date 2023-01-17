@@ -16,8 +16,9 @@ from colorama import Fore
 #PYFIGLET AND INFO
 
 print(figlet_format("Soccer", font="big"))
-print("A and D to aim your shot. Space to shoot. Watch for that goalie")
 #FUNCTIONS
+
+
 def specialGenNumber(notnumber, min, max):
     while True:
         number = random.randint(min, max)
