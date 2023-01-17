@@ -2,20 +2,47 @@ const readLine = require('readline');
 const fs = require('fs');
 var age = 0
 var name = ""
+
+//create a function that asks for the users name, and returns it in promise form so it wont run until the user has inputted their name
 function getName() {
-    const rl = readLine.createInterface({
-        input: process.stdin,
-        output: process.stdout
+    return new Promise((resolve, reject) => {
+        const rl = readLine.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+        rl.question('What is your name? ', (input) => {
+            name = input;
+            rl.close();
+            resolve();
+        });
     });
-    rl.question("What is your name? ", function (answer) {
-        name = answer
-        rl.close()
-    });
-    return name
 }
 
+function getAge() {
+    return new Promise((resolve, reject) => {
+        const rl = readLine.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+        rl.question('What is your age? ', (input) => {
+            age = input;
+            rl.close();
+            resolve();
+        });
+    });
+}
 
 
 name = getName()
 
-console.log("Welcome,", name)
+name.then(() => {
+    console.log(`Hello, ${name}`)
+})
+
+name.then(() => {
+    age = getAge()
+    age.then(() => {
+        console.log(`You are ${age} years old`)
+    })
+    setTimeout()
+})
