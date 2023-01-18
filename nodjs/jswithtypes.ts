@@ -1,5 +1,6 @@
 var booleanValue: boolean = true;
 var counter: number = 0;
+
 while (booleanValue){
     console.log("Hello World");
     counter++;
@@ -10,4 +11,5 @@ while (booleanValue){
         booleanValue = false;
     }
 }
+
 console.log("Hello, WOrld!")
