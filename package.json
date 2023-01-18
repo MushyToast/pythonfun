@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/node": "^18.11.18",
     "mathjs": "^11.5.0"
   }
 }
