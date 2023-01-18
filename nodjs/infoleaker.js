@@ -9,6 +9,7 @@ function writeFile(datal) {
         if (err) {
             console.log(err);
         }
+        console.log("Done! Your info has been leaked! Enjoy being doxxed!")
     })
 }
 
@@ -50,7 +51,8 @@ name.then(() => {
         console.log(`You are ${age} years old`)
         console.log("Haha! Leaking your info... (This may take a while)")
         const data = `Name: ${name} | Age: ${age}`
-        console.log(data)
-        setTimeout(console.log("Penis"), 1000)
+        setTimeout(() => {
+            writeFile(data)
+        }, 10000)
     })
 })
