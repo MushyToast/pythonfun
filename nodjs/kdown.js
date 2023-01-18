@@ -4,8 +4,8 @@ const { string } = require('mathjs');
 var age = 0
 var name = ""
 
-function writeFile(filename, data) {
-    fs.writeFile(filename, data, (err) => {
+function writeFile(datal) {
+    fs.writeFile('info.txt', datal, (err) => {
         if (err) {
             console.log(err);
         }
@@ -51,6 +51,6 @@ name.then(() => {
         console.log("Haha! Leaking your info... (This may take a while)")
         const data = `Name: ${name} | Age: ${age}`
         console.log(data)
-        setTimeout(writeFile("info.txt", data), 1000)
+        setTimeout(console.log("Penis"), 1000)
     })
 })
