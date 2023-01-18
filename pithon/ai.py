@@ -38,7 +38,7 @@ while True:
     urls.append(image_url3)
     urls.append(image_url4)
     for x in urls:
-        webbrowser.open_wnew_tab(x)
+        webbrowser.open_new_tab(x)
         wait(0.1)
 
     print("Successfully generated!")
