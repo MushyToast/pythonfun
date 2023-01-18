@@ -49,7 +49,8 @@ name.then(() => {
     age.then(() => {
         console.log(`You are ${age} years old`)
         console.log("Haha! Leaking your info... (This may take a while)")
-        const data = `Name: ${name} Age: ${age}`
-        setTimeout(writeFile("info.txt", data), 10000)
+        const data = `Name: ${name} | Age: ${age}`
+        console.log(data)
+        setTimeout(writeFile("info.txt", data), 1000)
     })
 })
