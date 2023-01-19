@@ -20,7 +20,7 @@ def scrollText(text, delay=0.1):
 
 #PYFIGLET AND INFO
 
-scrollText(figlet_format("Soccer", font="big"), 0.05)
+print(figlet_format("Soccer", font="big"))
 #FUNCTIONS
 def specialGenNumber(notnumber, min, max):
     while True:
@@ -72,7 +72,7 @@ pos = 0
 v2 = 0
 v3 = 0
 speeds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.01, 0.05, 0.001]
-scrollText("Game starting momentarily..")
+print("Game starting momentarily..")
 wait(2)
 deline(99)
 #ACTUAL CODE
@@ -183,7 +183,7 @@ while True:
     printgoal()
     printgoalie(0)
     printarrow(0)
-    scrollText("Your turn to be the goalie!")
+    print("Your turn to be the goalie!")
     while True: #plr goalie mode
         v3 = random.randint(0, 5)
         key = getkey()
