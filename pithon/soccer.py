@@ -74,7 +74,7 @@ v3 = 0
 speeds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.01, 0.05, 0.001]
 scrollText("Game starting momentarily..")
 wait(2)
-os.system('cls')
+deline(99)
 #ACTUAL CODE
 while True:
     suddenfail = False
