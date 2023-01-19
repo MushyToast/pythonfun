@@ -12,6 +12,9 @@ from colorama import Fore
 #Christiano Ronaldo
 #SUUUUUUEYYYYYYYYYY
 #AND WHERE'S RONALDO?? HES CRYING IN HIS CAR! POOR RONALDO!
+def clear():
+    os.system('clear')
+
 def scrollText(text, delay=0.1):
     for i in text:
         print(i, end='')
@@ -74,7 +77,7 @@ v3 = 0
 speeds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.01, 0.05, 0.001]
 print("Game starting momentarily..")
 wait(2)
-deline(99)
+clear()
 #ACTUAL CODE
 while True:
     suddenfail = False
@@ -91,10 +94,10 @@ while True:
         key = getkey()
         if (key == "d" and pos + 1 != 14):
             if v1 == True:
-                deline(99)
+                clear()
                 v1 = False
             else:
-                deline(99)
+                clear()
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             pos = pos + 1
@@ -107,10 +110,10 @@ while True:
             printarrow(pos)
         elif (key == "a" and pos - 1 != -1):
             if v1 == True:
-                deline(99)
+                clear()
                 v1 = False
             else:
-                deline(99)
+                clear()
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             pos = pos - 1
@@ -123,7 +126,7 @@ while True:
             printarrow(pos)
         elif key == "a" or key == "d":
             print("You can't go any further!")
-            deline(99)
+            clear()
             if pos == 0:
                 pos = pos + 1
             else:
@@ -147,7 +150,7 @@ while True:
             wait(random.choice(speeds))
     elif fail == True:
         if suddenfail == True:
-            deline(99)
+            clear()
             print('Current score:', score, 'Opponent score:', oppscore)
             printgoal()
             printgoalie(pos)
@@ -169,16 +172,16 @@ while True:
     if fail == True:
         print(Fore.RED + f"Awh man, the goalie caught your ball. Sucks for you!" + Fore.RESET)
         wait(1.5)
-        deline(99)
+        clear()
     elif fail == False:
         score = score + 1
         print(Fore.GREEN + f"Congrats, you scored against the goalie! Your score is now", str(score) + Fore.RESET)
         wait(1.5)
-        deline(99)
+        clear()
     else:
         print(Fore.RED + f"An unkown error occured. lmao" + Fore.RESET)
         wait(1.5)
-        deline(99)
+        clear()
     print("Current score:", score, "Opponent score:", oppscore)
     printgoal()
     printgoalie(0)
@@ -189,7 +192,7 @@ while True:
         key = getkey()
         if (key == "a" and plrpos - 1 != -1):
             shotpos = random.randint(1, 14)
-            deline(99)
+            clear()
             plrpos = plrpos - 1
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
@@ -206,7 +209,7 @@ while True:
             print("You can't go any further!")
         if (key == "d" and plrpos + 1 != 14):
             shotpos = random.randint(1, 14)
-            deline(99)
+            clear()
             plrpos = plrpos + 1
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
@@ -229,7 +232,7 @@ while True:
             if (plrpos == shotpos) or (plrpos + 2 == shotpos) or (plrpos - 2 == shotpos) and suddenfail != True:
                 win = True
             if suddenfail == True:
-                deline(99)
+                clear()
                 print("Current score:", score, "Opponent score:", oppscore)
                 printgoal()
                 printgoalie(plrpos)
@@ -242,7 +245,7 @@ while True:
                     print("⚽")
                     wait(random.choice(speeds))
             elif win == True:
-                deline(99)
+                clear()
                 print("Current score:", score, "Opponent score:", oppscore)
                 printgoal()
                 printgoalie(plrpos)
@@ -254,7 +257,7 @@ while True:
                     wait(random.choice(speeds))
                 
             elif win == False:
-                deline(99)
+                clear()
                 print("Current score:", score, "Opponent score:", oppscore)
                 printgoal()
                 printgoalie(plrpos)
@@ -268,10 +271,10 @@ while True:
             if win == True:
                 print(Fore.GREEN + f"Congrats, you saved the ball!" + Fore.RESET)
                 wait(1.5)
-                deline(99)
+                clear()
                 break
             elif win == False:
                 print(Fore.RED + f"Aw man, the ball got past you. Sucks for you! Your opponents score is now {oppscore}" + Fore.RESET)
                 wait(1.5)
-                deline(99)
+                clear()
                 break
