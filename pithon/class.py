@@ -9,7 +9,7 @@ max = input("Enter the maximum number: ")
 desNum = input("Enter the desired number: ")
 while True:
     count += 1
-    number = random.randint(1, 100000)
+    number = random.randint(int(min), int(max))
     print(str(count) + ": " + str(number))
-    asyncio.run(checkNumber(number, 69420, count))
+    asyncio.run(checkNumber(number, int(desNum), count))
     
