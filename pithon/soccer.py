@@ -91,10 +91,10 @@ while True:
         key = getkey()
         if (key == "d" and pos + 1 != 14):
             if v1 == True:
-                os.system('cls')
+                deline(99)
                 v1 = False
             else:
-                os.system('cls')
+                deline(99)
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             pos = pos + 1
@@ -107,10 +107,10 @@ while True:
             printarrow(pos)
         elif (key == "a" and pos - 1 != -1):
             if v1 == True:
-                os.system('cls')
+                deline(99)
                 v1 = False
             else:
-                os.system('cls')
+                deline(99)
             print("Current score:", score, "Opponent score:", oppscore)
             printgoal()
             pos = pos - 1
