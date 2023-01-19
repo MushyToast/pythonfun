@@ -8,3 +8,5 @@ def scrollText(text):
         time.sleep(0.1)
 
 scrollText("Hello World!")
+
+clear()
