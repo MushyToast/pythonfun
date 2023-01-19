@@ -20,7 +20,7 @@ def scrollText(text, delay=0.1):
 
 #PYFIGLET AND INFO
 
-scrollText(figlet_format("Soccer", font="big"), 0.001)
+scrollText(figlet_format("Soccer", font="big"), 0.05)
 #FUNCTIONS
 def specialGenNumber(notnumber, min, max):
     while True:
