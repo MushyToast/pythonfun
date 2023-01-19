@@ -1,5 +1,10 @@
 import sys
 import time
+import os
+
+def clear():
+    os.system('clear')
+
 
 def scrollText(text):
     for i in text:
