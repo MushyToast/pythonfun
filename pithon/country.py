@@ -15,7 +15,7 @@ def open_prompt(txt):
 
 
 
-root = Tk('Country Finder')
+root = Tk()
 root.iconbitmap("icon.ico")
 frm = ttk.Frame(root, padding=10)
 frm.grid()
