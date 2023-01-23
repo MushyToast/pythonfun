@@ -27,6 +27,7 @@ function getName() {
     });
 }
 
+
 function getAge() {
     return new Promise((resolve, reject) => {
         const rl = readLine.createInterface({
