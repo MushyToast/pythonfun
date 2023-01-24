@@ -60,6 +60,9 @@ while True:
     if daycompleted == True:
         day += 1
         daycompleted = False
+    if daycompleted == False:
+        if day == -1:
+            day = 0
     if day == 7:
         day = 0
     if day == 5 or day == 6:
