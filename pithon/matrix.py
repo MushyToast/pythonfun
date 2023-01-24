@@ -68,3 +68,11 @@ while True:
     print("[2] Go to the store")
     print("[3] Go to the gym")
     print("[4] Go to the park")
+    key = getkey()
+    if key == "1":
+        print("Work Options:")
+        print("[1] Go to work")
+        print("[2] Change job")
+        print("[3] Take the day off")
+        print("[4] Go back")
+        key = getkey()
