@@ -28,6 +28,7 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.001)
 balance = 0
 day = -1
 job = "Unemployed"
+residence = "Apartment"
 happiness = 100
 jobinfo = {
     "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0},
@@ -88,3 +89,64 @@ while True:
                 scrollText("You went to work. \n", 0.01)
                 wait(5)
                 scrollText("Still at work... \n", 0.01)
+        if key == "2":
+            clearscreen()
+            print("Change Job:")
+            print("[1] McDonalds")
+            print("[2] Walmart")
+            print("[3] Amazon")
+            print("[4] Google")
+            print("[5] Microsoft")
+            print("[6] Apple")
+            print("[7] IT Tech")
+            print("[8] Dunder Mifflin")
+            print("[9] Teacher")
+            print("[10] Go back")
+            key = getkey()
+            if key == "1":
+                job = "McDonalds"
+                scrollText("You are now a McDonalds employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "2":
+                job = "Walmart"
+                scrollText("You are now a Walmart employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "3":
+                job = "Amazon"
+                scrollText("You are now an Amazon employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "4":
+                job = "Google"
+                scrollText("You are now a Google employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "5":
+                job = "Microsoft"
+                scrollText("You are now a Microsoft employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "6":
+                job = "Apple"
+                scrollText("You are now an Apple employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "7":
+                job = "IT Tech"
+                scrollText("You are now an IT Tech. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "8":
+                job = "Dunder Mifflin"
+                scrollText("You are now a Dunder Mifflin employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "9":
+                job = "Teacher"
+                scrollText("You are now a teacher. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "10":
+                clearscreen()
