@@ -29,6 +29,7 @@ balance = 500
 day = -1
 job = "Unemployed"
 residence = "Apartment"
+itemsinfridge = 0
 happiness = 100
 daycompleted = False
 experience = 0
@@ -176,9 +177,14 @@ while True:
                     print("[2] Order")
                     key = getkey()
                     if key == "1":
-                        scrollText("You cooked dinner. \n")
-                        wait(2)
-                        clearscreen()
+                        if itemsinfridge == 0:
+                            scrollText("You have no food. You can't cook. And all the stores are closed.\n")
+                            wait(2)
+                            clearscreen()
+                        else:
+                            scrollText("You cooked dinner. \n")
+                            wait(2)
+                            clearscreen()
                     if key == "2":
                         print("What will you order? ")
                         print("[1] Pizza")
