@@ -41,7 +41,10 @@ jobinfo = {
 
 }
 
+weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
 #ACTUAL CODE
 
 scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid.")
 scrollText("You are fresh out of college. You have no job. You have no money. You are single.")
+
