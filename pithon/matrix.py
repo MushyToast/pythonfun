@@ -249,6 +249,7 @@ while True:
                         scrollText("You are now extremely tired, and you went to sleep.")
                         daycompleted = True
                         wait(2)
+                        clearscreen()
 
 
                 key = None
