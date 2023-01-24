@@ -133,16 +133,23 @@ while True:
                 if key == "3":
                     scrollText("You requested a raise. \n")
                     determiner = random.randint(1, 20)
+                    fireddeterminer = random.randint(1, 100)
                     if determiner == 13:
                         scrollText("Your boss said yes! +10 XP \n")
                         experience += 10
-                        jobinfo[job]["WeeklyPay"] += 50
+                        jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
                         wait(2)
                         clearscreen()
                     else:
-                        scrollText("Your boss said no. \n")
-                        wait(2)
-                        clearscreen()
+                        if fireddeterminer == 69:
+                            scrollText("Your boss said no. I guess he was in a bad mood because he fired you. \n")
+                            job = "Unemployed"
+                            wait(2)
+                            clearscreen()
+                        else:
+                            scrollText("Your boss said no. \n")
+                            wait(2)
+                            clearscreen()
 
 
                 key = None
