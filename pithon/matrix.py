@@ -103,6 +103,99 @@ while True:
             print("[7] IT Tech")
             print("[8] Dunder Mifflin")
             print("[9] Teacher")
+            print("[q] Resign from job")
             print("[0] Go back")
             key = getkey()
+            if key == "1":
+                job = "McDonalds"
+                scrollText("You are now a McDonalds employee. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "2":
+                if experience >= jobinfo["Walmart"]["XPRequired"]:
+                    job = "Walmart"
+                    scrollText("You are now a Walmart employee. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to work at Walmart. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "3":
+                if experience >= jobinfo["Amazon"]["XPRequired"]:
+                    job = "Amazon"
+                    scrollText("You are now an Amazon employee. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to work at Amazon. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "4":
+                if experience >= jobinfo["Google"]["XPRequired"]:
+                    job = "Google"
+                    scrollText("You are now a Google employee. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to work at Google. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "5":
+                if experience >= jobinfo["Microsoft"]["XPRequired"]:
+                    job = "Microsoft"
+                    scrollText("You are now a Microsoft employee. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to work at Microsoft. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "6":
+                if experience >= jobinfo["Apple"]["XPRequired"]:
+                    job = "Apple"
+                    scrollText("You are now an Apple employee. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to work at Apple. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "7":
+                if experience >= jobinfo["IT Tech"]["XPRequired"]:
+                    job = "IT Tech"
+                    scrollText("You are now an IT Tech. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to be an IT Tech. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "8":
+                if experience >= jobinfo["Dunder Mifflin"]["XPRequired"]:
+                    job = "Dunder Mifflin"
+                    scrollText("You are now a Dunder Mifflin employee. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to work at Dunder Mifflin. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "9":
+                if experience >= jobinfo["Teacher"]["XPRequired"]:
+                    job = "Teacher"
+                    scrollText("You are now a teacher. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText("You don't have enough experience to be a teacher. \n", 0.01)
+                    wait(2)
+                    clearscreen()
+            if key == "q":
+                job = "Unemployed"
+                scrollText("You are now unemployed. \n", 0.01)
+                wait(2)
+                clearscreen()
+            if key == "0":
+                clearscreen()
             
