@@ -139,6 +139,10 @@ while True:
                         jobinfo[job]["WeeklyPay"] += 50
                         wait(2)
                         clearscreen()
+                    else:
+                        scrollText("Your boss said no. \n")
+                        wait(2)
+                        clearscreen()
 
 
                 key = None
