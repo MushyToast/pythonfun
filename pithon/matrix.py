@@ -512,3 +512,15 @@ while True:
                     clearscreen()
             if key == "4":
                 clearscreen()
+    if key == "3":
+        clearscreen()
+        scrollText("You are now at the gym. What will you do? \n")
+        print("[1] Workout")
+        print("[2] Go back")
+        key = getkey()
+        if key == "1":
+            clearscreen()
+            scrollText("You are now working out. +10 Happiness\n")
+            happiness = specialcombine(happiness, 10, 0, 100)
+            wait(2)
+            clearscreen()
