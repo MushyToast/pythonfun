@@ -28,7 +28,17 @@ balance = 0
 job = "Unemployed"
 happiness = 100
 jobinfo = {
-    "Unemployed": 0,
+    "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0},
+    "McDonalds": {"WeeklyPay": 620, "WeeklyHours": 40},
+    "Walmart": {"WeeklyPay": 800, "WeeklyHours": 40},
+    "Amazon": {"WeeklyPay": 900, "WeeklyHours": 40},
+    "Google": {"WeeklyPay": 1000, "WeeklyHours": 50},
+    "Microsoft": {"WeeklyPay": 1200, "WeeklyHours": 50},
+    "Apple": {"WeeklyPay": 1250, "WeeklyHours": 50},
+    "IT Tech": {"WeeklyPay": 1300, "WeeklyHours": 60},
+    "Dunder Mifflin": {"WeeklyPay": 1500, "WeeklyHours": 60},
+    "Teacher": {"WeeklyPay": 900, "WeeklyHours": 60},
+
 }
 
 #ACTUAL CODE
