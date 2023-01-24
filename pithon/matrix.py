@@ -54,9 +54,16 @@ while True:
     day += 1
     if day == 7:
         day = 0
-    if day == 5:
-        scrollText("It's Saturday. You have the day off. \n", 0.01)
-        wait(2)
+    if day == 5 or day == 6:
+        scrollText("It's the weekend! You have no work. \n", 0.01)
+    if day == 4:
+        scrollText("It's Friday! Today is payday!. \n", 0.01)
+        balance += jobinfo[job]["WeeklyPay"]
     weekday = weekdays[day]
     print(weekday)
-    
+    print("Balance: $" + str(balance))
+    print("Job: " + job)
+    print("Happiness: " + str(happiness))
+    print("[1] Work")
+    print("[2] Take the day off")
+    print("[3] ")
