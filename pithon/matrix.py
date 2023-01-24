@@ -19,6 +19,13 @@ def scrollText(text, delay=0.1):
 def wait(secs):
     time.sleep(secs)
 
+def specialcombine(val, combiner, min, max):
+    if val + combiner > max:
+        return max
+    elif val + combiner < min:
+        return min
+    else:
+        return val + combiner
 
 #PYFIGLET
 scrollText(pyfiglet.figlet_format("The", font="big"), 0.001)
@@ -30,7 +37,7 @@ day = -1
 job = "Unemployed"
 residence = "Apartment"
 itemsinfridge = 0
-happiness = 100
+happiness = 50
 daycompleted = False
 experience = 0
 jobinfo = {
@@ -126,6 +133,8 @@ while True:
                     clearscreen()
                 if key == "4":
                     scrollText("You ate a pizza. \n")
+                    scrollText("The pizza was delicious. +5 happiness\n")
+                    specialcombine(happiness, 5, 0, 100)
                     wait(2)
                     clearscreen()
                 scrollText("You went back to work. \n")
@@ -154,14 +163,16 @@ while True:
                             clearscreen()
                         else:
                             if fireddeterminer == 69:
-                                scrollText("Your boss said no. I guess he was in a bad mood because he fired you. \n")
+                                scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                 job = "Unemployed"
+                                specialcombine(happiness, -15, 0, 100)
                                 wait(2)
                                 clearscreen()
                                 daycompleted = True
                             else:
-                                scrollText("Your boss said no. -1 XP \n")
+                                scrollText("Your boss said no. -1 XP, -5 happiness \n")
                                 experience -= 1
+                                specialcombine(happiness, -5, 0, 100)
                                 wait(2)
                                 clearscreen()
                 if fireddeterminer != 69:
@@ -411,6 +422,46 @@ while True:
                     clearscreen()
                 else:
                     scrollText(f"You don't have enough money. You need $3. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "4":
+                clearscreen()
+        if key == "2":
+            clearscreen()
+            print("Clothes:")
+            print("[1] T-Shirt - $5")
+            print("[2] Pants - $10")
+            print("[3] Shoes - $15")
+            print("[4] Go back")
+            key = getkey()
+            if key == "1":
+                if balance >= 5:
+                    balance -= 5
+                    scrollText("You bought a t-shirt. \n")
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $5. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "2":
+                if balance >= 10:
+                    balance -= 10
+                    scrollText("You bought pants. \n")
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $10. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "3":
+                if balance >= 15:
+                    balance -= 15
+                    scrollText("You bought shoes. \n")
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $15. You only have ${balance}\n")
                     wait(2)
                     clearscreen()
             if key == "4":
