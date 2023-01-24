@@ -70,6 +70,7 @@ while True:
     print("[4] Go to the park")
     key = getkey()
     if key == "1":
+        clearscreen()
         print("Work Options:")
         print("[1] Go to work")
         print("[2] Change job")
