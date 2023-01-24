@@ -6,3 +6,5 @@ import os
 #FUNCTIONS
 def clearscreen():
     os.system('clear')
+
+def scrolltext(text):
