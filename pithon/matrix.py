@@ -226,11 +226,26 @@ while True:
                     print("[1] Watch TV")
                     print("[2] Scroll through social media")
                     print("[3] Go to sleep")
+                    wenttosleep = False
                     key = getkey()
                     if key == "1":
                         scrollText("You watched TV. \n")
                         wait(2)
                         clearscreen()
+                    if key == "2":
+                        scrollText("You scrolled through social media. \n")
+                        wait(2)
+                        clearscreen()
+                    if key == "3":
+                        scrollText("You went to sleep. \n")
+                        wait(2)
+                        clearscreen()
+                        wenttosleep = True
+                        daycompleted = True
+                    if wenttosleep == False:
+                        scrollText("You are now extremely tired, and you went to sleep.")
+                        daycompleted = True
+                        wait(2)
 
 
                 key = None
