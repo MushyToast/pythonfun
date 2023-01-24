@@ -27,6 +27,10 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.001)
 balance = 0
 job = "Unemployed"
 happiness = 100
+jobinfo = {
+    "Unemployed": 0,
+}
+
 #ACTUAL CODE
 
 scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid.")
