@@ -437,7 +437,8 @@ while True:
             if key == "1":
                 if balance >= 5:
                     balance -= 5
-                    scrollText("You bought a t-shirt. \n")
+                    scrollText("You bought a t-shirt. +5 Happiness\n")
+                    specialcombine(happiness, 5, 0, 100)
                     wait(2)
                     clearscreen()
                 else:
@@ -447,7 +448,8 @@ while True:
             if key == "2":
                 if balance >= 10:
                     balance -= 10
-                    scrollText("You bought pants. \n")
+                    scrollText("You bought pants. +5 Happiness\n")
+                    specialcombine(happiness, 5, 0, 100)
                     wait(2)
                     clearscreen()
                 else:
@@ -457,7 +459,8 @@ while True:
             if key == "3":
                 if balance >= 15:
                     balance -= 15
-                    scrollText("You bought shoes. \n")
+                    scrollText("You bought shoes. +10 Happiness\n")
+                    specialcombine(happiness, 10, 0, 100)
                     wait(2)
                     clearscreen()
                 else:
