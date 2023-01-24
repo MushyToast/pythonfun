@@ -52,6 +52,11 @@ scrollText("You are fresh out of college. You have no job. You have no money. Yo
 
 while True:
     day += 1
-    weekday = weekdays[day % 7]
+    if day == 7:
+        day = 0
+    if day == 5:
+        scrollText("It's Saturday. You have the day off. \n", 0.01)
+        wait(2)
+    weekday = weekdays[day]
     print(weekday)
     
