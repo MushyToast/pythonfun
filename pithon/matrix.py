@@ -25,7 +25,7 @@ scrollText(pyfiglet.figlet_format("The", font="big"), 0.001)
 scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.001)
 
 #VARIABLES
-balance = 0
+balance = 500
 day = -1
 job = "Unemployed"
 residence = "Apartment"
@@ -58,6 +58,7 @@ print("Game starting momentarily...")
 while True:
     clearscreen()
     if daycompleted == True:
+        balance += 100
         day += 1
         daycompleted = False
     if daycompleted == False:
@@ -367,3 +368,44 @@ while True:
         print("[2] Clothes")
         print("[3] Electronics")
         print("[4] Go back")
+        key = getkey()
+        if key == "1":
+            clearscreen()
+            print("Food:")
+            print("[1] Bread - $1")
+            print("[2] Milk - $2")
+            print("[3] Eggs - $3")
+            print("[4] Go back")
+            key = getkey()
+            if key == "1":
+                if balance >= 1:
+                    balance -= 1
+                    scrollText("You bought bread. \n")
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $1. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "2":
+                if balance >= 2:
+                    balance -= 2
+                    scrollText("You bought milk. \n")
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $2. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "3":
+                if balance >= 3:
+                    balance -= 3
+                    scrollText("You bought eggs. \n")
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $3. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "4":
+                clearscreen()
