@@ -30,6 +30,7 @@ day = -1
 job = "Unemployed"
 residence = "Apartment"
 happiness = 100
+daycompleted = False
 experience = 0
 jobinfo = {
     "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0, "XPRequired": 0},
@@ -45,6 +46,8 @@ jobinfo = {
 
 }
 
+
+
 weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 #ACTUAL CODE
@@ -54,7 +57,9 @@ scrollText("You are fresh out of college. You have no job. You have no money. Yo
 print("Game starting momentarily...")
 while True:
     clearscreen()
-    day += 1
+    if daycompleted == True:
+        day += 1
+        daycompleted = False
     if day == 7:
         day = 0
     if day == 5 or day == 6:
@@ -148,6 +153,7 @@ while True:
                                 job = "Unemployed"
                                 wait(2)
                                 clearscreen()
+                                daycompleted = True
                             else:
                                 scrollText("Your boss said no. -1 XP \n")
                                 experience -= 1
@@ -161,6 +167,33 @@ while True:
                     scrollText("You are now home. \n")
                     wait(1)
                     clearscreen()
+                    scrollText("It's time for dinner. Will you cook or order? \n")
+                    print("[1] Cook")
+                    print("[2] Order")
+                    key = getkey()
+                    if key == "1":
+                        scrollText("You cooked dinner. \n")
+                        wait(2)
+                        clearscreen()
+                    if key == "2":
+                        print("What will you order? ")
+                        print("[1] Pizza")
+                        print("[2] Burger")
+                        print("[3] Wings")
+                        print("[4] Sushi")
+                        key = getkey()
+                        if key == "1":
+                            if balance >= 20:
+                                balance -= 20
+                                scrollText("You ordered pizza. \n")
+                                wait(2)
+                                clearscreen()
+                            else:
+                                scrollText(f"You don't have enough money. You need $20. You only have ${balance}t\n")
+                                wait(2)
+                                clearscreen()
+
+
 
                 key = None
         if key == "2":
