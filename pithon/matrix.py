@@ -88,9 +88,9 @@ while True:
             else:
                 experience +=  random.randint(1, 10)
                 scrollText("You went to work. \n", 0.01)
-                wait(5)
+                wait(1)
                 scrollText("Still at work... \n", 0.01)
-                wait(2)
+                wait(1)
                 scrollText("It is now your lunch break \n")
                 print("What will you eat? ")
                 print("[1] Sandwich")
