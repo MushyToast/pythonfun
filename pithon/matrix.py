@@ -360,4 +360,10 @@ while True:
                 clearscreen()
             if key == "0":
                 clearscreen()
-            
+    elif key == "2":
+        clearscreen()
+        scrollText("You are now at the store. What will you buy? \n")
+        print("[1] Food")
+        print("[2] Clothes")
+        print("[3] Electronics")
+        print("[4] Go back")
