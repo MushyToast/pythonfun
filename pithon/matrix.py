@@ -64,6 +64,8 @@ while True:
         balance += jobinfo[job]["WeeklyPay"]
     weekday = weekdays[day]
     print(weekday)
+    print("------------------")
+    print(f"Job Experience: {experience}")
     print("Balance: $" + str(balance))
     print("Job: " + job)
     print("Happiness: " + str(happiness))
@@ -117,6 +119,28 @@ while True:
                     wait(2)
                     clearscreen()
                 scrollText("You went back to work. \n")
+                wait(1)
+                scrollText("You see your boss at work. What do you do? \n")
+                print("[1] Talk to your boss")
+                print("[2] Do nothing")
+                print("[3] Request a raise")
+                key = getkey()
+                if key == "1":
+                    scrollText("You talked to your boss. +5 XP \n")
+                    experience += 5
+                    wait(0.5)
+                    clearscreen()
+                if key == "3":
+                    scrollText("You requested a raise. \n")
+                    determiner = random.randint(1, 20)
+                    if determiner == 13:
+                        scrollText("Your boss said yes! +10 XP \n")
+                        experience += 10
+                        jobinfo[job]["WeeklyPay"] += 50
+                        wait(2)
+                        clearscreen()
+
+
                 key = None
         if key == "2":
             clearscreen()
