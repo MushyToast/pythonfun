@@ -222,7 +222,15 @@ while True:
                                 scrollText(f"You don't have enough money. You need $25. You only have ${balance}\n")
                                 wait(2)
                                 clearscreen()
-
+                    scrollText("It's quite late. What will you do now? \n")
+                    print("[1] Watch TV")
+                    print("[2] Scroll through social media")
+                    print("[3] Go to sleep")
+                    key = getkey()
+                    if key == "1":
+                        scrollText("You watched TV. \n")
+                        wait(2)
+                        clearscreen()
 
 
                 key = None
