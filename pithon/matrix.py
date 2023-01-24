@@ -115,6 +115,7 @@ while True:
                     wait(2)
                     clearscreen()
                 scrollText("You went back to work. \n")
+                key = None
         if key == "2":
             clearscreen()
             print("Change job:")
