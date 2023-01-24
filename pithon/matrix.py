@@ -30,17 +30,18 @@ day = -1
 job = "Unemployed"
 residence = "Apartment"
 happiness = 100
+experience = 0
 jobinfo = {
-    "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0},
-    "McDonalds": {"WeeklyPay": 620, "WeeklyHours": 40},
-    "Walmart": {"WeeklyPay": 800, "WeeklyHours": 40},
-    "Amazon": {"WeeklyPay": 900, "WeeklyHours": 40},
-    "Google": {"WeeklyPay": 1000, "WeeklyHours": 50},
-    "Microsoft": {"WeeklyPay": 1200, "WeeklyHours": 50},
-    "Apple": {"WeeklyPay": 1250, "WeeklyHours": 50},
-    "IT Tech": {"WeeklyPay": 1300, "WeeklyHours": 60},
-    "Dunder Mifflin": {"WeeklyPay": 1500, "WeeklyHours": 60},
-    "Teacher": {"WeeklyPay": 900, "WeeklyHours": 60},
+    "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0, "XPRequired": 0},
+    "McDonalds": {"WeeklyPay": 620, "WeeklyHours": 40, "XPRequired": 0},
+    "Walmart": {"WeeklyPay": 800, "WeeklyHours": 40, "XPRequired": 25},
+    "Amazon": {"WeeklyPay": 900, "WeeklyHours": 40, "XPRequired": 35},
+    "Google": {"WeeklyPay": 1000, "WeeklyHours": 50, "XPRequired": 60},
+    "Microsoft": {"WeeklyPay": 1200, "WeeklyHours": 50, "XPRequired": 100},
+    "Apple": {"WeeklyPay": 1250, "WeeklyHours": 50, "XPRequired": 120},
+    "IT Tech": {"WeeklyPay": 1300, "WeeklyHours": 55, "XPRequired": 150},
+    "Dunder Mifflin": {"WeeklyPay": 1500, "WeeklyHours": 60, "XPRequired": 69},
+    "Teacher": {"WeeklyPay": 900, "WeeklyHours": 60, "XPRequired": 60},
 
 }
 
@@ -86,12 +87,13 @@ while True:
                 wait(2)
                 clearscreen()
             else:
+                experience +=  random.randint(1, 10)
                 scrollText("You went to work. \n", 0.01)
                 wait(5)
                 scrollText("Still at work... \n", 0.01)
         if key == "2":
             clearscreen()
-            print("Change Job:")
+            print("Change job:")
             print("[1] McDonalds")
             print("[2] Walmart")
             print("[3] Amazon")
@@ -101,52 +103,6 @@ while True:
             print("[7] IT Tech")
             print("[8] Dunder Mifflin")
             print("[9] Teacher")
-            print("[10] Go back")
+            print("[0] Go back")
             key = getkey()
-            if key == "1":
-                job = "McDonalds"
-                scrollText("You are now a McDonalds employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "2":
-                job = "Walmart"
-                scrollText("You are now a Walmart employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "3":
-                job = "Amazon"
-                scrollText("You are now an Amazon employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "4":
-                job = "Google"
-                scrollText("You are now a Google employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "5":
-                job = "Microsoft"
-                scrollText("You are now a Microsoft employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "6":
-                job = "Apple"
-                scrollText("You are now an Apple employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "7":
-                job = "IT Tech"
-                scrollText("You are now an IT Tech. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "8":
-                job = "Dunder Mifflin"
-                scrollText("You are now a Dunder Mifflin employee. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "9":
-                job = "Teacher"
-                scrollText("You are now a teacher. \n", 0.01)
-                wait(2)
-                clearscreen()
-            if key == "10":
-                clearscreen()
+            
