@@ -120,37 +120,47 @@ while True:
                     clearscreen()
                 scrollText("You went back to work. \n")
                 wait(1)
-                scrollText("You see your boss at work. What do you do? \n")
-                print("[1] Talk to your boss")
-                print("[2] Do nothing")
-                print("[3] Request a raise")
-                key = getkey()
-                if key == "1":
-                    scrollText("You talked to your boss. +5 XP \n")
-                    experience += 5
-                    wait(0.5)
-                    clearscreen()
-                if key == "3":
-                    scrollText("You requested a raise. \n")
-                    determiner = random.randint(1, 20)
-                    fireddeterminer = random.randint(1, 100)
-                    if determiner == 13:
-                        scrollText("Your boss said yes! +10 XP \n")
-                        experience += 10
-                        jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
-                        wait(2)
+                fireddeterminer = None
+                if random.randint(1, 5) == 3:
+                    scrollText("You see your boss at work. What do you do? \n")
+                    print("[1] Talk to your boss")
+                    print("[2] Do nothing")
+                    print("[3] Request a raise")
+                    key = getkey()
+                    if key == "1":
+                        scrollText("You talked to your boss. +5 XP \n")
+                        experience += 5
+                        wait(0.5)
                         clearscreen()
-                    else:
-                        if fireddeterminer == 69:
-                            scrollText("Your boss said no. I guess he was in a bad mood because he fired you. \n")
-                            job = "Unemployed"
+                    if key == "3":
+                        scrollText("You requested a raise. \n")
+                        determiner = random.randint(1, 20)
+                        fireddeterminer = random.randint(1, 100)
+                        if determiner == 13:
+                            scrollText("Your boss said yes! +10 XP \n")
+                            experience += 10
+                            jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
                             wait(2)
                             clearscreen()
                         else:
-                            scrollText("Your boss said no. \n")
-                            wait(2)
-                            clearscreen()
-
+                            if fireddeterminer == 69:
+                                scrollText("Your boss said no. I guess he was in a bad mood because he fired you. \n")
+                                job = "Unemployed"
+                                wait(2)
+                                clearscreen()
+                            else:
+                                scrollText("Your boss said no. -1 XP \n")
+                                experience -= 1
+                                wait(2)
+                                clearscreen()
+                if fireddeterminer != 69:
+                    scrollText("You went back to work. \n")
+                    wait(1)
+                    scrollText("You went home. \n")
+                    wait(1)
+                    scrollText("You are now home. \n")
+                    wait(1)
+                    clearscreen()
 
                 key = None
         if key == "2":
