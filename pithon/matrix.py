@@ -52,4 +52,6 @@ scrollText("You are fresh out of college. You have no job. You have no money. Yo
 
 while True:
     day += 1
-    print(f"Today is {weekdays[day]}")
+    weekday = weekdays[day % 7]
+    print(weekday)
+    
