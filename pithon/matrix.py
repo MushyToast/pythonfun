@@ -26,6 +26,7 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.001)
 
 #VARIABLES
 balance = 0
+day = -1
 job = "Unemployed"
 happiness = 100
 jobinfo = {
@@ -46,18 +47,9 @@ weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
 
 #ACTUAL CODE
 
-scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid.")
-scrollText("You are fresh out of college. You have no job. You have no money. You are single.")
+scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid. \n", 0.01)
+scrollText("You are fresh out of college. You have no job. You have no money. You are single. \n", 0.01)
 
 while True:
-    clearscreen()
-    scrollText("You have $" + str(balance) + " in your bank account.")
-    scrollText("You are " + job + " and work " + str(jobinfo[job]["WeeklyHours"]) + " hours a week.")
-    scrollText("You are " + str(happiness) + "% happy.")
-    scrollText("What would you like to do?")
-    scrollText("1. Go to work")
-    scrollText("2. Change job")
-    scrollText("3. Go to the store")
-    scrollText("4. Go to the gym")
-    scrollText("5. Go to the bar")
-    scrollText("6. Go to the casino")
+    day += 1
+    print(f"Today is {weekdays[day]}")
