@@ -469,3 +469,46 @@ while True:
                     clearscreen()
             if key == "4":
                 clearscreen()
+        if key == "3":
+            clearscreen()
+            print("Electronics:")
+            print("[1] Phone - $50")
+            print("[2] Laptop - $100")
+            print("[3] Flipper Zero - $1000")
+            print("[4] Go back")
+            key = getkey()
+            if key == "1":
+                if balance >= 50:
+                    balance -= 50
+                    scrollText("You bought a phone. +5 Happiness\n")
+                    happiness = specialcombine(happiness, 5, 0, 100)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $50. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "2":
+                if balance >= 100:
+                    balance -= 100
+                    scrollText("You bought a laptop. +10 Happiness\n")
+                    happiness = specialcombine(happiness, 10, 0, 100)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $100. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "3":
+                if balance >= 1000:
+                    balance -= 1000
+                    scrollText("You bought a Flipper Zero. +100 Happiness\n")
+                    happiness = specialcombine(happiness, 100, 0, 100)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $1000. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "4":
+                clearscreen()
