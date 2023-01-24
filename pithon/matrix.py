@@ -85,6 +85,8 @@ while True:
                 scrollText("You have no job. You can't go to work. \n", 0.01)
                 wait(2)
                 clearscreen()
+            elif day == 5 or day == 6:
+                    scrollText("It's the weekend. You have no work. \n", 0.01)
             else:
                 experience +=  random.randint(1, 10)
                 scrollText("You went to work. \n", 0.01)
