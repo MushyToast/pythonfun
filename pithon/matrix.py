@@ -189,7 +189,37 @@ while True:
                                 wait(2)
                                 clearscreen()
                             else:
-                                scrollText(f"You don't have enough money. You need $20. You only have ${balance}t\n")
+                                scrollText(f"You don't have enough money. You need $20. You only have ${balance}\n")
+                                wait(2)
+                                clearscreen()
+                        if key == "2":
+                            if balance >= 10:
+                                balance -= 10
+                                scrollText("You ordered a burger. \n")
+                                wait(2)
+                                clearscreen()
+                            else:
+                                scrollText(f"You don't have enough money. You need $10. You only have ${balance}\n")
+                                wait(2)
+                                clearscreen()
+                        if key == "3":
+                            if balance >= 15:
+                                balance -= 15
+                                scrollText("You ordered wings. \n")
+                                wait(2)
+                                clearscreen()
+                            else:
+                                scrollText(f"You don't have enough money. You need $15. You only have ${balance}\n")
+                                wait(2)
+                                clearscreen()
+                        if key == "4":
+                            if balance >= 25:
+                                balance -= 25
+                                scrollText("You ordered sushi. \n")
+                                wait(2)
+                                clearscreen()
+                            else:
+                                scrollText(f"You don't have enough money. You need $25. You only have ${balance}\n")
                                 wait(2)
                                 clearscreen()
 
