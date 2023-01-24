@@ -77,3 +77,6 @@ while True:
         print("[3] Take the day off")
         print("[4] Go back")
         key = getkey()
+        if key == "1":
+            clearscreen()
+            print("You go to work.")
