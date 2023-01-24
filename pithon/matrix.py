@@ -134,7 +134,7 @@ while True:
                 if key == "4":
                     scrollText("You ate a pizza. \n")
                     scrollText("The pizza was delicious. +5 happiness\n")
-                    specialcombine(happiness, 5, 0, 100)
+                    happiness = specialcombine(happiness, 5, 0, 100)
                     wait(2)
                     clearscreen()
                 scrollText("You went back to work. \n")
@@ -165,14 +165,14 @@ while True:
                             if fireddeterminer == 69:
                                 scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                 job = "Unemployed"
-                                specialcombine(happiness, -15, 0, 100)
+                                happiness = specialcombine(happiness, -15, 0, 100)
                                 wait(2)
                                 clearscreen()
                                 daycompleted = True
                             else:
                                 scrollText("Your boss said no. -1 XP, -5 happiness \n")
                                 experience -= 1
-                                specialcombine(happiness, -5, 0, 100)
+                                happiness = specialcombine(happiness, -5, 0, 100)
                                 wait(2)
                                 clearscreen()
                 if fireddeterminer != 69:
@@ -438,7 +438,7 @@ while True:
                 if balance >= 5:
                     balance -= 5
                     scrollText("You bought a t-shirt. +5 Happiness\n")
-                    specialcombine(happiness, 5, 0, 100)
+                    happiness = specialcombine(happiness, 5, 0, 100)
                     wait(2)
                     clearscreen()
                 else:
@@ -449,7 +449,7 @@ while True:
                 if balance >= 10:
                     balance -= 10
                     scrollText("You bought pants. +5 Happiness\n")
-                    specialcombine(happiness, 5, 0, 100)
+                    happiness = specialcombine(happiness, 5, 0, 100)
                     wait(2)
                     clearscreen()
                 else:
@@ -460,7 +460,7 @@ while True:
                 if balance >= 15:
                     balance -= 15
                     scrollText("You bought shoes. +10 Happiness\n")
-                    specialcombine(happiness, 10, 0, 100)
+                    happiness = specialcombine(happiness, 10, 0, 100)
                     wait(2)
                     clearscreen()
                 else:
