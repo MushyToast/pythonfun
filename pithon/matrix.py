@@ -49,8 +49,10 @@ weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
 
 scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid. \n", 0.01)
 scrollText("You are fresh out of college. You have no job. You have no money. You are single. \n", 0.01)
-
+print("Game starting momentarily...")
+wait(5)
 while True:
+    clearscreen()
     day += 1
     if day == 7:
         day = 0
@@ -78,5 +80,11 @@ while True:
         print("[4] Go back")
         key = getkey()
         if key == "1":
-            clearscreen()
-            print("You go to work.")
+            if job == "Unemployed":
+                scrollText("You have no job. You can't go to work. \n", 0.01)
+                wait(2)
+                clearscreen()
+            else:
+                scrollText("You went to work. \n", 0.01)
+                wait(5)
+                scrollText("Still at work... \n", 0.01)
