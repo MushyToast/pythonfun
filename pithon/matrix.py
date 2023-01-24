@@ -54,7 +54,6 @@ scrollText("You are fresh out of college. You have no job. You have no money. Yo
 print("Game starting momentarily...")
 while True:
     clearscreen()
-    print(" EE E EE E REID MILLER")
     day += 1
     if day == 7:
         day = 0
