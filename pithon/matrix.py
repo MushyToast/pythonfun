@@ -149,6 +149,9 @@ while True:
                 scrollText("You went back to work. \n")
                 wait(1)
                 fireddeterminer = None
+                #specific job interactions
+                if job == "Apple":
+                    
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
