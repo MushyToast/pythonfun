@@ -8,7 +8,10 @@ import sys
 import pyfiglet
 #FUNCTIONS
 def clearscreen():
-    os.system('clear')
+    try:
+        os.system('cls')
+    except:
+        os.system('clear')
 
 def scrollText(text, delay=0.1):
     for i in text:
@@ -28,8 +31,8 @@ def specialcombine(val, combiner, min, max):
         return val + combiner
 
 #PYFIGLET
-scrollText(pyfiglet.figlet_format("The", font="big"), 0.001)
-scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.001)
+scrollText(pyfiglet.figlet_format("The", font="big"), 0.000001)
+scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.000001)
 
 #VARIABLES
 balance = 500
@@ -145,42 +148,86 @@ while True:
                 scrollText("You went back to work. \n")
                 wait(1)
                 fireddeterminer = None
-                if random.randint(1, 5) == 3:
-                    scrollText("You see your boss at work. What do you do? \n")
-                    print("[1] Talk to your boss")
-                    print("[2] Do nothing")
-                    print("[3] Request a raise")
-                    key = getkey()
-                    if key == "1":
-                        scrollText("You talked to your boss. +5 XP \n")
-                        experience += 5
-                        wait(0.5)
-                        clearscreen()
-                    if key == "3":
-                        scrollText("You requested a raise. \n")
-                        determiner = random.randint(1, 20)
-                        fireddeterminer = random.randint(1, 100)
-                        if determiner == 13:
-                            scrollText("Your boss said yes! +10 XP \n")
-                            experience += 10
-                            jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
-                            wait(2)
+                firedbymichaelscott = False
+                if random.randint(3, 3) == 3:
+                    if job == "Dunder Mifflin":
+                        scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
+                        print("[1] Talk to your boss")
+                        print("[2] Do nothing")
+                        print("[3] Request a raise")
+                        print("[4] Tell Jim Halpert")
+                        key = getkey()
+                        if key == "1":
+                            scrollText("You talked to Michael Scott. +10 XP \n")
+                            experience += 5
+                            wait(0.5)
                             clearscreen()
-                        else:
-                            if fireddeterminer == 69:
-                                scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
-                                job = "Unemployed"
-                                happiness = specialcombine(happiness, -15, 0, 100)
+                        if key == "3":
+                            scrollText("You requested a raise. \n")
+                            determiner = random.randint(1, 10)
+                            fireddeterminer = random.randint(1, 200)
+                            if determiner == 13:
+                                scrollText("Michael Scott said yes! +10 XP \n")
+                                experience += 10
+                                jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
                                 wait(2)
                                 clearscreen()
-                                daycompleted = True
                             else:
-                                scrollText("Your boss said no. -1 XP, -5 happiness \n")
-                                experience -= 1
-                                happiness = specialcombine(happiness, -5, 0, 100)
+                                if fireddeterminer == 69:
+                                    scrollText("Michael Scott said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
+                                    job = "Unemployed"
+                                    happiness = specialcombine(happiness, -15, 0, 100)
+                                    wait(2)
+                                    clearscreen()
+                                    daycompleted = True
+                                else:
+                                    scrollText("Michael Scott said no. -1 XP, -5 happiness \n")
+                                    experience -= 1
+                                    happiness = specialcombine(happiness, -5, 0, 100)
+                                    wait(2)
+                                    clearscreen()
+                        if key == "4":
+                            scrollText("You told Jim Halpert. \n")
+                            scrollText("Jim is angry. He tells Michael Scott. \n")
+                            scrollText("Michael Scott is angry. He fires you. -15 happiness \n")
+                            job = "Unemployed"
+                            happiness = specialcombine(happiness, -15, 0, 100)
+                    else:
+                        scrollText("You see your boss at work. What do you do? \n")
+                        print("[1] Talk to your boss")
+                        print("[2] Do nothing")
+                        print("[3] Request a raise")
+                        key = getkey()
+                        if key == "1":
+                            scrollText("You talked to your boss. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "3":
+                            scrollText("You requested a raise. \n")
+                            determiner = random.randint(1, 20)
+                            fireddeterminer = random.randint(1, 100)
+                            if determiner == 13:
+                                scrollText("Your boss said yes! +10 XP \n")
+                                experience += 10
+                                jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
                                 wait(2)
                                 clearscreen()
-                if fireddeterminer != 69:
+                            else:
+                                if fireddeterminer == 69:
+                                    scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
+                                    job = "Unemployed"
+                                    happiness = specialcombine(happiness, -15, 0, 100)
+                                    wait(2)
+                                    clearscreen()
+                                    daycompleted = True
+                                else:
+                                    scrollText("Your boss said no. -1 XP, -5 happiness \n")
+                                    experience -= 1
+                                    happiness = specialcombine(happiness, -5, 0, 100)
+                                    wait(2)
+                                    clearscreen()
+                if fireddeterminer != 69 and firedbymichaelscott == False:
                     scrollText("You went back to work. \n")
                     wait(1)
                     scrollText("You went home. \n")
@@ -383,6 +430,7 @@ while True:
                 clearscreen()
             if key == "0":
                 clearscreen()
+        key = None
     elif key == "2":
         clearscreen()
         scrollText("You are now at the store. What will you buy? \n")
@@ -520,6 +568,7 @@ while True:
                     clearscreen()
             if key == "4":
                 clearscreen()
+        key = None
     if key == "3":
         clearscreen()
         scrollText("You are now at the gym. What will you do? \n")
@@ -655,6 +704,7 @@ while True:
             clearscreen()
         if key == "4":
             clearscreen()
+        key = None
     if key == "4":
         scrollText("You are now at the park. What will you do?\n")
         print("[1] Play on the swings")
@@ -738,3 +788,6 @@ while True:
                         clearscreen()
             wait(2)
             clearscreen()
+            key = None
+    if key == "a":
+        experience += 10000
