@@ -291,7 +291,39 @@ while True:
                             wait(0.5)
                             clearscreen()
                         if key == "3":
-                            scrollText("You got revenge. +5 XP, +10 Happiness \n")
+                            scrollText("How will you get revenge? \n")
+                            print("[1] Put his stapler in Jell-O")
+                            print("[2] Put his stapler in Jell-O and put it in the freezer")
+                            print("[3] Put his stapler in Jell-O and put it in the microwave")
+                            print("[4] Put his stapler in Jell-O and put it in the microwave and turn it on")
+                            key = getkey()
+                            if key == "1":
+                                scrollText("You put his stapler in Jell-O. +5 XP, +10 Happiness \n")
+                                experience += 5
+                                happiness = specialcombine(happiness, 10, 0, 100)
+                                wait(0.5)
+                                clearscreen()
+                            if key == "2":
+                                scrollText("You put his stapler in Jell-O and put it in the freezer. +10 Happiness \n")
+                                scrollText("Jim Halpert was not happy and told Michael Scott -5 XP\n")
+                                experience -= 5
+                                happiness = specialcombine(happiness, 10, 0, 100)
+                                wait(0.5)
+                                clearscreen()
+                            if key == "3":
+                                scrollText("You put his stapler in Jell-O and put it in the microwave. +10 Happiness \n")
+                                scrollText("Jim Halpert was not happy, and couldn't find his stapler. +2 happiness\n")
+                                experience -= 5
+                                happiness = specialcombine(happiness, 12, 0, 100)
+                                wait(0.5)
+                                clearscreen()
+                            if key == "4":
+                                scrollText("You put his stapler in Jell-O and put it in the microwave and turned it on.\n")
+                                scrollText("The microwave blew up, started a fire, and destroyed a room. You are now required to pay the damages, you have been fired, and you are going to jail for recklessness.\n")
+                                scrollText("You lost the game. \n")
+                                wait(5)
+                                clearscreen()
+                                exit()
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
