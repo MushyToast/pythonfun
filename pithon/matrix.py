@@ -152,7 +152,7 @@ while True:
                 #specific job interactions
                 if job == "Apple":
                     if random.randint(1, 5) == 3:
-                        scrollText("A customer comes up to you, complaining that the iPhone 13 & 14 are the same. What do you do? \n")
+                        scrollText("A customer comes up to you, complaining that the iPhone 13 & 14 are the same. What do you do? \n", 0.01)
                         print("[1] Say the camera is different")
                         print("[2] Say the processor is different")
                         print("[3] Say the battery is different")
@@ -162,27 +162,55 @@ while True:
                             scrollText("You said the camera is different. Pretty BS\n")
                             if random.randint(1, 3) == 2:
                                 scrollText("The customer was not happy. -5 happiness, -5 XP \n")
+                                wait(2)
                                 happiness = specialcombine(happiness, -5, 0, 100)
                                 experience -= 5
+                                clearscreen()
                             else:
                                     scrollText("The customer was happy. +5 happiness, +5 XP \n")
+                                    wait(2)
                                     happiness = specialcombine(happiness, 5, 0, 100)
                                     experience += 5
+                                    clearscreen()
                         if key == "2":
                             scrollText("You said the processor is different. Most technical answer. +1 XP\n")
+                            wait(2)
                             experience += 1
+                            clearscreen()
                         if key == "3":
                             scrollText("You said the battery is different.\n")
                             wait(2)
                             if random.randint(1, 5) == 3:
                                 scrollText("The customer was not happy. -5 happiness, -5 XP \n")
+                                wait(2)
                                 happiness = specialcombine(happiness, -5, 0, 100)
                                 experience -= 5
+                                clearscreen()
                             else:
                                 scrollText("The customer was happy. +5 happiness, +5 XP \n")
+                                wait(2)
                                 happiness = specialcombine(happiness, 5, 0, 100)
                                 experience += 5
+                                clearscreen()
                             clearscreen()
+                        if key == "4":
+                            scrollText("You admitted it's the same.\n")
+                            wait(2)
+                            if random.randint(1,5) == 3:
+                                scrollText("The customer was not happy, and went to the manager. -5 happiness, -5 XP \n")
+                                experience -= 5
+                                happiness = specialcombine(happiness, -5, 0, 100)
+                                wait(2)
+                                scrollText("The manager fired you. \n")
+                                wait(2)
+                                jobsfiredfrom.append(job)
+                                job = "Unemployed"
+                            else:
+                                    scrollText("The customer was happy. +5 happiness, +5 XP \n")
+                                    wait(2)
+                                    happiness = specialcombine(happiness, 5, 0, 100)
+                                    experience += 5
+
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
