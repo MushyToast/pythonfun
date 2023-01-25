@@ -616,8 +616,10 @@ while True:
                 if balance >= 3:
                     balance -= 3
                     scrollText("You bought a Red Bull. +10 Happiness\n")
-                    happiness = specialcombine(happiness, 10, 0, 100)
+                    scrollText("Wait..what? You have..wings! You are flying!\n")
                     wait(2)
+                    scrollText("Oh, it turned out to be a dream. -20 Happiness\n")
+                    happiness = specialcombine(happiness, -20, 0, 100)
                     clearscreen()
                 else:
                     scrollText(f"You don't have enough money. You need $3. You only have ${balance}\n")
