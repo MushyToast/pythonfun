@@ -595,10 +595,47 @@ while True:
             clearscreen()
         if key == "2":
             clearscreen()
-            scrollText("You grabbed an energy drink. +10 Happiness\n")
-            happiness = specialcombine(happiness, 10, 0, 100)
-            wait(2)
-            clearscreen()
+            scrollText("What brand of energy drink will you get?\n")
+            print("[1] Monster - $2")
+            print("[2] Red Bull - $3")
+            print("[3] Ghost - $4")
+            print("[4] Go back")
+            key = getkey()
+            if key == "1":
+                if balance >= 2:
+                    balance -= 2
+                    scrollText("You bought a Monster. +5 Happiness\n")
+                    happiness = specialcombine(happiness, 5, 0, 100)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $2. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "2":
+                if balance >= 3:
+                    balance -= 3
+                    scrollText("You bought a Red Bull. +10 Happiness\n")
+                    happiness = specialcombine(happiness, 10, 0, 100)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $3. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "3":
+                if balance >= 4:
+                    balance -= 4
+                    scrollText("You bought a Ghost. +15 Happiness\n")
+                    happiness = specialcombine(happiness, 15, 0, 100)
+                    wait(2)
+                    clearscreen()
+                else:
+                    scrollText(f"You don't have enough money. You need $4. You only have ${balance}\n")
+                    wait(2)
+                    clearscreen()
+            if key == "4":
+                clearscreen()
         if key == "3":
             clearscreen()
             scrollText("You drank water. +5 Happiness\n")
