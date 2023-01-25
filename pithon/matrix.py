@@ -224,6 +224,7 @@ while True:
                                     happiness = specialcombine(happiness, -5, 0, 100)
                                     wait(2)
                                     clearscreen()
+                print(fireddeterminer)
                 if fireddeterminer != 69:
                     scrollText("You went back to work. \n")
                     wait(1)
