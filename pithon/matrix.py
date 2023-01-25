@@ -36,6 +36,7 @@ balance = 500
 day = -1
 totaldays = 0
 friends = []
+jobsfiredfrom = []
 job = "Unemployed"
 residence = "Apartment"
 itemsinfridge = 0
@@ -175,6 +176,7 @@ while True:
                                 if fireddeterminer == 69:
                                     scrollText("Michael Scott said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                     job = "Unemployed"
+                                    jobsfiredfrom.append(job)
                                     fireddeterminer = 69
                                     happiness = specialcombine(happiness, -15, 0, 100)
                                     wait(2)
@@ -191,6 +193,7 @@ while True:
                             scrollText("Jim is angry. He tells Michael Scott. \n")
                             scrollText("Michael Scott is angry. He fires you. -15 happiness \n")
                             job = "Unemployed"
+                            jobsfiredfrom.append(job)
                             fireddeterminer = 69
                             happiness = specialcombine(happiness, -15, 0, 100)
                     else:
@@ -218,6 +221,7 @@ while True:
                                 if fireddeterminer == 69:
                                     scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                     job = "Unemployed"
+                                    jobsfiredfrom.append(job)
                                     happiness = specialcombine(happiness, -15, 0, 100)
                                     wait(2)
                                     clearscreen()
