@@ -350,83 +350,83 @@ while True:
                 wait(2)
                 clearscreen()
             if key == "2":
-                if experience >= jobinfo["Walmart"]["XPRequired"]:
+                if experience >= jobinfo["Walmart"]["XPRequired"] or jobsfiredfrom.count("Walmart") == 1:
                     job = "Walmart"
                     scrollText("You are now a Walmart employee. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to work at Walmart. \n", 0.01)
+                    scrollText("You don't have enough experience to work at Walmart. Or you have been fired from Walmart recently.\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "3":
-                if experience >= jobinfo["Amazon"]["XPRequired"]:
+                if experience >= jobinfo["Amazon"]["XPRequired"] or jobsfiredfrom.count("Amazon") == 1:
                     job = "Amazon"
                     scrollText("You are now an Amazon employee. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to work at Amazon. \n", 0.01)
+                    scrollText("You don't have enough experience to work at Amazon. Or you have been fired from Amazon recently\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "4":
-                if experience >= jobinfo["Google"]["XPRequired"]:
+                if experience >= jobinfo["Google"]["XPRequired"] or jobsfiredfrom.count("Google") == 1:
                     job = "Google"
                     scrollText("You are now a Google employee. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to work at Google. \n", 0.01)
+                    scrollText("You don't have enough experience to work at Google. Or you have been fired from Google recently\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "5":
-                if experience >= jobinfo["Microsoft"]["XPRequired"]:
+                if experience >= jobinfo["Microsoft"]["XPRequired"] or jobsfiredfrom.count("Microsoft") == 1:
                     job = "Microsoft"
-                    scrollText("You are now a Microsoft employee. \n", 0.01)
+                    scrollText("You are now a Microsoft employee.\n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to work at Microsoft. \n", 0.01)
+                    scrollText("You don't have enough experience to work at Microsoft. Or you have been fired from Microsoft recently\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "6":
-                if experience >= jobinfo["Apple"]["XPRequired"]:
+                if experience >= jobinfo["Apple"]["XPRequired"] or jobsfiredfrom.count("Apple") == 1:
                     job = "Apple"
                     scrollText("You are now an Apple employee. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to work at Apple. \n", 0.01)
+                    scrollText("You don't have enough experience to work at Apple. Or you have been fired from Apple recently.\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "7":
-                if experience >= jobinfo["IT Tech"]["XPRequired"]:
+                if experience >= jobinfo["IT Tech"]["XPRequired"] or jobsfiredfrom.count("IT Tech") == 1:
                     job = "IT Tech"
                     scrollText("You are now an IT Tech. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to be an IT Tech. \n", 0.01)
+                    scrollText("You don't have enough experience to be an IT Tech. Or you have been fired from being an IT Tech recently.\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "8":
-                if experience >= jobinfo["Dunder Mifflin"]["XPRequired"]:
+                if experience >= jobinfo["Dunder Mifflin"]["XPRequired"] or jobsfiredfrom.count("Dunder Mifflin") == 1:
                     job = "Dunder Mifflin"
                     scrollText("You are now a Dunder Mifflin employee. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to work at Dunder Mifflin. \n", 0.01)
+                    scrollText("You don't have enough experience to work at Dunder Mifflin. Or you have been fired from Dunder Mifflin recently.\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "9":
-                if experience >= jobinfo["Teacher"]["XPRequired"]:
+                if experience >= jobinfo["Teacher"]["XPRequired"] or jobsfiredfrom.count("Teacher") == 1:
                     job = "Teacher"
                     scrollText("You are now a teacher. \n", 0.01)
                     wait(2)
                     clearscreen()
                 else:
-                    scrollText("You don't have enough experience to be a teacher. \n", 0.01)
+                    scrollText("You don't have enough experience to be a teacher. Or you have been fired from being a teacher recently.\n", 0.01)
                     wait(2)
                     clearscreen()
             if key == "q":
