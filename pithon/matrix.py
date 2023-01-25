@@ -211,6 +211,7 @@ while True:
                             fireddeterminer = random.randint(1, 100)
                             if determiner == 13:
                                 scrollText("Your boss said yes! +10 XP \n")
+                                events['AskedForRaise'] = totaldays
                                 experience += 10
                                 jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
                                 wait(2)
@@ -219,12 +220,14 @@ while True:
                                 if fireddeterminer == 69:
                                     scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                     job = "Unemployed"
+                                    events[f'FiredFrom{job}'] = totaldays
                                     happiness = specialcombine(happiness, -15, 0, 100)
                                     wait(2)
                                     clearscreen()
                                     daycompleted = True
                                 else:
                                     scrollText("Your boss said no. -1 XP, -5 happiness \n")
+                                    events['AskedForRaise'] = totaldays
                                     experience -= 1
                                     happiness = specialcombine(happiness, -5, 0, 100)
                                     wait(2)
