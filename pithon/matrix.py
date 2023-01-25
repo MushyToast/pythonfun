@@ -151,7 +151,7 @@ while True:
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
-                        print("[1] Talk to Michael Scott")
+                        print("[1] Talk to your boss")
                         print("[2] Do nothing")
                         print("[3] Request a raise")
                         print("[4] Tell Jim Halpert")
@@ -162,33 +162,30 @@ while True:
                             wait(0.5)
                             clearscreen()
                         if key == "3":
-                            if events["AskedForRaise"] + 3 > totaldays:
-                                scrollText("You already requested a raise too recently!")
+                            scrollText("You requested a raise. \n")
+                            determiner = random.randint(1, 10)
+                            fireddeterminer = random.randint(1, 200)
+                            if determiner == 13:
+                                scrollText("Michael Scott said yes! +10 XP \n")
+                                experience += 10
+                                jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
+                                wait(2)
+                                clearscreen()
                             else:
-                                scrollText("You requested a raise. \n")
-                                determiner = random.randint(1, 10)
-                                fireddeterminer = random.randint(1, 200)
-                                if determiner == 13:
-                                    scrollText("Michael Scott said yes! +10 XP \n")
-                                    experience += 10
-                                    jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
+                                if fireddeterminer == 69:
+                                    scrollText("Michael Scott said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
+                                    job = "Unemployed"
+                                    fireddeterminer = 69
+                                    happiness = specialcombine(happiness, -15, 0, 100)
                                     wait(2)
                                     clearscreen()
+                                    daycompleted = True
                                 else:
-                                    if fireddeterminer == 69:
-                                        scrollText("Michael Scott said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
-                                        job = "Unemployed"
-                                        fireddeterminer = 69
-                                        happiness = specialcombine(happiness, -15, 0, 100)
-                                        wait(2)
-                                        clearscreen()
-                                        daycompleted = True
-                                    else:
-                                        scrollText("Michael Scott said no. -1 XP, -5 happiness \n")
-                                        experience -= 1
-                                        happiness = specialcombine(happiness, -5, 0, 100)
-                                        wait(2)
-                                        clearscreen()   
+                                    scrollText("Michael Scott said no. -1 XP, -5 happiness \n")
+                                    experience -= 1
+                                    happiness = specialcombine(happiness, -5, 0, 100)
+                                    wait(2)
+                                    clearscreen()
                         if key == "4":
                             scrollText("You told Jim Halpert. \n")
                             scrollText("Jim is angry. He tells Michael Scott. \n")
@@ -213,7 +210,6 @@ while True:
                             fireddeterminer = random.randint(1, 100)
                             if determiner == 13:
                                 scrollText("Your boss said yes! +10 XP \n")
-                                events['AskedForRaise'] = totaldays
                                 experience += 10
                                 jobinfo[job]["WeeklyPay"] += random.randint(50, 100)
                                 wait(2)
@@ -222,14 +218,12 @@ while True:
                                 if fireddeterminer == 69:
                                     scrollText("Your boss said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                     job = "Unemployed"
-                                    events[f'FiredFrom{job}'] = totaldays
                                     happiness = specialcombine(happiness, -15, 0, 100)
                                     wait(2)
                                     clearscreen()
                                     daycompleted = True
                                 else:
                                     scrollText("Your boss said no. -1 XP, -5 happiness \n")
-                                    events['AskedForRaise'] = totaldays
                                     experience -= 1
                                     happiness = specialcombine(happiness, -5, 0, 100)
                                     wait(2)
