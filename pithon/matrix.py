@@ -174,6 +174,14 @@ while True:
                         if key == "3":
                             scrollText("You said the battery is different.\n")
                             wait(2)
+                            if random.randint(1, 5) == 3:
+                                scrollText("The customer was not happy. -5 happiness, -5 XP \n")
+                                happiness = specialcombine(happiness, -5, 0, 100)
+                                experience -= 5
+                            else:
+                                scrollText("The customer was happy. +5 happiness, +5 XP \n")
+                                happiness = specialcombine(happiness, 5, 0, 100)
+                                experience += 5
                             clearscreen()
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
