@@ -669,3 +669,32 @@ while True:
             elif random.randint(1, 5) == 3:
                 scrollText("A kid made fun of you for playing on the swings. -5 Happiness\n")
                 happiness = specialcombine(happiness, -5, 0, 100)
+
+        if key == "2":
+            clearscreen()
+            scrollText("You played on the slide. +1 Happiness\n")
+            happiness = specialcombine(happiness, 1, 0, 100)
+            wait(2)
+            clearscreen()
+            if random.randint(1, 5) == 2:
+                scrollText("You fell off the slide! -10 Happiness\n")
+                happiness = specialcombine(happiness, -10, 0, 100)
+                wait(2)
+                clearscreen()
+            elif random.randint(1, 5) == 3:
+                scrollText("A kid made fun of you for playing on the slide. -5 Happiness\n")
+                happiness = specialcombine(happiness, -5, 0, 100)
+        if key == "3":
+            clearscreen()
+            scrollText("You played on the monkey bars. +1 Happiness\n")
+            happiness = specialcombine(happiness, 1, 0, 100)
+            wait(2)
+            clearscreen()
+            if random.randint(1, 5) == 2:
+                scrollText("You fell off the monkey bars! -10 Happiness\n")
+                happiness = specialcombine(happiness, -10, 0, 100)
+                wait(2)
+                clearscreen()
+            elif random.randint(1, 5) == 3:
+                scrollText("A kid made fun of you for playing on the monkey bars. -5 Happiness\n")
+                happiness = specialcombine(happiness, -5, 100)
