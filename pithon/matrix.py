@@ -34,6 +34,7 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.000001)
 #VARIABLES
 balance = 500
 day = -1
+totaldays = 0
 friends = []
 job = "Unemployed"
 residence = "Apartment"
@@ -55,6 +56,8 @@ jobinfo = {
 
 }
 
+events = {}
+
 gfirst = ["Olivia", "Emma", "Ava", "Charlotte", "Harper", "Avery", "Camelia", "Sophia", "Sofia", "Luna", "Elizabeth", "Scarlett", "Madison", "Isabella", "Isabel", "Emily", "Audrey", "Mya", "Savannah", "August", "Sadie", "Hailey", "Autumn", "Quinn", "Harley", "Sonia", "Naveah", "Natalia", "Jade", "Adeline", "Alexandra", "Sandy", "Lydia", "Peyton", "Allison", "Megan", "Meghan", "Athena", "Lily", "Liliana", "Fate", "Kaylee", "Ella", "Ivy", "Charlie", "Jessie", "Alex", "Miley", "Madi", "Bella", "Anabella", "Ximena", "Xochitl", "Carmen", "Kylie", "Zoe", "Zoey", "Alyssa", "May", "Mei", "Rachel", "Alexis", "Julia", "Karla", "Amanda", "Amelia", "Mia", "Illa", "Arya", "Annabel", "Annabella"]
 
 bfirst = ["Nolan", "Alex", "Marcus", "Daniel", "Benjamin", "George", "Liam", "Lucas", "Noah", "Oliver", "Gavin", "James", "Alexander", "Jacob", "Levi", "Sebastian", "Joseph", "John", "David", "Brian", "Reid", "Joaquin", "Morgan", "Wyatt", "Matthew", "Luke", "Asher", "Carter", "Leo", "Jayden", "Isaiah", 'Isiah', "Christian", "Thomas", "Tommy", "Kingston", "Michael", "Jackson", "Finn", "Mason", "Jason", "Jay", "Hayden", "Andrew", "Keil", "Tyler", "Cameron", "Samuel", "Sam", "Martin", "Ruben", "Marco", "Lukas", "CJ", "Aidan"]
@@ -71,7 +74,8 @@ print("Game starting momentarily...")
 while True:
     clearscreen()
     if daycompleted == True:
-        balance += 100
+        balance += 10
+        totaldays += 1
         day += 1
         daycompleted = False
     if daycompleted == False:
