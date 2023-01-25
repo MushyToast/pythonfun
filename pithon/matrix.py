@@ -34,6 +34,7 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.001)
 #VARIABLES
 balance = 500
 day = -1
+friends = []
 job = "Unemployed"
 residence = "Apartment"
 itemsinfridge = 0
@@ -706,5 +707,31 @@ while True:
             clearscreen()
             scrollText("You went on a peaceful walk. +1 Happiness\n")
             happiness = specialcombine(happiness, 1, 0, 100)
+            if random.randint(1, 5) == 3:
+                scrollText("You found a $1 bill on the ground! +1 Money\n")
+                balance += 1
+            elif random.randint(1, 5) == 4:
+                    scrollText("You come across a good looking woman while walking. What do you do?\n")
+                    print("[1] Talk to her")
+                    print("[2] Ignore her")
+                    print("[3] Befriend her")
+                    key = getkey()
+                    if key == "1":
+                        clearscreen()
+                        scrollText("You talked to her. +2 Happiness\n")
+                        happiness = specialcombine(happiness, 2, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    if key == "2":
+                        clearscreen()
+                    if key == "3":
+                        clearscreen()
+                        scrollText("You befriended her. +3 Happiness\n")
+                        hername = random.choice(gfirst) + " " + random.choice(lastnames)
+                        scrollText(f"Her name is {hername}.\n")
+                        happiness = specialcombine(happiness, 3, 0, 100)
+                        friends.append(hername)
+                        wait(2)
+                        clearscreen()
             wait(2)
             clearscreen()
