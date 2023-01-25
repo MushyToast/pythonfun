@@ -555,7 +555,7 @@ while True:
                     clearscreen()
             if key == "2":
                 clearscreen()
-                scrollText("How long will you lift for?")
+                scrollText("How long will you lift for?\n")
                 print("[1] 10 minutes")
                 print("[2] 20 minutes")
                 print("[3] 30 minutes")
