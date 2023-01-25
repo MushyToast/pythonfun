@@ -647,3 +647,25 @@ while True:
             clearscreen()
         if key == "4":
             clearscreen()
+    if key == "4":
+        scrollText("You are now at the park. What will you do?\n")
+        print("[1] Play on the swings")
+        print("[2] Play on the slide")
+        print("[3] Play on the monkey bars")
+        print("[4] Go on a peaceful walk")
+        print("[5] Go back")
+        key = getkey()
+        if key == "1":
+            clearscreen()
+            scrollText("You played on the swings. +1 Happiness\n")
+            happiness = specialcombine(happiness, 1, 0, 100)
+            wait(2)
+            clearscreen()
+            if random.randint(1, 5) == 2:
+                scrollText("You fell off the swings! -10 Happiness\n")
+                happiness = specialcombine(happiness, -10, 0, 100)
+                wait(2)
+                clearscreen()
+            elif random.randint(1, 5) == 3:
+                scrollText("A kid made fun of you for playing on the swings. -5 Happiness\n")
+                happiness = specialcombine(happiness, -5, 0, 100)
