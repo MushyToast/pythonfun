@@ -151,7 +151,30 @@ while True:
                 fireddeterminer = None
                 #specific job interactions
                 if job == "Apple":
-                    
+                    if random.randint(1, 5) == 3:
+                        scrollText("A customer comes up to you, complaining that the iPhone 13 & 14 are the same. What do you do? \n")
+                        print("[1] Say the camera is different")
+                        print("[2] Say the processor is different")
+                        print("[3] Say the battery is different")
+                        print("[4] Admit it's the same (it really is)")
+                        key = getkey()
+                        if key == "1":
+                            scrollText("You said the camera is different. Pretty BS\n")
+                            if random.randint(1, 3) == 2:
+                                scrollText("The customer was not happy. -5 happiness, -5 XP \n")
+                                happiness = specialcombine(happiness, -5, 0, 100)
+                                experience -= 5
+                            else:
+                                    scrollText("The customer was happy. +5 happiness, +5 XP \n")
+                                    happiness = specialcombine(happiness, 5, 0, 100)
+                                    experience += 5
+                        if key == "2":
+                            scrollText("You said the processor is different. Most technical answer. +1 XP\n")
+                            experience += 1
+                        if key == "3":
+                            scrollText("You said the battery is different.\n")
+                            wait(2)
+                            clearscreen()
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
