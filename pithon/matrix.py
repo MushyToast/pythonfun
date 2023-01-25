@@ -68,6 +68,7 @@ lastnames = ["Smith", "Johnson", "Davis", "Martinez", "Lopez", "Patel", "Lee", "
 weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 #LOADING
 clearscreen()
+"""
 for x in range(0, random.randint(1, 10)):
     thistip = ("Loading.. Tip: " + random.choice(tips))
     tim = 0.2
@@ -131,6 +132,8 @@ for x in range(0, random.randint(1, 10)):
     clearscreen()
     print("\ " + thistip)
 clearscreen()
+"""
+
 #ACTUAL CODE
 
 scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid. \n", 0.01)
@@ -155,7 +158,7 @@ while True:
         balance += jobinfo[job]["WeeklyPay"]
     weekday = weekdays[day]
     print(weekday)
-    print("------------------")
+    print(r"\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/")
     print(f"Job Experience: {experience}")
     print("Balance: $" + str(balance))
     print("Job: " + job)
