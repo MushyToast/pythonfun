@@ -8,10 +8,7 @@ import sys
 import pyfiglet
 #FUNCTIONS
 def clearscreen():
-    try:
-        os.system('cls')
-    except:
-        os.system('clear')
+    os.system("clear")
 
 def scrollText(text, delay=0.1):
     for i in text:
