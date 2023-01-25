@@ -188,6 +188,7 @@ while True:
                             scrollText("Jim is angry. He tells Michael Scott. \n")
                             scrollText("Michael Scott is angry. He fires you. -15 happiness \n")
                             job = "Unemployed"
+                            fireddeterminer = 69
                             happiness = specialcombine(happiness, -15, 0, 100)
                     else:
                         scrollText("You see your boss at work. What do you do? \n")
