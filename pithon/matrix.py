@@ -54,7 +54,11 @@ jobinfo = {
 
 }
 
+gfirst = ["Olivia", "Emma", "Ava", "Charlotte", "Harper", "Avery", "Camelia", "Sophia", "Sofia", "Luna", "Elizabeth", "Scarlett", "Madison", "Isabella", "Isabel", "Emily", "Audrey", "Mya", "Savannah", "August", "Sadie", "Hailey", "Autumn", "Quinn", "Harley", "Sonia", "Naveah", "Natalia", "Jade", "Adeline", "Alexandra", "Sandy", "Lydia", "Peyton", "Allison", "Megan", "Meghan", "Athena", "Lily", "Liliana", "Fate", "Kaylee", "Ella", "Ivy", "Charlie", "Jessie", "Alex", "Miley", "Madi", "Bella", "Anabella", "Ximena", "Xochitl", "Carmen", "Kylie", "Zoe", "Zoey", "Alyssa", "May", "Mei", "Rachel", "Alexis", "Julia", "Karla", "Amanda", "Amelia", "Mia", "Illa", "Arya", "Annabel", "Annabella"]
 
+bfirst = ["Nolan", "Alex", "Marcus", "Daniel", "Benjamin", "George", "Liam", "Lucas", "Noah", "Oliver", "Gavin", "James", "Alexander", "Jacob", "Levi", "Sebastian", "Joseph", "John", "David", "Brian", "Reid", "Joaquin", "Morgan", "Wyatt", "Matthew", "Luke", "Asher", "Carter", "Leo", "Jayden", "Isaiah", 'Isiah', "Christian", "Thomas", "Tommy", "Kingston", "Michael", "Jackson", "Finn", "Mason", "Jason", "Jay", "Hayden", "Andrew", "Keil", "Tyler", "Cameron", "Samuel", "Sam", "Martin", "Ruben", "Marco", "Lukas", "CJ", "Aidan"]
+
+lastnames = ["Smith", "Johnson", "Davis", "Martinez", "Lopez", "Patel", "Lee", "Harris", "Sanchez", "Munoz", "Clark", "Lewis", "Miller", "Young", "Scott", "Torres", "Frausto", "King", "Richards", "Ying", "Su", "Green", "Adams", "Nelson", "Baker", "Rivera", "Cervantes", "Contreras", "Roberts", "Carter", "Brady", "Gallegos", "Jenner", "Swift", "Shannon", "Papik", "Reasin", "Cardenas", "Maldonado", "Cintron", "Royes", "Bivens", "Eden", "Guy", "Hernandez", "Kuehfuss", "Rivas", "Laguitao", "Jackson", "Friedman", "Fletcher", "Flynn", "McCaleb", "McDonald", "Middleton", "Thiel", "Flock", "Hart", "David", "Wilson", "Anderson", "Mercury", "Martin", "Depp", "Scott", "Nathan", "Morgan", "Rusch"]
 
 weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
