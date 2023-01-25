@@ -221,7 +221,7 @@ while True:
                         print("[4] Admit the fries are cold (they really are)")
                         key = getkey()
                         if key == "1":
-                            scrollText("You said the fries are fresh. Pretty BS\n")
+                            scrollText("You said the fries are fresh. BS, nothing from McDonald's is fresh.\n")
                             if random.randint(1, 3) == 2:
                                 scrollText("The customer was not happy. -5 happiness, -5 XP \n")
                                 wait(2)
