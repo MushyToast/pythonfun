@@ -261,6 +261,37 @@ while True:
                             if random.randint(1,5) == 3:
                                 scrollText("The customer was not happy, and went to the manager. -5 happiness, -5 XP \n")
                                 experience -= 5
+                                happiness = specialcombine(happiness, -5, 0, 100)
+                                wait(2)
+                                clearscreen()
+                            else:
+                                scrollText("The customer was happy. +5 happiness, +5 XP \n")
+                                wait(2)
+                                happiness = specialcombine(happiness, 5, 0, 100)
+                                experience += 5
+                                clearscreen()
+                if job == "Dunder Mifflin":
+                    if random.randint(1, 3) == 3:
+                        scrollText("Your coworker, Jim Halpert plays a prank on you. He puts your stapler in Jell-O. What do you do? \n")
+                        print("[1] Get mad")
+
+                        print("[2] Laugh it off")
+                        print("[3] Get revenge")
+                        key = getkey()
+                        if key == "1":
+                            scrollText("You got mad. -5 XP, -10 Happiness \n")
+                            experience -= 5
+                            happiness = specialcombine(happiness, -10, 0, 100)
+                            wait(0.5)
+                            clearscreen()
+                        if key == "2":
+                            scrollText("You laughed it off. +5 XP, +10 Happiness \n")
+                            experience += 5
+                            happiness = specialcombine(happiness, 10, 0, 100)
+                            wait(0.5)
+                            clearscreen()
+                        if key == "3":
+                            scrollText("You got revenge. +5 XP, +10 Happiness \n")
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
