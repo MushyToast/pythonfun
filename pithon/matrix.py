@@ -619,6 +619,7 @@ while True:
                     scrollText("Wait..what? You have..wings! You are flying!\n")
                     wait(2)
                     scrollText("Oh, it turned out to be a dream. -20 Happiness\n")
+                    daycompleted = True
                     happiness = specialcombine(happiness, -20, 0, 100)
                     clearscreen()
                 else:
