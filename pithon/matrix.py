@@ -57,6 +57,7 @@ jobinfo = {
 
 }
 
+tips = ["Don't put your coworkers stapler in the microwave while it's in Jell-O and turn it on", "Don't ask your boss for a raise when he's in a bad mood", "Buy electronics to surf the web", "Don't say iPhones are the same."]
 
 gfirst = ["Olivia", "Emma", "Ava", "Charlotte", "Harper", "Avery", "Camelia", "Sophia", "Sofia", "Luna", "Elizabeth", "Scarlett", "Madison", "Isabella", "Isabel", "Emily", "Audrey", "Mya", "Savannah", "August", "Sadie", "Hailey", "Autumn", "Quinn", "Harley", "Sonia", "Naveah", "Natalia", "Jade", "Adeline", "Alexandra", "Sandy", "Lydia", "Peyton", "Allison", "Megan", "Meghan", "Athena", "Lily", "Liliana", "Fate", "Kaylee", "Ella", "Ivy", "Charlie", "Jessie", "Alex", "Miley", "Madi", "Bella", "Anabella", "Ximena", "Xochitl", "Carmen", "Kylie", "Zoe", "Zoey", "Alyssa", "May", "Mei", "Rachel", "Alexis", "Julia", "Karla", "Amanda", "Amelia", "Mia", "Illa", "Arya", "Annabel", "Annabella"]
 
@@ -65,7 +66,71 @@ bfirst = ["Nolan", "Alex", "Marcus", "Daniel", "Benjamin", "George", "Liam", "Lu
 lastnames = ["Smith", "Johnson", "Davis", "Martinez", "Lopez", "Patel", "Lee", "Harris", "Sanchez", "Munoz", "Clark", "Lewis", "Miller", "Young", "Scott", "Torres", "Frausto", "King", "Richards", "Ying", "Su", "Green", "Adams", "Nelson", "Baker", "Rivera", "Cervantes", "Contreras", "Roberts", "Carter", "Brady", "Gallegos", "Jenner", "Swift", "Shannon", "Papik", "Reasin", "Cardenas", "Maldonado", "Cintron", "Royes", "Bivens", "Eden", "Guy", "Hernandez", "Kuehfuss", "Rivas", "Laguitao", "Jackson", "Friedman", "Fletcher", "Flynn", "McCaleb", "McDonald", "Middleton", "Thiel", "Flock", "Hart", "David", "Wilson", "Anderson", "Mercury", "Martin", "Depp", "Scott", "Nathan", "Morgan", "Rusch"]
 
 weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
+#LOADING
+clearscreen()
+for x in range(0, random.randint(1, 10)):
+    thistip = ("Loading.. Tip: " + random.choice(tips))
+    tim = 0.2
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("/ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("/ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("/ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("/ " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("| " + thistip)
+    time.sleep(tim)
+    clearscreen()
+    print("\ " + thistip)
+clearscreen()
 #ACTUAL CODE
 
 scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid. \n", 0.01)
