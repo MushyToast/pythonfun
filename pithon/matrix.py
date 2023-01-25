@@ -405,7 +405,7 @@ while True:
                     scrollText("You bought bread. \n")
                     itemsinfridge += 1
                     wait(2)
-                    clearscreen()
+                    clearscreen() 
                 else:
                     scrollText(f"You don't have enough money. You need $1. You only have ${balance}\n")
                     wait(2)
