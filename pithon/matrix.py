@@ -399,6 +399,41 @@ while True:
                                 wait(5)
                                 clearscreen()
                                 exit()
+                if job == "Microsoft":
+                    if random.randint(1, 3) == 3:
+                        scrollText("You see Bill Gates at work. He is busy working on a new computer. What do you do? \n")
+                        print("[1] Talk to Bill Gates")
+                        print("[2] Do nothing")
+                        print("[3] Request a raise")
+                        print("[4] Tell Steve Ballmer")
+                        key = getkey()
+                        if key == "1":
+                            scrollText("You talked to Bill Gates. +10 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "3":
+                            scrollText("You requested a raise. \n")
+                            determiner = random.randint(1, 10)
+                            fireddeterminer = random.randint(1, 200)
+                            if determiner == 13:
+                                scrollText("Bill Gates said yes! +10 XP \n")
+                                experience += 10
+                                wait(0.5)
+                                clearscreen()
+                            else:
+                                scrollText("Bill Gates said no. -5 XP \n")
+                                experience -= 5
+                                wait(0.5)
+                                clearscreen()
+                        if key == "2":
+                            scrollText("You did nothing. \n")
+                            wait(0.5)
+                            clearscreen()
+                        if key == "4":
+                            scrollText("You told Steve Ballmer. \n")
+                            wait(0.5)
+                            clearscreen()
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
