@@ -145,7 +145,6 @@ while True:
                 scrollText("You went back to work. \n")
                 wait(1)
                 fireddeterminer = None
-                firedbymichaelscott = False
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
@@ -173,6 +172,7 @@ while True:
                                 if fireddeterminer == 69:
                                     scrollText("Michael Scott said no. I guess he was in a bad mood because he fired you. -15 happiness \n")
                                     job = "Unemployed"
+                                    fireddeterminer = 69
                                     happiness = specialcombine(happiness, -15, 0, 100)
                                     wait(2)
                                     clearscreen()
@@ -224,7 +224,7 @@ while True:
                                     happiness = specialcombine(happiness, -5, 0, 100)
                                     wait(2)
                                     clearscreen()
-                if fireddeterminer != 69 and firedbymichaelscott == False:
+                if fireddeterminer != 69:
                     scrollText("You went back to work. \n")
                     wait(1)
                     scrollText("You went home. \n")
