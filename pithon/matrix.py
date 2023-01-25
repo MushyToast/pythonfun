@@ -90,7 +90,6 @@ while True:
         balance += jobinfo[job]["WeeklyPay"]
     weekday = weekdays[day]
     print(weekday)
-    print(jobsfiredfrom)
     print("------------------")
     print(f"Job Experience: {experience}")
     print("Balance: $" + str(balance))
