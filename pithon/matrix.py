@@ -581,3 +581,29 @@ while True:
                     clearscreen()
                 if key == "4":
                     clearscreen()
+        scrollText("You are now super tired. What will you do?\n")
+        print("[1] Go home")
+        print("[2] Grab an energy drink")
+        print("[3] Drink water")
+        print("[4] Go back")
+        key = getkey()
+        if key == "1":
+            clearscreen()
+            scrollText("You went home. +5 Happiness\n")
+            happiness = specialcombine(happiness, 5, 0, 100)
+            wait(2)
+            clearscreen()
+        if key == "2":
+            clearscreen()
+            scrollText("You grabbed an energy drink. +10 Happiness\n")
+            happiness = specialcombine(happiness, 10, 0, 100)
+            wait(2)
+            clearscreen()
+        if key == "3":
+            clearscreen()
+            scrollText("You drank water. +5 Happiness\n")
+            happiness = specialcombine(happiness, 5, 0, 100)
+            wait(2)
+            clearscreen()
+        if key == "4":
+            clearscreen()
