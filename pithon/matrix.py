@@ -403,6 +403,7 @@ while True:
                 if balance >= 1:
                     balance -= 1
                     scrollText("You bought bread. \n")
+                    itemsinfridge += 1
                     wait(2)
                     clearscreen()
                 else:
@@ -413,6 +414,7 @@ while True:
                 if balance >= 2:
                     balance -= 2
                     scrollText("You bought milk. \n")
+                    itemsinfridge += 1
                     wait(2)
                     clearscreen()
                 else:
@@ -423,6 +425,7 @@ while True:
                 if balance >= 3:
                     balance -= 3
                     scrollText("You bought eggs. \n")
+                    itemsinfridge += 1
                     wait(2)
                     clearscreen()
                 else:
