@@ -698,3 +698,9 @@ while True:
             elif random.randint(1, 5) == 3:
                 scrollText("A kid made fun of you for playing on the monkey bars. -5 Happiness\n")
                 happiness = specialcombine(happiness, -5, 100)
+        if key == "4":
+            clearscreen()
+            scrollText("You went on a peaceful walk. +1 Happiness\n")
+            happiness = specialcombine(happiness, 1, 0, 100)
+            wait(2)
+            clearscreen()
