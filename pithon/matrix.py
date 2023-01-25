@@ -90,6 +90,7 @@ while True:
         balance += jobinfo[job]["WeeklyPay"]
     weekday = weekdays[day]
     print(weekday)
+    print(jobsfiredfrom)
     print("------------------")
     print(f"Job Experience: {experience}")
     print("Balance: $" + str(balance))
@@ -121,7 +122,7 @@ while True:
                 wait(1)
                 scrollText("Still at work... \n", 0.01)
                 wait(1)
-                scrollText("It is now your lunch break \n")
+                scrollText("It is now your lunch break \n", 0.01)
                 print("What will you eat? ")
                 print("[1] Sandwich")
                 print("[2] Salad")
