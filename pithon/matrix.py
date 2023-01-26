@@ -149,12 +149,14 @@ while True:
         daycompleted = False
         if allowedserialkiller == True:
             allowedserialkiller = False
-            scrollText("When you woke up, you checked your phone and found breaking news.")
-            scrollText("It reads:")
+            scrollText("When you woke up, you checked your phone and found breaking news.\n")
+            scrollText("It reads:\n")
             print("The M4TrIx News:")
             print("----------------")
             print("BREAKING NEWS!")
             print("Serial killer spotted in the area. He was last seen at Walmart. He poisoned many of his victims with potassium cyanide. Be safe.")
+            wait(2)
+            clearscreen()
     if daycompleted == False:
         if day == -1:
             day = 0
