@@ -147,6 +147,9 @@ while True:
         totaldays += 1
         day += 1
         daycompleted = False
+        if allowedserialkiller == True:
+            allowedserialkiller = False
+            scrollText("When you woke up, you checked your phone and found breaking news.")
     if daycompleted == False:
         if day == -1:
             day = 0
@@ -159,7 +162,7 @@ while True:
         balance += jobinfo[job]["WeeklyPay"]
     weekday = weekdays[day]
     print(weekday)
-    print(r"\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/")
+    print("==================")
     print(f"Job Experience: {experience}")
     print("Balance: $" + str(balance))
     print("Job: " + job)
@@ -559,6 +562,9 @@ while True:
                                 experience += 15
                                 wait(0.5)
                                 clearscreen()
+                            if key == "2":
+                                clearscreen()
+                                allowedserialkiller = True
 
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
@@ -898,6 +904,7 @@ while True:
                     clearscreen()
             if key == "4":
                 clearscreen()
+            key = None
         if key == "2":
             clearscreen()
             print("Clothes:")
@@ -941,6 +948,7 @@ while True:
                     clearscreen()
             if key == "4":
                 clearscreen()
+            key = None
         if key == "3":
             clearscreen()
             print("Electronics:")
