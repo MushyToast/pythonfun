@@ -35,6 +35,7 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.000001)
 balance = 500
 day = -1
 totaldays = 0
+allowedserialkiller = False
 friends = []
 jobsfiredfrom = []
 job = "Unemployed"
@@ -45,15 +46,15 @@ daycompleted = False
 experience = 0
 jobinfo = {
     "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0, "XPRequired": 0},
-    "McDonalds": {"WeeklyPay": 620, "WeeklyHours": 40, "XPRequired": 0},
+    "McDonalds": {"WeeklyPay": 620, "WeeklyHours": 40, "XPRequired": 0}, #
     "Walmart": {"WeeklyPay": 800, "WeeklyHours": 40, "XPRequired": 25},
-    "Amazon": {"WeeklyPay": 900, "WeeklyHours": 40, "XPRequired": 35},
+    "Amazon": {"WeeklyPay": 900, "WeeklyHours": 40, "XPRequired": 35}, 
     "Google": {"WeeklyPay": 1000, "WeeklyHours": 50, "XPRequired": 60},
     "Microsoft": {"WeeklyPay": 1200, "WeeklyHours": 50, "XPRequired": 100},
-    "Apple": {"WeeklyPay": 1250, "WeeklyHours": 50, "XPRequired": 120},
-    "IT Tech": {"WeeklyPay": 1300, "WeeklyHours": 55, "XPRequired": 150},
-    "Dunder Mifflin": {"WeeklyPay": 1500, "WeeklyHours": 60, "XPRequired": 69},
-    "Teacher": {"WeeklyPay": 900, "WeeklyHours": 60, "XPRequired": 60},
+    "Apple": {"WeeklyPay": 1250, "WeeklyHours": 50, "XPRequired": 120}, #
+    "IT Tech": {"WeeklyPay": 1300, "WeeklyHours": 55, "XPRequired": 150}, #
+    "Dunder Mifflin": {"WeeklyPay": 1500, "WeeklyHours": 60, "XPRequired": 69}, #
+    "Teacher": {"WeeklyPay": 900, "WeeklyHours": 60, "XPRequired": 60}, #
 
 }
 
@@ -399,8 +400,166 @@ while True:
                                 wait(5)
                                 clearscreen()
                                 exit()
-                if job == "Microsoft":
-                    
+                if job == "Teacher":
+                    if random.randint(1, 3) == 3:
+                        scrollText("You see a student cheating on a test. What do you do? \n")
+                        print("[1] Tell the student to stop")
+                        print("[2] Silently give him a zero")
+                        print("[3] Call the student out")
+                        key = getkey()
+                        if key == "1":
+                            clearscreen()
+                            scrollText("You told the student to stop. +5 XP, +1 Happiness \n")
+                            experience += 5
+                            happiness = specialcombine(happiness, 1, 0, 100)
+                            wait(0.5)
+                            clearscreen()
+                        if key == "2":
+                            clearscreen()
+                            scrollText("You gave the student a zero. +5 XP, +5 Happiness \n")
+                            experience += 5
+                            happiness = specialcombine(happiness, 5, 0, 100)
+                            wait(0.5)
+                            clearscreen()
+                            wait(0.5)
+                            scrollText("The student comes up to you pleading for a higher grade. What do you do? \n")
+                            print("[1] Give him a higher grade")
+                            print("[2] Explain that cheating is wrong")
+                            print("[3] Tell him to get out of your classroom")
+                            key = getkey()
+                            if key == "1":
+                                clearscreen()
+                                scrollText("You gave the student a higher grade. -5 XP, +5 Happiness \n")
+                                experience -= 5
+                                happiness = specialcombine(happiness, 5, 0, 100)
+                                wait(0.5)
+                                clearscreen()
+                            if key == "2":
+                                clearscreen()
+                                scrollText("You explained that cheating is wrong. +5 XP \n")
+                                experience += 5
+                                wait(0.5)
+                                clearscreen()
+                            if key == "3":
+                                clearscreen()
+                                scrollText("You told him to get out of your classroom.\n")
+                                wait(0.5)
+                                clearscreen()
+                                scrollText("The student tells the principal that you are a bad teacher.\n")
+                                wait(0.5)
+                                scrollText("The principal comes up to you and asks what happened. What do you do? \n")
+                                print("[1] Tell the truth")
+                                print("[2] Lie")
+                                key = getkey()
+                                if key == "1":
+                                    clearscreen()
+                                    scrollText("You told the truth.\n")
+                                    wait(0.5)
+                                    scrollText("The principal tells you that you shouldn't tell a student to get out of your classroom. -10 XP \n")
+                                    experience -= 10
+                                    clearscreen()
+                                if key == "2":
+                                    clearscreen()
+                                    scrollText("You lied.\n")
+                                    wait(0.5)
+                                    scrollText("The principal believes you. +5 XP \n")
+                                    experience += 5
+                                    clearscreen()
+                if job == "IT Tech":
+                    if random.randint(1, 3) == 3:
+                        scrollText("A customer's computer has 37 viruses. What do you do? \n")
+                        print("[1] Tell the customer to buy a new computer")
+                        print("[2] Ask the customer how he got the viruses")
+                        print("[3] Request that the customer sends in the computer")
+                        key = getkey()
+                        if key == "1":
+                            clearscreen()
+                            scrollText("You told the customer to buy a new computer. +5 XP\n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "2":
+                            clearscreen()
+                            scrollText("You asked the customer how he got the viruses.\n")
+                            wait(0.5)
+                            print("The customer says he tried to download free movies from a sketchy website")
+                            wait(0.5)
+                            scrollText("You tell the customer that he should not download free movies from sketchy websites. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "3":
+                            clearscreen()
+                            scrollText("You requested that the customer sends in the computer.\n")
+                            wait(0.5)
+                            scrollText("The customer says that he will send in the computer.\n")
+                            wait(0.5)
+                            scrollText("The customer never sends in the computer. -5 XP \n")
+                            experience -= 5
+                            wait(0.5)
+                            clearscreen()
+                if job == "Walmart":
+                    if random.randint(1, 3) == 3:
+                        scrollText("You see a customer stealing a pack of gum. What do you do? \n")
+                        print("[1] Tell the customer to stop")
+                        print("[2] Do nothing. You don't get paid enough to care.")
+                        print("[3] Call the police")
+                        key = getkey()
+                        if key == "1":
+                            clearscreen()
+                            scrollText("You told the customer to stop. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "3":
+                            clearscreen()
+                            scrollText("You called the police. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                            scrollText("The police arrive and arrest the customer. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                    else:
+                        scrollText("A customer comes up to you asking where he can find potassium cyanide. What do you do? \n")
+                        print("[1] Tell the customer that you don't know")
+                        print("[2] Tell the customer that Walmart does not sell potassium cyanide")
+                        print("[3] Tell the customer that you shouldn't be asking that question")
+                        key = getkey()
+                        if key == "1":
+                            clearscreen()
+                            scrollText("You told the customer that you don't know. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "2":
+                            clearscreen()
+                            scrollText("You told the customer that Walmart does not sell potassium cyanide. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                        if key == "3":
+                            clearscreen()
+                            scrollText("You told the customer that you shouldn't be asking that question. +5 XP \n")
+                            experience += 5
+                            wait(0.5)
+                            clearscreen()
+                            scrollText("You have a sketchy feeling about the customer. What do you do?\n")
+                            print("[1] Call the police")
+                            print("[2] Do nothing")
+                            key = getkey()
+                            if key == "1":
+                                clearscreen()
+                                scrollText("You called the police. +5 XP \n")
+                                experience += 5
+                                wait(0.5)
+                                clearscreen()
+                                scrollText("The police talk to you and reveal that the customer was a serial killer. +15 XP \n")
+                                experience += 15
+                                wait(0.5)
+                                clearscreen()
+
                 if random.randint(3, 3) == 3:
                     if job == "Dunder Mifflin":
                         scrollText("You see your boss, Michael Scott at work. He is busy flirting with Pam at the reception desk. What do you do? \n")
