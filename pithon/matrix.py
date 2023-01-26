@@ -154,7 +154,7 @@ while True:
             print("The M4TrIx News:")
             print("----------------")
             print("BREAKING NEWS!")
-            print("Serial killer spotted in the area. He was last seen at Walmart. He poisones ")
+            print("Serial killer spotted in the area. He was last seen at Walmart. He poisoned many of his victims with potassium cyanide. Be safe.")
     if daycompleted == False:
         if day == -1:
             day = 0
