@@ -50,3 +50,5 @@ name.then(function () {
         }, 10000);
     });
 });
+
+console.log("Hello,");
