@@ -10,6 +10,3 @@ function getWpData(url) {
     resolve()
   });
 }
-
-console.log(getWpData('http://www.example.org/example.txt'))
-
