@@ -1,12 +1,12 @@
-const request = require('https')
+const https = require('https')
 
 function getWpData(url) {
   return new Promise((resolve, reject) => {
-    var req = new XMLHttpRequest
-    req.addEventListener("load", reqListener);
-    req.open("GET", "http://www.example.org/example.txt");
-    req.send();
-    return req
-    resolve()
+    const options = {
+      hostname: url,
+      port: 443,
+      path: '/index.html',
+    }
+    
   });
 }
