@@ -1,4 +1,4 @@
-const request = require('XMLHttpRequest').XMLHttpRequest;
+const request = require('https')
 
 function getWpData(url) {
   return new Promise((resolve, reject) => {
