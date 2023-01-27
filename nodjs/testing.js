@@ -11,5 +11,5 @@ function getWpData(url) {
   });
 }
 
-
+console.log(getWpData('http://www.example.org/example.txt'))
 
