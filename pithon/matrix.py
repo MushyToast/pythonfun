@@ -475,6 +475,8 @@ while True:
                                     scrollText("The principal believes you. +5 XP \n")
                                     experience += 5
                                     clearscreen()
+                if job == "Microsoft":
+                    
                 if job == "IT Tech":
                     if random.randint(1, 3) == 3:
                         scrollText("A customer's computer has 37 viruses. What do you do? \n")
