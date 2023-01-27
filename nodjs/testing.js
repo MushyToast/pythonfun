@@ -1,27 +1,13 @@
-const https = require('https');
+const http = require('https');
 
-function getWpData(url) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: url,
-      port: 443,
-      path: '/index.html',
-    }
-    https.get(options, function(res){
-      res.on('data', function(d) {
-        return d
-        resolve(d);
-      });
-      res.on('error', function(e){
-        return e
-        reject(e);
-      });
-    });
-  });
-}
+var options = {
+  host: 'www.google.com',
+  port: 80,
+  path: '/index.html'
+};
 
-req = getWpData('www.google.com');
-
-req.on('resolve', function(data){
-  console.log(data);
+http.get(options, function(res) {
+  console.log("Got response: " + res.statusCode);
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
 });
