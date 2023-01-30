@@ -36,6 +36,7 @@ balance = 500
 day = -1
 totaldays = 0
 allowedserialkiller = False
+tookDayOff = False
 friends = []
 jobsfiredfrom = []
 job = "Unemployed"
@@ -47,7 +48,7 @@ experience = 0
 jobinfo = {
     "Unemployed": {"WeeklyPay": 0, "WeeklyHours": 0, "XPRequired": 0},
     "McDonalds": {"WeeklyPay": 620, "WeeklyHours": 40, "XPRequired": 0}, #
-    "Walmart": {"WeeklyPay": 800, "WeeklyHours": 40, "XPRequired": 25},
+    "Walmart": {"WeeklyPay": 800, "WeeklyHours": 40, "XPRequired": 25}, #
     "Amazon": {"WeeklyPay": 900, "WeeklyHours": 40, "XPRequired": 35}, 
     "Google": {"WeeklyPay": 1000, "WeeklyHours": 50, "XPRequired": 60},
     "Microsoft": {"WeeklyPay": 1200, "WeeklyHours": 50, "XPRequired": 100},
@@ -135,7 +136,7 @@ for x in range(0, random.randint(1, 10)):
 clearscreen()
 """
 
-#ACTUAL CODE
+#ACTUAL CODE 
 
 scrollText("This is the Matrix. A never ending cycle. Go to work. Get paid. Go to work. Get paid. \n", 0.01)
 scrollText("You are fresh out of college. You have no job. You have no money. You are single. \n", 0.01)
@@ -194,6 +195,8 @@ while True:
                 clearscreen()
             elif day == 5 or day == 6:
                     scrollText("It's the weekend. You have no work. \n", 0.01)
+            elif tookDayOff == True:
+                scrollText("You took the day off. You can't go to work. \n", 0.01)
             else:
                 experience +=  random.randint(1, 10)
                 scrollText("You went to work. \n", 0.01)
@@ -476,7 +479,7 @@ while True:
                                     experience += 5
                                     clearscreen()
                 if job == "Microsoft":
-                    
+                    scrollText("E")
                 if job == "IT Tech":
                     if random.randint(1, 3) == 3:
                         scrollText("A customer's computer has 37 viruses. What do you do? \n")
@@ -860,6 +863,30 @@ while True:
                 wait(2)
                 clearscreen()
             if key == "0":
+                clearscreen()
+        if key == "3":
+            scrollText("You want to take the day off. What will your excuse be? \n")
+            print("[1] I have a headache")
+            print("[2] I have a stomach ache")
+            print("[3] I have a fever")
+            print("[4] Go back")
+            key = getkey()
+            if key == "1":
+                scrollText("You said you have a headache. \n")
+                tookDayOff = True
+                wait(2)
+                clearscreen()
+            if key == "2":
+                scrollText("You said you have a stomach ache. \n")
+                tookDayOff = True
+                wait(2)
+                clearscreen()
+            if key == "3":
+                scrollText("You said you have a fever. \n")
+                tookDayOff = True
+                wait(2)
+                clearscreen()
+            if key == "4":
                 clearscreen()
         key = None
     elif key == "2":
