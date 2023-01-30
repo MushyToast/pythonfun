@@ -35,6 +35,7 @@ scrollText(pyfiglet.figlet_format("Matrix", font="big"), 0.000001)
 balance = 500
 day = -1
 totaldays = 0
+assets = []
 allowedserialkiller = False
 tookDayOff = False
 friends = []
@@ -180,6 +181,8 @@ while True:
     print("[2] Go to the store")
     print("[3] Go to the gym")
     print("[4] Go to the park")
+    print("[5] Go to the special store")
+    print("[6] View your assets")
     key = getkey()
     if key == "1":
         clearscreen()
@@ -1250,5 +1253,53 @@ while True:
             wait(2)
             clearscreen()
             key = None
+    if key == "5":
+        scrollText("You are now at the specialty store. What will you do?\n")
+        print("[1] View property")
+        print("[2] View cars")
+        print("[3] Go back")
+        key = getkey()
+        if key == "1":
+            clearscreen()
+            scrollText(f"You currently live in {residence}.\n")
+            scrollText("What would you like to do?\n")
+            print("[1] View houses")
+            print("[2] View apartments")
+            print("[3] View bigger houses")
+            print("[4] View mansions")
+            print("[5] Go back")
+            key = getkey()
+            if key == "1":
+                clearscreen()
+                scrollText("Houses:\n")
+                scrollText("1. Small house - $100,000\n")
+                scrollText("2. Medium house - $200,000\n")
+                scrollText("3. Large house - $300,000\n")
+                scrollText("4. Huge house - $400,000\n")
+                scrollText("5. Mega house - $500,000\n")
+                scrollText("6. Giga house - $600,000\n")
+                scrollText("7. Tera house - $700,000\n")
+                scrollText("8. Peta house - $800,000\n")
+                scrollText("9. Exa house - $900,000\n")
+                scrollText("10. Zetta house - $1,000,000\n")
+                scrollText("11. Yotta house - $1,100,000\n")
+                scrollText("12. Xona house - $1,200,000\n")
+                scrollText("13. Weka house - $1,300,000\n")
+                scrollText("14. Veda house - $1,400,000\n")
+                scrollText("15. Un house - $1,500,000\n")
+                scrollText("16. Du house - $1,600,000\n")
+                scrollText("17. Tri house - $1,700,000\n")
+                scrollText("18. Tetra house - $1,800,000\n")
+                scrollText("19. Penta house - $1,900,000\n")
+                scrollText("20. Hexa house - $2,000,000\n")
+                scrollText("21. Hepta house - $2,100,000\n")
+                scrollText("22. Octa house - $2,200,000\n")
+                scrollText("23. Nona house - $2,300,000\n")
+                scrollText("24. Deca house - $2,400,000\n")
+                scrollText("25. Hecta house - $2,500,000\n")
+                scrollText("26. Deka house - $2,600,000\n")
+                scrollText("27. Hecto house - $2,700,000\n")
+                scrollText("28. Kilo house - $2,800,000\n")
+    
     if key == "a":
         experience += 10000
