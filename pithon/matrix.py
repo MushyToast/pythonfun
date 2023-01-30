@@ -1272,34 +1272,127 @@ while True:
             if key == "1":
                 clearscreen()
                 scrollText("Houses:\n")
-                scrollText("1. Small house - $100,000\n")
-                scrollText("2. Medium house - $200,000\n")
-                scrollText("3. Large house - $300,000\n")
-                scrollText("4. Huge house - $400,000\n")
-                scrollText("5. Mega house - $500,000\n")
-                scrollText("6. Giga house - $600,000\n")
-                scrollText("7. Tera house - $700,000\n")
-                scrollText("8. Peta house - $800,000\n")
-                scrollText("9. Exa house - $900,000\n")
-                scrollText("10. Zetta house - $1,000,000\n")
-                scrollText("11. Yotta house - $1,100,000\n")
-                scrollText("12. Xona house - $1,200,000\n")
-                scrollText("13. Weka house - $1,300,000\n")
-                scrollText("14. Veda house - $1,400,000\n")
-                scrollText("15. Un house - $1,500,000\n")
-                scrollText("16. Du house - $1,600,000\n")
-                scrollText("17. Tri house - $1,700,000\n")
-                scrollText("18. Tetra house - $1,800,000\n")
-                scrollText("19. Penta house - $1,900,000\n")
-                scrollText("20. Hexa house - $2,000,000\n")
-                scrollText("21. Hepta house - $2,100,000\n")
-                scrollText("22. Octa house - $2,200,000\n")
-                scrollText("23. Nona house - $2,300,000\n")
-                scrollText("24. Deca house - $2,400,000\n")
-                scrollText("25. Hecta house - $2,500,000\n")
-                scrollText("26. Deka house - $2,600,000\n")
-                scrollText("27. Hecto house - $2,700,000\n")
-                scrollText("28. Kilo house - $2,800,000\n")
+                print("[1] Small Craftsman - $100,000")
+                print("[2] Medium Craftsman - $200,000")
+                print("[3] Large Craftsman - $300,000")
+                print("[4] Small Colonial - $400,000")
+                print("[5] Medium Colonial - $500,000")
+                print("[6] Large Colonial - $600,000")
+                print("[7] Small Tudor - $700,000")
+                print("[8] Medium Tudor - $800,000")
+                print("[9] Large Tudor - $900,000")
+                print("[q] Go back")
+                key = getkey()
+                if key == "1":
+                    if balance >= 100000:
+                        residence = "Small Craftsman"
+                        balance -= 100000
+                        scrollText("You bought a Small Craftsman. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "2":
+                    if balance >= 200000:
+                        residence = "Medium Craftsman"
+                        balance -= 200000
+                        scrollText("You bought a Medium Craftsman. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "3":
+                    if balance >= 300000:
+                        residence = "Large Craftsman"
+                        balance -= 300000
+                        scrollText("You bought a Large Craftsman. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "4":
+                    if balance >= 400000:
+                        residence = "Small Colonial"
+                        balance -= 400000
+                        scrollText("You bought a Small Colonial. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "5":
+                    if balance >= 500000:
+                        residence = "Medium Colonial"
+                        balance -= 500000
+                        scrollText("You bought a Medium Colonial. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "6":
+                    if balance >= 600000:
+                        residence = "Large Colonial"
+                        balance -= 600000
+                        scrollText("You bought a Large Colonial. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "7":
+                    if balance >= 700000:
+                        residence = "Small Tudor"
+                        balance -= 700000
+                        scrollText("You bought a Small Tudor. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "8":
+                    if balance >= 800000:
+                        residence = "Medium Tudor"
+                        balance -= 800000
+                        scrollText("You bought a Medium Tudor. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "9":
+                    if balance >= 900000:
+                        residence = "Large Tudor"
+                        balance -= 900000
+                        scrollText("You bought a Large Tudor. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "q":
+                    clearscreen()
     
     if key == "a":
         experience += 10000
