@@ -145,6 +145,7 @@ while True:
     clearscreen()
     if daycompleted == True:
         balance += 10
+        tookDayOff = False
         totaldays += 1
         day += 1
         daycompleted = False
