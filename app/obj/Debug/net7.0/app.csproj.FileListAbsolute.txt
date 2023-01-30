@@ -1,0 +1,15 @@
+/workspaces/pythonfun/app/bin/Debug/net7.0/app
+/workspaces/pythonfun/app/bin/Debug/net7.0/app.deps.json
+/workspaces/pythonfun/app/bin/Debug/net7.0/app.runtimeconfig.json
+/workspaces/pythonfun/app/bin/Debug/net7.0/app.dll
+/workspaces/pythonfun/app/bin/Debug/net7.0/app.pdb
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.csproj.AssemblyReference.cache
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.AssemblyInfoInputs.cache
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.AssemblyInfo.cs
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.csproj.CoreCompileInputs.cache
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.dll
+/workspaces/pythonfun/app/obj/Debug/net7.0/refint/app.dll
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.pdb
+/workspaces/pythonfun/app/obj/Debug/net7.0/app.genruntimeconfig.cache
+/workspaces/pythonfun/app/obj/Debug/net7.0/ref/app.dll
