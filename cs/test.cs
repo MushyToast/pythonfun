@@ -9,6 +9,9 @@ namespace GetUserInput
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Hello, " + name + "!");
+            console.WriteLine("Press any key to exit.");
+            Console.ReadKey(true);
+            
         }
     }
 }
