@@ -1393,6 +1393,130 @@ while True:
                         clearscreen()
                 if key == "q":
                     clearscreen()
-    
+
+            if key == "2":
+                clearscreen()
+                scrollText("Apartments:\n")
+                print("[1] Small Apartment - $100,000")
+                print("[2] Medium Apartment - $200,000")
+                print("[3] Large Apartment - $300,000")
+                print("[4] Small Condo - $400,000")
+                print("[5] Medium Condo - $500,000")
+                print("[6] Large Condo - $600,000")
+                print("[7] Small Penthouse - $700,000")
+                print("[8] Medium Penthouse - $800,000")
+                print("[9] Large Penthouse - $900,000")
+                print("[q] Go back")
+                key = getkey()
+                if key == "1":
+                    if balance >= 100000:
+                        residence = "Small Apartment"
+                        balance -= 100000
+                        scrollText("You bought a Small Apartment. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "2":
+                    if balance >= 200000:
+                        residence = "Medium Apartment"
+                        balance -= 200000
+                        scrollText("You bought a Medium Apartment. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "3":
+                    if balance >= 300000:
+                        residence = "Large Apartment"
+                        balance -= 300000
+                        scrollText("You bought a Large Apartment. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "4":
+                    if balance >= 400000:
+                        residence = "Small Condo"
+                        balance -= 400000
+                        scrollText("You bought a Small Condo. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "5":
+                    if balance >= 500000:
+                        residence = "Medium Condo"
+                        balance -= 500000
+                        scrollText("You bought a Medium Condo. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "6":
+                    if balance >= 600000:
+                        residence = "Large Condo"
+                        balance -= 600000
+                        scrollText("You bought a Large Condo. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "7":
+                    if balance >= 700000:
+                        residence = "Small Penthouse"
+                        balance -= 700000
+                        scrollText("You bought a Small Penthouse. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "8":
+                    if balance >= 800000:
+                        residence = "Medium Penthouse"
+                        balance -= 800000
+                        scrollText("You bought a Medium Penthouse. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "9":
+                    if balance >= 900000:
+                        residence = "Large Penthouse"
+                        balance -= 900000
+                        scrollText("You bought a Large Penthouse. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "q":
+                    clearscreen()
     if key == "a":
         experience += 10000
