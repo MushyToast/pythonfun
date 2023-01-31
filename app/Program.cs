@@ -1,16 +1,12 @@
 ﻿using System;
 
-namespace GetUserInput
+namespace print
 {
-    class Program
+    class Ptjrogram
     {
         private static void Main(string[] args)
         {
-            Console.Write("Please enter your name: ");
-            string name = Console.ReadLine();
-            Console.WriteLine("Hello, " + name + "!");
-            Thread.Sleep(5000);
-            Console.WriteLine("Hello");
+            Console.WriteLine("Hello, World!");
         }
     }
 }
