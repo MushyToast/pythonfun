@@ -1,7 +1,11 @@
-﻿internal class Program
+﻿using System;
+
+namespace App
 {
-    private static void Main(string[] args)
+    class Stuff
     {
-        Console.WriteLine("Hello, World!");
+        public string Name = "Hello!";
     }
+    Stuff s = new Stuff();
+    Console.WriteLine(s.Name);
 }
