@@ -1518,5 +1518,6 @@ while True:
                         clearscreen()
                 if key == "q":
                     clearscreen()
+                    
     if key == "a":
         experience += 10000
