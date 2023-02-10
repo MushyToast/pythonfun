@@ -1518,6 +1518,9 @@ while True:
                         clearscreen()
                 if key == "q":
                     clearscreen()
-                    
+
+            if key == "3":
+                clearscreen()
+                scrollText("")
     if key == "a":
         experience += 10000
