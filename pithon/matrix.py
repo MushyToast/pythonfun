@@ -1521,6 +1521,88 @@ while True:
 
             if key == "3":
                 clearscreen()
-                scrollText("")
+                scrollText("Bigger houses:")
+                print("[1] Small Contemporary - $1,000,000")
+                print("[2] Medium Contemporary - $1,500,000")
+                print("[3] Large Contemporary - $2,000,000")
+                print("[4] Small Modern - $2,500,000")
+                print("[5] Medium Modern - $3,000,000")
+                print("[6] Large Modern - $3,500,000")
+                print("[q] Go back")
+                key = getkey()
+                if key == "1":
+                    if balance >= 1000000:
+                        residence = "Small Contemporary"
+                        balance -= 1000000
+                        scrollText("You bought a Small Contemporary. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "2":
+                    if balance >= 1500000:
+                        residence = "Medium Contemporary"
+                        balance -= 1500000
+                        scrollText("You bought a Medium Contemporary. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "3":
+                    if balance >= 2000000:
+                        residence = "Large Contemporary"
+                        balance -= 2000000
+                        scrollText("You bought a Large Contemporary. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "4":
+                    if balance >= 2500000:
+                        residence = "Small Modern"
+                        balance -= 2500000
+                        scrollText("You bought a Small Modern. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "5":
+                    if balance >= 3000000:
+                        residence = "Medium Modern"
+                        balance -= 3000000
+                        scrollText("You bought a Medium Modern. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "6":
+                    if balance >= 3500000:
+                        residence = "Large Modern"
+                        balance -= 3500000
+                        scrollText("You bought a Large Modern. +20 Happiness\n")
+                        happiness = specialcombine(happiness, 20, 0, 100)
+                        wait(2)
+                        clearscreen()
+                    else:
+                        scrollText("You don't have enough money!\n")
+                        wait(2)
+                        clearscreen()
+                if key == "q":
+                    clearscreen()
     if key == "a":
         experience += 10000
