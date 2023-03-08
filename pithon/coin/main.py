@@ -1,11 +1,18 @@
 import json
 import random
+import os
+
+def getFileDir(dir):
+    here = os.path.dirname(os.path.abspath(__file__))
+
+    directory = os.path.join(here, dir)
+    return directory
 
 coins = {"Bytecoin"}
 
-Bytecoindata = {}
+bytecoindir = getFileDir("bytecoin.json")
 
-with open ("home/codespace/.python/current/bin/python3/workspaces/pythonfun/pithon/coin/bytecoin.json", "r") as f:
+with open (bytecoindir, "r") as f:
     Bytecoindata = json.load(f)
 
 print(Bytecoindata)
