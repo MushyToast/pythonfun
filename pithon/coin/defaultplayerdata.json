@@ -1,5 +1,7 @@
 {
     "CoinHoldings" : {"Bytecoin": 0, "Catcoin": 0, "Cryptonite": 0},
-    "PlayerCash" : 500
+    "PlayerCash" : 500,
+    "Miners": 1,
+    "MiningPower": 5
     
 }
