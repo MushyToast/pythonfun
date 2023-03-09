@@ -8,11 +8,23 @@ def getFileDir(dir):
     directory = os.path.join(here, dir)
     return directory
 
-coins = {"Bytecoin"}
+coins = {"Bytecoin", "Catcoin", "Cryptonite"}
 
-bytecoindir = getFileDir("bytecoin.json")
+plrdatadir = getFileDir("playerdata.json")
 
-with open (bytecoindir, "r") as f:
+with open (plrdatadir, "r") as f:
     Bytecoindata = json.load(f)
 
-print(Bytecoindata)
+print("\n\n\n\n\n")
+
+print("Welcome to Metacoin, the futuristic cryptocurrency simulator!")
+print("You can buy, sell, and trade coins, and even mine them!")
+
+print("Current Data:")
+print("Cash: " + str(Bytecoindata["PlayerCash"]))
+print("Bytecoin: " + str(Bytecoindata["CoinHoldings"]["Bytecoin"]))
+print("Catcoin: " + str(Bytecoindata["CoinHoldings"]["Catcoin"]))
+print("Cryptonite: " + str(Bytecoindata["CoinHoldings"]["Cryptonite"]))
+print("~~~")
+print("Mining Power: " + str(Bytecoindata["MiningPower"]))
+print("Miners: " + str(Bytecoindata["Miners"]))
