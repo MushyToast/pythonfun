@@ -74,3 +74,148 @@ while True:
                 print("You don't have enough cash!")
                 time.sleep(2)
                 clearscreen()
+        elif key == "2":
+            if plrdata["PlayerCash"] >= 2000:
+                plrdata["PlayerCash"] -= 2000
+                plrdata["MiningPower"] += 6
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Bundle QuadroXS6000 2012!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "3":
+            if plrdata["PlayerCash"] >= 3000:
+                plrdata["PlayerCash"] -= 3000
+                plrdata["MiningPower"] += 9
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro XR1000 Mini 2013!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "4":
+            if plrdata["PlayerCash"] >= 4000:
+                plrdata["PlayerCash"] -= 4000
+                plrdata["MiningPower"] += 12
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro XR1000 2014!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "5":
+            if plrdata["PlayerCash"] >= 5000:
+                plrdata["PlayerCash"] -= 5000
+                plrdata["MiningPower"] += 15
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro X150 2015!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "6":
+            if plrdata["PlayerCash"] >= 6000:
+                plrdata["PlayerCash"] -= 6000
+                plrdata["MiningPower"] += 18
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro X200 2015!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "7":
+            if plrdata["PlayerCash"] >= 7000:
+                plrdata["PlayerCash"] -= 7000
+                plrdata["MiningPower"] += 21
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro XS200 2015!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "8":
+            if plrdata["PlayerCash"] >= 8000:
+                plrdata["PlayerCash"] -= 8000
+                plrdata["MiningPower"] += 24
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro X300 2016!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "9":
+            if plrdata["PlayerCash"] >= 9000:
+                plrdata["PlayerCash"] -= 9000
+                plrdata["MiningPower"] += 27
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro X400 2016!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "r":
+            if plrdata["PlayerCash"] >= 10000:
+                plrdata["PlayerCash"] -= 10000
+                plrdata["MiningPower"] += 30
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro X500 2019!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "c":
+            if plrdata["PlayerCash"] >= 11000:
+                plrdata["PlayerCash"] -= 11000
+                plrdata["MiningPower"] += 33
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro XS Super Series 3000 2021!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        elif key == "v":
+            if plrdata["PlayerCash"] >= 12000:
+                plrdata["PlayerCash"] -= 12000
+                plrdata["MiningPower"] += 36
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Quadro XS Super Series 4000 2021!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
+        else:
+            clearscreen()
