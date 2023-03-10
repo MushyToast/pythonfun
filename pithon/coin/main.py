@@ -1,5 +1,6 @@
 import json
 import random
+import time
 import os
 from getkey import getkey, keys
 
@@ -14,7 +15,7 @@ def saveData():
         json.dump(plrdata, f)
 
 def clearscreen():
-    os.system("cls")
+    os.system("clear")
 
 coins = {"Bytecoin", "Catcoin", "Cryptonite"}
 
@@ -41,91 +42,35 @@ while True:
     print("What would you like to do?")
     print("1. Buy Miners")
     print("2. Mine")
-    print("3. Sell Miners")
-print("4. Buy Coins")
-print("5. Sell Coins")
-key = getkey()
-if key == "1":
-    print("Welcome to the Miner shop!")
-    print("There are 7 types of miners.")
-    print("[1] Basic Miner - 1000 coins, avg 0.74 coins/min, +5 mining power")
-    print("[2] Advanced Miner - 5000 coins, avg 1.5 coins/min, +10 mining power")
-    print("[3] Professional Miner - 10000 coins, avg 3 coins/min, +20 mining power")
-    print("[4] Elite Miner - 25000 coins, avg 5 coins/min, +30 mining power")
-    print("[5] Master Miner - 50000 coins, avg 10 coins/min, +50 mining power")
-    print("[6] Legendary Miner - 100000 coins, avg 20 coins/min, +100 mining power")
-    print("[7] Godly Miner - 250000 coins, avg 50 coins/min, +200 mining power")
-    print("Which miner would you like to buy?")
+    print("4. Buy Coins")
+    print("5. Sell Coins")
     key = getkey()
     if key == "1":
-        if plrdata["PlayerCash"] >= 1000:
-            plrdata["PlayerCash"] -= 1000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 5
-            print("You bought a Basic Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    elif key == "2":
-        if plrdata["PlayerCash"] >= 5000:
-            plrdata["PlayerCash"] -= 5000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 10
-            print("You bought an Advanced Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    elif key == "3":
-        if plrdata["PlayerCash"] >= 10000:
-            plrdata["PlayerCash"] -= 10000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 20
-            print("You bought a Professional Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    elif key == "4":
-        if plrdata["PlayerCash"] >= 25000:
-            plrdata["PlayerCash"] -= 25000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 30
-            print("You bought an Elite Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    elif key == "5":
-        if plrdata["PlayerCash"] >= 50000:
-            plrdata["PlayerCash"] -= 50000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 50
-            print("You bought a Master Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    elif key == "6":
-        if plrdata["PlayerCash"] >= 100000:
-            plrdata["PlayerCash"] -= 100000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 100
-            print("You bought a Legendary Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    elif key == "7":
-        if plrdata["PlayerCash"] >= 250000:
-            plrdata["PlayerCash"] -= 250000
-            plrdata["Miners"] += 1
-            plrdata["MiningPower"] += 200
-            print("You bought a Godly Miner!")
-            clearscreen()
-        else:
-            print("You don't have enough money!")
-            clearscreen()
-    else:
-        print("Invalid input!")
+        clearscreen()
+        print("Which miners would you like to buy?")
+        print("[1]. [1] Basic QuadroX6000 2010 - 1000 Cash - 3 Mining Power - avg 0.4 coins/min")
+        print("[2]. [2] Bundle QuadroXS6000 2012 - 2000 Cash - 6 Mining Power - avg 0.8 coins/min")
+        print("[3]. [3] Quadro XR1000 Mini 2013 - 3000 Cash - 9 Mining Power - avg 1.2 coins/min")
+        print("[4]. [4] Quadro XR1000 2014 - 4000 Cash - 12 Mining Power - avg 1.6 coins/min")
+        print("[5]. [5] Quadro X150 2015 - 5000 Cash - 15 Mining Power - avg 2.0 coins/min")
+        print("[6]. [6] Quadro X200 2015 - 6000 Cash - 18 Mining Power - avg 2.4 coins/min")
+        print("[7]. [7] Quadro XS200 2015 - 7000 Cash - 21 Mining Power - avg 2.8 coins/min")
+        print("[8]. [8] Quadro X300 2016 - 8000 Cash - 24 Mining Power - avg 3.2 coins/min")
+        print("[9]. [9] Quadro X400 2016 - 9000 Cash - 27 Mining Power - avg 3.6 coins/min")
+        print("[R]. [0] Quadro X500 2019 - 10000 Cash - 30 Mining Power - avg 4.0 coins/min")
+        print("[C]. [q] Quadro XS Super Series 3000 2021 - 11000 Cash - 33 Mining Power - avg 9.4 coins/min")
+        print("[V]. [w] Quadro XS Super Series 4000 2021 - 12000 Cash - 36 Mining Power - avg 10.8 coins/min")
+        key = getkey()
+        if key == "1":
+            if plrdata["PlayerCash"] >= 1000:
+                plrdata["PlayerCash"] -= 1000
+                plrdata["MiningPower"] += 3
+                plrdata["Miners"] += 1
+                saveData()
+                clearscreen()
+                print("You bought a Basic QuadroX6000 2010!")
+            else:
+                clearscreen()
+                print("You don't have enough cash!")
+                time.sleep(2)
+                clearscreen()
