@@ -228,6 +228,11 @@ while True:
             clearscreen()
     elif key == "2":
         clearscreen()
+        print("What coin will you mine?")
+        print("[1]. Bitcoin")
+        
+        
+        clearscreen()
         print("How long will you mine for? (Actual time)")
         print("[1]. 30 Seconds")
         print("[2]. 1 Minute")
@@ -252,5 +257,5 @@ while True:
             print("Mining Complete!")
             time.sleep(2)
             rate = plrdata["MiningPower"]/7
-            
+
 
