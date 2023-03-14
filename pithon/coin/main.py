@@ -1,9 +1,12 @@
+#IMPORTs
 import json
 import random
-import colorama
+from colorama import Fore
 import time
 import os
 from getkey import getkey, keys
+
+#FUNCTIONS
 
 def getFileDir(dir):
     here = os.path.dirname(os.path.abspath(__file__))
@@ -15,12 +18,15 @@ def saveData():
     with open (plrdatadir, "w") as f:
         json.dump(plrdata, f)
 
+
 def clearscreen():
     os.system("clear")
 
+#VARIABLES
 coins = {"Bytecoin", "Catcoin", "Cryptonite"}
-
 plrdatadir = getFileDir("playerdata.json")
+letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+numbers = ["1","2","3","4","5","6","7","8","9","0"]
 
 with open (plrdatadir, "r") as f:
     plrdata = json.load(f)
@@ -221,4 +227,12 @@ while True:
         else:
             clearscreen()
     elif key == "2":
-        
+        clearscreen()
+        print("How long will you mine for? (Actual time)")
+        print("[1]. 30 Seconds")
+        print("[2]. 1 Minute")
+        print("[3]. 5 Minutes")
+        print("[4]. 10 Minutes")
+        key = getkey()
+        if key == "1":
+            clearscreen()
