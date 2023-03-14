@@ -9,7 +9,7 @@ numbers = ["1","2","3","4","5","6","7","8","9","0"]
 url = "https://api.profyle.net/api/users"
 
 params = {"userName":"quandale","displayName":"quandale","email":"h3gas7g@gmail.com","password":"qwu3ygg3gh4f73wg4897a"}
-i = 0
+it = 0
 while True:
     async def main():
         passw = ""
@@ -27,8 +27,8 @@ while True:
             email += random.choice(letters)
             email += random.choice(numbers)
             params["email"] = email + "@gmail.com"
-        i += 1
-        print(str(i) + ":")
+        it += 1
+        print(str(it) + ":")
         print(params)
         response = requests.request("POST", url, json=params)
         print("\n\n\n\n")
