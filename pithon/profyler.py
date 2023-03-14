@@ -36,11 +36,10 @@ while True:
         dir = getFileDir("count.json")
         with open(dir, "r") as f:
             count = json.load(f)
-        count["count"] += 1
-        
+        count += 1
         with open(dir, "w") as f:
             json.dump(count, f)
-        print(count["count"])
+        print(count)
         print(params)
         response = requests.request("POST", url, json=params)
         print("\n\n\n\n")
