@@ -236,3 +236,7 @@ while True:
         key = getkey()
         if key == "1":
             clearscreen()
+            for x in range(30):
+                print("Mining...")
+                
+
