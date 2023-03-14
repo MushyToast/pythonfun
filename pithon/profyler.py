@@ -9,8 +9,7 @@ numbers = ["1","2","3","4","5","6","7","8","9","0"]
 
 url = "https://api.profyle.net/api/users"
 
-global it
-it = 0
+os.environ['iterator'] = '1'
 
 params = {"userName":"quandale","displayName":"quandale","email":"h3gas7g@gmail.com","password":"qwu3ygg3gh4f73wg4897a"}
 
@@ -31,8 +30,8 @@ while True:
             email += random.choice(letters)
             email += random.choice(numbers)
             params["email"] = email + "@gmail.com"
-        it += 1
-        print(str(it) + ":")
+        os.environ['iterator'] = str(int(os.environ['iterator']) + 1)
+        print(os.environ['iterator'] + ":")
         print(params)
         response = requests.request("POST", url, json=params)
         print("\n\n\n\n")
