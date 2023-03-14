@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@types/node": "^18.11.18",
+    "blooket": "^0.1.0",
     "mathjs": "^11.5.0"
   }
 }
