@@ -1,5 +1,6 @@
 import json
 import random
+import colorama
 import time
 import os
 from getkey import getkey, keys
@@ -219,3 +220,5 @@ while True:
                 clearscreen()
         else:
             clearscreen()
+    elif key == "2":
+        
