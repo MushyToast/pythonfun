@@ -9,7 +9,8 @@ numbers = ["1","2","3","4","5","6","7","8","9","0"]
 
 url = "https://api.profyle.net/api/users"
 
-os.seten
+it = 0
+global i
 
 params = {"userName":"quandale","displayName":"quandale","email":"h3gas7g@gmail.com","password":"qwu3ygg3gh4f73wg4897a"}
 
