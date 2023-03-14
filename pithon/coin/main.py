@@ -238,5 +238,5 @@ while True:
             clearscreen()
             for x in range(30):
                 print("Mining...")
-                
+                time.sleep(0.2)
 
