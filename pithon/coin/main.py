@@ -236,8 +236,16 @@ while True:
         key = getkey()
         if key == "1":
             clearscreen()
-            for x in range(30):
+            for x in range(150):
                 print(Fore.RED)
                 print("Mining...")
-                
+                print("HASHING:")
+                hashkey = "0x86"
+                for x in range(20):
+                    hashkey += random.choice(letters)
+                    hashkey += random.choice(numbers)
+                print(hashkey)
+                if random.randint(1, 10) == 5:
+                    print("0.86xBlockReward!")
+                time.sleep(0.2)
 
