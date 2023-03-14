@@ -251,5 +251,6 @@ while True:
             clearscreen()
             print("Mining Complete!")
             time.sleep(2)
+            rate = plrdata["MiningPower"]/7
             
 
