@@ -237,6 +237,7 @@ while True:
         if key == "1":
             clearscreen()
             for x in range(30):
+                print(Fore.RED)
                 print("Mining...")
-                time.sleep(0.2)
+                
 
