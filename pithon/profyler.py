@@ -17,7 +17,7 @@ while True:
             passw += random.choice(letters)
             params["password"] = passw
         name = ""
-        for i in range(0, 5):
+        for i in range(0, 63):
             name += random.choice(letters)
             name += random.choice(numbers)
             params["userName"] = name
