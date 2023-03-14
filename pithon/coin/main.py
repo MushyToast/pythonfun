@@ -248,4 +248,8 @@ while True:
                 if random.randint(1, 10) == 5:
                     print("0.86xBlockReward!")
                 time.sleep(0.2)
+            clearscreen()
+            print("Mining Complete!")
+            time.sleep(2)
+            
 
