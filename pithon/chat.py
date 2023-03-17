@@ -49,5 +49,5 @@ clearscreen()
 while True:
     printChats()
     msg = input("> ")
-    writeToChat(name, msg, gettime())
     clearscreen()
+    writeToChat(name, msg, gettime())
