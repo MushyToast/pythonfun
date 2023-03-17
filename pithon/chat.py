@@ -2,6 +2,7 @@ import json
 import os
 from datetime import datetime
 import time
+from colorama import Fore, Back, Style
 
 data = []
 
@@ -37,7 +38,9 @@ def saveChats():
 
 def printChats():
     for chat in data:
+        
         print("(" + chat["Time"] + ") " + chat["Author"] + ": " + chat["Message"])
+        
 
 def writeToChat(authr, msg, time):
     data.append({"Author": authr, "Message": msg, "Time": time})
@@ -62,5 +65,18 @@ lasttime = 0
 
 clearscreen()
 while True:
-    if getextime() - lasttime > 1:
+    if getextime() - lasttime < 2:
+        antispamcount += 1
+        if antispamcount >= 4:
+            print("() System: Please do not spam.")
+            time.sleep(5)
+            clearscreen()
+            antispamcount = 0
+            lasttime = getextime()
+    else:
         antispamcount = 0
+        lasttime = getextime()
+    printChats()
+    msg = input("> ")
+    clearscreen()
+    writeToChat(name, msg, gettime())
