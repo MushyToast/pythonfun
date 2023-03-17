@@ -1,15 +1,16 @@
-import time
-import random
-v1 = 0
+from datetime import datetime
 
-v3 = input()
-int(v3)
-while True == True:
-    v1 = v1 + 1
-    v2 = random.randint(1, 99999)
-    print(str(v1) + ":", v2)
-    if v2 == v3:
-        print("Lol")
-        break
-    time.sleep(0.00001)
+def gettime(): 
+    time = ""
+    time += str(datetime.now().year)
+    time += "-"
+    time += str(datetime.now().month)
+    time += "-"
+    time += str(datetime.now().day)
+    time += " "
+    time += str(datetime.now().hour)
+    time += ":"
+    time += str(datetime.now().minute)
+    print(time)
 
+gettime()
