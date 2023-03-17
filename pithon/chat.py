@@ -2,6 +2,8 @@ import json
 import os
 from datetime import datetime
 import time
+import profanity_check
+profanity_check.predict("fuck you"")
 
 from colorama import Fore, Back, Style
 
