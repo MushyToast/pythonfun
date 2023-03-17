@@ -17,3 +17,5 @@ def saveChats():
     with open(filedir, "w") as f:
         json.dump(data, f)
 
+for chat in data:
+    print(chat["Author"] + ": " + chat["Message"])
