@@ -2,7 +2,6 @@ import json
 import os
 from datetime import datetime
 import time
-print(time.time())
 data = []
 
 def getFileDir(dir):
@@ -45,6 +44,8 @@ def clearscreen():
 
 name = input("Welcome to the chatrooms! What's your name?\n")
 print(f"Hello {name}!")
+
+
 
 clearscreen()
 while True:
