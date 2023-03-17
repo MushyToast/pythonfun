@@ -49,7 +49,7 @@ def printChats():
     for chat in data:
         sys.stdout.write(Style.BRIGHT)
         print("(" + chat["Time"] + ") " +
-              chat["Author"] + ": " + chat["Message"])
+        chat["Author"] + ": " + chat["Message"])
         sys.stdout.write(Style.RESET_ALL)
 
 
