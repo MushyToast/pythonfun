@@ -1,1 +1,67 @@
-[{"Author": "System", "Message": "Hello! Welcome to the python chatroom. Enjoy your stay, just don't talk about anime!!", "Time": "1970-1-01 00:00"}, {"Author": "nolan", "Message": "yo", "Time": "2023-3-17 16:58"}, {"Author": "nolan", "Message": "how are yall", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "i bet yall are good", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "anyone here?", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "i kinda hate this", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "this is kinda odd", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "LOOL", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "anyway", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "BBC or BWC?", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "ehh", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "bbc", "Time": "2023-3-17 16:59"}, {"Author": "nolan", "Message": "bbc is better", "Time": "2023-3-17 16:59"}]
+[
+    {
+        "Author": "System",
+        "Message": "Hello! Welcome to the python chatroom. Enjoy your stay, just don't talk about anime!!",
+        "Time": "1970-1-01 00:00"
+    },
+    {
+        "Author": "nolan",
+        "Message": "yo",
+        "Time": "2023-3-17 16:58"
+    },
+    {
+        "Author": "nolan",
+        "Message": "how are yall",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "i bet yall are good",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "anyone here?",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "i kinda hate this",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "this is kinda odd",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "LOOL",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "anyway",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "BBC or BWC?",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "ehh",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "bbc",
+        "Time": "2023-3-17 16:59"
+    },
+    {
+        "Author": "nolan",
+        "Message": "bbc is better",
+        "Time": "2023-3-17 16:59"
+    }
+]
