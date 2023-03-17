@@ -5,6 +5,9 @@ import time
 
 data = []
 
+def getextime():
+    return round(time.time())
+
 def getFileDir(dir):
     here = os.path.dirname(os.path.abspath(__file__))
     directory = os.path.join(here, dir)
@@ -55,10 +58,9 @@ while True:
 print(f"Hello {name}!")
 
 antispamcount = 0
+lasttime = 0
 
 clearscreen()
 while True:
-    printChats()
-    msg = input("> ")
-    clearscreen()
-    writeToChat(name, msg, gettime())
+    if getextime() - lasttime > 1:
+        antispamcount = 0
