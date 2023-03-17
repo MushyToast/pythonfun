@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 import time
-import getkey
+from getkey import getkey
 import sys
 from colorama import Fore, Back, Style
 
@@ -16,6 +16,7 @@ def getFileDir(dir):
     directory = os.path.join(here, dir)
     return directory
 
+accountdatadir = getFileDir("accounts.json")
 filedir = getFileDir("chatlog.json")
 
 with open(filedir, "r") as f:
@@ -52,7 +53,30 @@ def clearscreen():
     os.system("clear")
 name = "juandale"
 
-    
+while True:
+    clearscreen()
+    print("Welcome to the chat! Please login/signup!")
+    print("[1] Login")
+    print("[2] Signup")
+    key = getkey()
+    if key == "1":
+        clearscreen()
+        name = input("Username > ")
+        password = input ("Password >")
+        with open(accountdatadir, "r") as f:
+            accounts = json.load(f)
+        if name in accounts:
+            for account in accounts:
+                if account["Username"] == name:
+                    if account["Password"] == password:
+                        name = account["Username"]
+                        break
+                    else:
+                        print("Incorrect password!")
+                        time.sleep(2)
+                        clearscreen()
+                        
+
 print(f"Hello {name}!")
 
 antispamcount = 0
