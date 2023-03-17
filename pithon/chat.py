@@ -47,11 +47,14 @@ while True:
     name = input("Welcome to the chatrooms! What's your name?\n")
     if "system" in name.lower():
         print("Name cannot contain 'system'!")
+        time.sleep(1)
+        clearscreen()
     else:
+        clearscreen()
         break
 print(f"Hello {name}!")
 
-
+antispamcount = 0
 
 clearscreen()
 while True:
