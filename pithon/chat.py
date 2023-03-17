@@ -34,6 +34,6 @@ print(f"Hello {name}!")
 clearscreen()
 while True:
     printChats()
-    msg = input()
+    msg = input(">>> ")
     writeToChat(name, msg)
     clearscreen()
