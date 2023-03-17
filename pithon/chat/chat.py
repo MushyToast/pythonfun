@@ -62,8 +62,9 @@ def clearscreen():
     os.system("clear")
 
 
-name = "juandale"
+name = ""
 done = False
+usednames = ""
 
 while True:
     if done == True:
@@ -78,15 +79,40 @@ while True:
     if key == "1":
         clearscreen()
         name = input("Username > ")
-        password = input("Password >")
+        password = input("Password > ")
         with open(accountdatadir, "r") as f:
             accounts = json.load(f)
-        if name in accounts:
-            print("name found")
-            time.sleep(3)
-        else:
-            print("name not found")
-            time.sleep(3)
+        for account in accounts:
+            if account["Username"] == name:
+                if account["Password"] == password:
+                    name = account["Username"]
+                    print("Logged in! Welcome, " + name + "!")
+                    time.sleep(2)
+                    done = True
+                else:
+                    print("Incorrect password!")
+                    time.sleep(2)
+            else:
+                print("Username not found")
+                time.sleep(2)
+    elif key == "2":
+        clearscreen()
+        name = input("Username > ")
+        password = input("Password > ")
+        with open(accountdatadir, "r") as f:
+            accounts = json.load(f)
+        for account in accounts:
+            if account["Username"] == name and done != True:
+                print("Username already in use!")
+                time.sleep(2)
+            else:
+                accounts.append({"Username": name, "Password": password})
+                with open(accountdatadir, "w") as f:
+                    json.dump(accounts, f)
+                print("Account created!")
+                time.sleep(2)
+                done = True
+                break
 
 
 print(f"Hello {name}!")
@@ -99,8 +125,7 @@ while True:
     if getextime() - lasttime < 2:
         antispamcount += 1
         if antispamcount >= 4:
-            print(Fore.RED + Style.DIM + "() System: Please do not spam." +
-                  Fore.RESET + Style.RESET_ALL)
+            print(Fore.RED + Style.DIM + "() System: Please do not spam." + Fore.RESET + Style.RESET_ALL)
             time.sleep(5)
             clearscreen()
             antispamcount = 0

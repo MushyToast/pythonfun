@@ -1,7 +1,1 @@
-[
-    {
-        "Author": "System",
-        "Message": "Welcome to the chat! Please be respectuful to others and have fun!",
-        "Time": ""
-    }
-]
+[{"Author": "System", "Message": "Welcome to the chat! Please be respectuful to others and have fun!", "Time": ""}, {"Author": "admin", "Message": "yo", "Time": "2023-3-17 20:39"}, {"Author": "admin", "Message": "wsg", "Time": "2023-3-17 20:39"}, {"Author": "nolan", "Message": "yo", "Time": "2023-3-17 20:40"}, {"Author": "nolan", "Message": "wsg", "Time": "2023-3-17 20:40"}, {"Author": "nolan", "Message": "/home/codespace/.python/current/bin/python3 /workspaces/pythonfun/pithon/chat/chat.py", "Time": "2023-3-17 20:41"}, {"Author": "juandale", "Message": "hi", "Time": "2023-3-17 20:41"}, {"Author": "juandale", "Message": "lol", "Time": "2023-3-17 20:41"}, {"Author": "juandale", "Message": "im new here", "Time": "2023-3-17 20:41"}, {"Author": "juandale", "Message": "uwu", "Time": "2023-3-17 20:41"}]
