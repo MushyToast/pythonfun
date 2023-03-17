@@ -1,3 +1,3 @@
 import json
 
-data = {}
+data = []
