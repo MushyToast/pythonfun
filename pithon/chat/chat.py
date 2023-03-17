@@ -63,7 +63,7 @@ while True:
     if getextime() - lasttime < 2:
         antispamcount += 1
         if antispamcount >= 4:
-            print("() System: Please do not spam.")
+            print(Fore.RED + Style.DIM + "() System: Please do not spam." + Fore.RESET + Style.RESET_ALL)
             time.sleep(5)
             clearscreen()
             antispamcount = 0
