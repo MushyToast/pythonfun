@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 data = []
 
@@ -13,16 +14,29 @@ filedir = getFileDir("chatlog.json")
 with open(filedir, "r") as f:
     data = json.load(f)
 
+def gettime(): 
+    time = ""
+    time += str(datetime.now().year)
+    time += "-"
+    time += str(datetime.now().month)
+    time += "-"
+    time += str(datetime.now().day)
+    time += " "
+    time += str(datetime.now().hour)
+    time += ":"
+    time += str(datetime.now().minute)
+    return time
+
 def saveChats():
     with open(filedir, "w") as f:
         json.dump(data, f)
 
 def printChats():
     for chat in data:
-        print(chat["Author"] + ": " + chat["Message"])
+        print("(" + chat["Time"] + ") " + chat["Author"] + ": " + chat["Message"])
 
-def writeToChat(authr, msg):
-    data.append({"Author": authr, "Message": msg})
+def writeToChat(authr, msg, time):
+    data.append({"Author": authr, "Message": msg, "Time": time})
     saveChats()
 
 def clearscreen():
@@ -34,6 +48,6 @@ print(f"Hello {name}!")
 clearscreen()
 while True:
     printChats()
-    msg = input(">>> ")
-    writeToChat(name, msg)
+    msg = input("> ")
+    writeToChat(name, msg, gettime())
     clearscreen()
