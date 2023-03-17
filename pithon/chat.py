@@ -2,6 +2,7 @@ import json
 import os
 from datetime import datetime
 import time
+
 data = []
 
 def getFileDir(dir):
@@ -42,7 +43,12 @@ def writeToChat(authr, msg, time):
 def clearscreen():
     os.system("clear")
 
-name = input("Welcome to the chatrooms! What's your name?\n")
+while True:
+    name = input("Welcome to the chatrooms! What's your name?\n")
+    if "system" in name.lower():
+        print("Name cannot contain 'system'!")
+    else:
+        break
 print(f"Hello {name}!")
 
 
