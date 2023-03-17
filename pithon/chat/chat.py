@@ -8,13 +8,16 @@ from colorama import Fore, Back, Style
 
 data = []
 
+
 def getextime():
     return round(time.time())
+
 
 def getFileDir(dir):
     here = os.path.dirname(os.path.abspath(__file__))
     directory = os.path.join(here, dir)
     return directory
+
 
 accountdatadir = getFileDir("accounts.json")
 filedir = getFileDir("chatlog.json")
@@ -22,7 +25,8 @@ filedir = getFileDir("chatlog.json")
 with open(filedir, "r") as f:
     data = json.load(f)
 
-def gettime(): 
+
+def gettime():
     time = ""
     time += str(datetime.now().year)
     time += "-"
@@ -35,25 +39,37 @@ def gettime():
     time += str(datetime.now().minute)
     return time
 
+
 def saveChats():
     with open(filedir, "w") as f:
         json.dump(data, f)
 
+
 def printChats():
     for chat in data:
         sys.stdout.write(Style.BRIGHT)
-        print("(" + chat["Time"] + ") " + chat["Author"] + ": " + chat["Message"])
+        print("(" + chat["Time"] + ") " +
+              chat["Author"] + ": " + chat["Message"])
         sys.stdout.write(Style.RESET_ALL)
+
 
 def writeToChat(authr, msg, time):
     data.append({"Author": authr, "Message": msg, "Time": time})
     saveChats()
 
+
 def clearscreen():
     os.system("clear")
+
+
 name = "juandale"
+done = False
 
 while True:
+    if done == True:
+        print("aa")
+        break
+    time.sleep(2)
     clearscreen()
     print("Welcome to the chat! Please login/signup!")
     print("[1] Login")
@@ -62,20 +78,16 @@ while True:
     if key == "1":
         clearscreen()
         name = input("Username > ")
-        password = input ("Password >")
+        password = input("Password >")
         with open(accountdatadir, "r") as f:
             accounts = json.load(f)
         if name in accounts:
-            for account in accounts:
-                if account["Username"] == name:
-                    if account["Password"] == password:
-                        name = account["Username"]
-                        break
-                    else:
-                        print("Incorrect password!")
-                        time.sleep(2)
-                        clearscreen()
-                        
+            print("name found")
+            time.sleep(3)
+        else:
+            print("name not found")
+            time.sleep(3)
+
 
 print(f"Hello {name}!")
 
@@ -87,7 +99,8 @@ while True:
     if getextime() - lasttime < 2:
         antispamcount += 1
         if antispamcount >= 4:
-            print(Fore.RED + Style.DIM + "() System: Please do not spam." + Fore.RESET + Style.RESET_ALL)
+            print(Fore.RED + Style.DIM + "() System: Please do not spam." +
+                  Fore.RESET + Style.RESET_ALL)
             time.sleep(5)
             clearscreen()
             antispamcount = 0
@@ -98,4 +111,4 @@ while True:
     printChats()
     msg = input("> ")
     clearscreen()
-    writeToChat(name, msg, gettime()) 
+    writeToChat(name, msg, gettime())
