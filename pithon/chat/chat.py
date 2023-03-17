@@ -2,8 +2,8 @@ import json
 import os
 from datetime import datetime
 import time
-
-
+import getkey
+import sys
 from colorama import Fore, Back, Style
 
 data = []
@@ -40,9 +40,9 @@ def saveChats():
 
 def printChats():
     for chat in data:
-        
+        sys.stdout.write(Style.BRIGHT)
         print("(" + chat["Time"] + ") " + chat["Author"] + ": " + chat["Message"])
-        
+        sys.stdout.write(Style.RESET_ALL)
 
 def writeToChat(authr, msg, time):
     data.append({"Author": authr, "Message": msg, "Time": time})
@@ -50,16 +50,9 @@ def writeToChat(authr, msg, time):
 
 def clearscreen():
     os.system("clear")
+name = "juandale"
 
-while True:
-    name = input("Welcome to the chatrooms! What's your name?\n")
-    if "system" in name.lower():
-        print("Name cannot contain 'system'!")
-        time.sleep(1)
-        clearscreen()
-    else:
-        clearscreen()
-        break
+    
 print(f"Hello {name}!")
 
 antispamcount = 0
