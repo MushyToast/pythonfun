@@ -17,5 +17,23 @@ def saveChats():
     with open(filedir, "w") as f:
         json.dump(data, f)
 
-for chat in data:
-    print(chat["Author"] + ": " + chat["Message"])
+def printChats():
+    for chat in data:
+        print(chat["Author"] + ": " + chat["Message"])
+
+def writeToChat(authr, msg):
+    data.append({"Author": authr, "Message": msg})
+    saveChats()
+
+def clearscreen():
+    os.system("clear")
+
+name = input("Welcome to the chatrooms! What's your name?\n")
+print(f"Hello {name}!")
+
+clearscreen()
+while True:
+    printChats()
+    msg = input()
+    writeToChat(name, msg)
+    clearscreen()
