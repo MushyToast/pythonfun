@@ -1,7 +1,8 @@
 import json
 import os
 from datetime import datetime
-
+import time
+print(time.time())
 data = []
 
 def getFileDir(dir):
