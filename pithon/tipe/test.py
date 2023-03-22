@@ -1,3 +1,5 @@
-string = "Hello, World!"
+import base64
 
-print(string[3])
+encoded = base64.b64encode('Hello World')
+
+print(encoded)
