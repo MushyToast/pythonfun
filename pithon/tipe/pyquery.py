@@ -4,6 +4,8 @@ import random
 import sys
 import time
 
+#my bad cuh
+
 def deleteline(lines):
     for x in range(1, lines):
         sys.stdout.write("\033[F")
