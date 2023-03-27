@@ -34,12 +34,13 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
         print("scale: " + str(scale))
         return seed
 
-render(20, 20, 16, 0, 2, True)
+
 
 scale = 16
 resx = 100
 resy = 100
-seed = render(20, 20, scale, 0, 2, True)
+octaves = 200
+seed = render(resx, resy, scale, 0, octaves, True)
 
 while True:
     key = getkey.getkey()
