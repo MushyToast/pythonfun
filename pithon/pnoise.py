@@ -45,15 +45,25 @@ scale = 50
 resx = 100
 resy = 100
 octaves = 2
-seed = render(resx, resy, scale, 0, octaves, True)
+ofx = 0
+ofy = 0
+seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
+
 
 while True:
     key = getkey.getkey()
     if key == 'e':
         clearscreen()
         scale += 1
-        seed = render(resx, resy, scale, seed, octaves, True)
+        seed = render(resx, resy, scale, seed, octaves, True, 0, 0)
     elif key == 'q':
         clearscreen()
         scale -= 1
-        seed = render(resx, resy, scale, seed, octaves, True)
+        seed = render(resx, resy, scale, seed, octaves, True, 0, 0)
+    elif key == 'w':
+        clearscreen()
+        seed = render(resx, resy, scale, seed, octaves, True, 0, -1)
+    elif key == 's':
+        clearscreen()
+        seed = render(resx, resy, scale, seed, octaves, True, 0, 1)
+
