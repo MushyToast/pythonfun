@@ -13,7 +13,7 @@ noise = PerlinNoise(octaves=2, seed=seed)
 
 resx = 20
 resy = 20
-scale = 20
+scale = 50
 
 def get_symbol(noisevalue):
     if noisevalue < -0.2:
@@ -40,8 +40,5 @@ for x in range(resx):
 print("seed: " + str(noise.seed))
 print("octaves: " + str(noise.octaves))
 print("scale: " + str(scale))
-print("enter coordinate to get cell val")
-cellx = input("x: ")
-celly = input("y: ")
 
-print(cells[str(cellx) + ", " + str(celly)])
+
