@@ -30,6 +30,9 @@ for x in range(resx):
         cells[str(x) + ", " + str(y)] = symbol
     print('')
 
+print("seed: " + str(noise.seed))
+print("octaves: " + str(noise.octaves))
+print("scale: " + str(scale))
 print("enter coordinate to get cell val")
 cellx = input("x: ")
 celly = input("y: ")
