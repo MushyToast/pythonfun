@@ -8,7 +8,7 @@ def clearscreen():
     os.system('clear')
 
 def get_symbol(noisevalue):
-    if noisevalue < -0.3:
+    if noisevalue < -0.4:
         return '⬜'
     elif noisevalue < -0.2:
         return '⬛'
