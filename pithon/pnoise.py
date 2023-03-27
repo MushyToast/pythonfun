@@ -25,11 +25,11 @@ def get_symbol(noisevalue):
         return '🟦'
 
 
-def render(resx, resy, scale, seed, octaves, printdebuginfo):
+def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
     if seed == 0:
         seed = random.randint(-999999999999, 999999999999)
     noise = PerlinNoise(octaves=octaves, seed=seed)
-    for x in range(resx):
+    for x in range(0+offsetx, resx+offsetx):
         for y in range(resy):
             symbol = get_symbol(noise([x/scale, y/scale]))
             sys.stdout.write(symbol)
