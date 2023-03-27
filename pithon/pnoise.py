@@ -29,6 +29,6 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
         print("octaves: " + str(noise.octaves))
         print("scale: " + str(scale))
 
-render(20, 20, 20, 0, 20, True)
+render(20, 20, 10, 0, 2, True)
 
 
