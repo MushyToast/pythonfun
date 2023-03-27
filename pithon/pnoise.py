@@ -3,7 +3,7 @@ import random
 import sys
 
 customseed = 730961673295
-
+seed = 0
 if customseed == 0:
     seed = random.randint(0, 999999999999)
 
