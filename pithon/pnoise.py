@@ -75,5 +75,6 @@ while True:
         ofy += step
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'r':
+        clearscreen()
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
 
