@@ -37,10 +37,15 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
 render(20, 20, 16, 0, 2, True)
 
 scale = 16
+resx = 50
+resy = 50
+seed = render(20, 20, scale, 0, 2, True)
 
 while True:
-    seed = render(20, 20, scale, 0, 2, True)
     key = getkey.getkey()
-    if key == 'e':
-        scale+=1
-        render(20, 20, scale, seed, 2, True)
+    if key == 'w':
+        scale += 1
+        seed = render(resx, resy, scale, seed, 2, True)
+    elif key == 's':
+        scale -= 1
+        seed = render(resx, resy, scale, seed, 2, True)
