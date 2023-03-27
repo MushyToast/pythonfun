@@ -5,7 +5,7 @@ import os
 import getkey
 
 def clearscreen():
-    os.system('cls')
+    os.system('clear')
 
 def get_symbol(noisevalue):
     if noisevalue < -0.2:
