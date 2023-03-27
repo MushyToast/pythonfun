@@ -62,18 +62,18 @@ while True:
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'w':
         clearscreen()
-        ofy -= 1
+        ofx -= 1
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 's':
         clearscreen()
-        ofy += 1
+        ofx += 1
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'a':
         clearscreen()
-        ofx -= 1
+        ofy -= 1
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'd':
         clearscreen()
-        ofx += 1
+        ofy += 1
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
 
