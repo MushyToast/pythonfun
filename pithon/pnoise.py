@@ -24,9 +24,9 @@ cells = {}
 
 for x in range(resx):
     sys.stdout.write(str(x))
+for x in range(resx):
+    sys.stdout.write(str(x))
     for y in range(resy):
-        if y == 0:
-            sys.stdout.write(str(y))
         symbol = get_symbol(noise([x/scale, y/scale]))
         sys.stdout.write(symbol)
         cells[str(x) + ", " + str(y)] = symbol
