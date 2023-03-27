@@ -11,13 +11,13 @@ def get_symbol(noisevalue):
     if noisevalue < -0.2:
         return '⬜'
     elif noisevalue < 0:
-        return '⬜'
+        return '🪨'
     elif noisevalue < 0.2:
-        return '🔵'
+        return '🟩'
     elif noisevalue < 0.3:
         return '🟨'
     else:
-        return '🟨'
+        return '🔵'
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo):
     if seed == 0:
