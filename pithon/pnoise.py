@@ -44,8 +44,10 @@ seed = render(20, 20, scale, 0, 2, True)
 while True:
     key = getkey.getkey()
     if key == 'w':
+        clearscreen()
         scale += 1
         seed = render(resx, resy, scale, seed, 2, True)
     elif key == 's':
+        clearscreen()
         scale -= 1
         seed = render(resx, resy, scale, seed, 2, True)
