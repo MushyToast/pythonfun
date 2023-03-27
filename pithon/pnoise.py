@@ -37,8 +37,8 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
 render(20, 20, 16, 0, 2, True)
 
 scale = 16
-resx = 50
-resy = 50
+resx = 100
+resy = 100
 seed = render(20, 20, scale, 0, 2, True)
 
 while True:
