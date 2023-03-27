@@ -1,7 +1,11 @@
 from perlin_noise import PerlinNoise
 import random
 import sys
+import os 
+import getkey
 
+def clearscreen():
+    os.system('cls')
 
 def get_symbol(noisevalue):
     if noisevalue < -0.2:
@@ -28,7 +32,10 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
         print("scale: " + str(scale))
+        debugdata = [seed, octaves, scale]
 
 render(20, 20, 16, 0, 2, True)
 
 
+while True:
+    render(20, 20, 16, 0, 2, True)
