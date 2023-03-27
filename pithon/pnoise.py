@@ -39,7 +39,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
 scale = 16
 resx = 100
 resy = 100
-octaves = 200
+octaves = 2
 seed = render(resx, resy, scale, 0, octaves, True)
 
 while True:
@@ -47,8 +47,8 @@ while True:
     if key == 'w':
         clearscreen()
         scale += 1
-        seed = render(resx, resy, scale, seed, 2, True)
+        seed = render(resx, resy, scale, seed, octaves, True)
     elif key == 's':
         clearscreen()
         scale -= 1
-        seed = render(resx, resy, scale, seed, 2, True)
+        seed = render(resx, resy, scale, seed, octaves, True)
