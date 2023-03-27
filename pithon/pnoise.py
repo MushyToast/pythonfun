@@ -2,7 +2,12 @@ from perlin_noise import PerlinNoise
 import random
 import sys
 
-noise = PerlinNoise(octaves=2, seed=random.randint(0, 999999999999))
+customseed = 730961673295
+
+if customseed == 0:
+    seed = random.randint(0, 999999999999)
+
+noise = PerlinNoise(octaves=2, seed=seed)
 
 resx = 20
 resy = 20
