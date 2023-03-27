@@ -4,9 +4,9 @@ import sys
 
 noise = PerlinNoise(octaves=2, seed=random.randint(0, 999999999999))
 
-resx = 50
-resy = 50
-scale = 15
+resx = 20
+resy = 20
+scale = 20
 
 def get_symbol(noisevalue):
     if noisevalue < -0.2:
