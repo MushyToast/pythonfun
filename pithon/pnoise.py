@@ -32,10 +32,14 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
         print("scale: " + str(scale))
-        debugdata = [seed, octaves, scale]
+        return seed
 
 render(20, 20, 16, 0, 2, True)
 
+startscale = 16
 
 while True:
-    render(20, 20, 16, 0, 2, True)
+    seed = render(20, 20, startscale, 0, 2, True)
+    key = getkey.getkey()
+    if key == 'e':
+        render(20, 20, startscale+1)
