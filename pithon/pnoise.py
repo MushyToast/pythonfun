@@ -21,7 +21,7 @@ def get_symbol(noisevalue):
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo):
     if seed == 0:
-        seed = random.randint(0, 999999999999)
+        seed = random.randint(-999999999999, 999999999999)
     noise = PerlinNoise(octaves=octaves, seed=seed)
     for x in range(resx):
         for y in range(resy):
