@@ -13,12 +13,12 @@ def clearscreen():
 
 def get_symbol(noisevalue):
     if noisevalue < -0.45:
-        return '⬛'
+        return '⬜'
     elif noisevalue < -0.3:
+        return '⬛'
+    elif noisevalue < 0:
         return '🟩'
-    elif noisevalue < -0.25:
-        return '🟫'
-    elif noisevalue < -0.03:
+    elif noisevalue < 0.1:
         return '🟨'
     else:
         return '🟦'
