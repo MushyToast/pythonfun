@@ -1,9 +1,11 @@
+#IMPORTS
 from perlin_noise import PerlinNoise
 import random
 import sys
 import os
 import getkey
 
+#FUNCTIONS
 
 def clearscreen():
     os.system('clear')
@@ -37,16 +39,18 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
         print("scale: " + str(scale))
         return seed
 
+#VARIABLES
 
-scale = 25
-resx = 150
+scale = 25 #the scale of the world, think of it as zoom, higher it is = more zoomed in
+resx = 150 #the resolution of the display, higher it is = more cells, i reccomend keeping it at 150 but you can play around with it
 resy = 150
-octaves = 1
-ofx = 0
+octaves = 1 #the amount of octaves for the perlin noise, higher it is = more detail
+ofx = 0 #the offset of the x axis. this is for the moving system, dont mess with this or the ofy variable
 ofy = 0
-step = 20
+step = 20 #the increment that you move in (cells) for the zooming and moving system
 seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 
+#MAIN
 
 while True:
     key = getkey.getkey()
