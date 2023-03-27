@@ -12,11 +12,11 @@ def clearscreen():
 def get_symbol(noisevalue):
     if noisevalue < -0.4:
         return '⬛'
+    elif noisevalue < -0.3:
+        return '🟩'
     elif noisevalue < -0.2:
         return '🟩'
-    elif noisevalue < 0.2:
-        return '🟩'
-    elif noisevalue < 0.3:
+    elif noisevalue < 0.1:
         return '🟫'
     else:
         return '🟦'
@@ -44,7 +44,7 @@ resy = 100
 octaves = 2
 ofx = 0
 ofy = 0
-step = 1
+step = 20
 seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 
 
@@ -53,27 +53,27 @@ while True:
     if key == 'e':
         clearscreen()
         scale += 1
-        seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'q':
         clearscreen()
         scale -= step
-        seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'w':
         clearscreen()
         ofx -= step
-        seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 's':
         clearscreen()
         ofx += step
-        seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'a':
         clearscreen()
         ofy -= step
-        seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'd':
         clearscreen()
         ofy += step
-        seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'r':
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
 
