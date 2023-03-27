@@ -4,21 +4,21 @@ import sys
 
 noise = PerlinNoise(octaves=2, seed=random.randint(0, 999999999999))
 
-resx = 20
-resy = 20
-scale = 30
+resx = 50
+resy = 50
+scale = 15
 
 def get_symbol(noisevalue):
     if noisevalue < -0.2:
         return '⬜'
     elif noisevalue < 0:
-        return '🪨'
+        return '⬜'
     elif noisevalue < 0.2:
-        return '🟩'
+        return '🔵'
     elif noisevalue < 0.3:
         return '🟨'
     else:
-        return '🟦'
+        return '🟨'
 
 for x in range(resx):
     for y in range(resy):
