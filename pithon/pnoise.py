@@ -76,4 +76,6 @@ while True:
         clearscreen()
         ofy += 1
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+    elif key == 'r':
+        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
 
