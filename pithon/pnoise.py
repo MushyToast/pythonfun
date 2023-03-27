@@ -52,7 +52,7 @@ while True:
     key = getkey.getkey()
     if key == 'e':
         clearscreen()
-        scale += 1
+        scale += step
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'q':
         clearscreen()
