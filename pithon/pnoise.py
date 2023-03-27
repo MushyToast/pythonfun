@@ -22,10 +22,8 @@ def get_symbol(noisevalue):
 
 cells = {}
 
+
 for x in range(resx):
-    sys.stdout.write(str(x))
-for x in range(resx):
-    sys.stdout.write(str(x))
     for y in range(resy):
         symbol = get_symbol(noise([x/scale, y/scale]))
         sys.stdout.write(symbol)
