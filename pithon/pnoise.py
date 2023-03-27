@@ -8,12 +8,15 @@ def clearscreen():
     os.system('clear')
 
 def get_symbol(noisevalue):
-    if noisevalue < -0.2:
+    if noisevalue < -0.3:
         return '⬜'
-    elif noisevalue < 0:
+    elif noisevalue < -0.2:
         return '⬛'
     elif noisevalue < 0.2:
-        return '🟩'
+        if random.randint(1, 10) == 4:
+            return '🟫'
+        else:
+            return '🟩'
     elif noisevalue < 0.3:
         return '🟨'
     else:
