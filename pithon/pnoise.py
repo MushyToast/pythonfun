@@ -47,6 +47,7 @@ resy = 100
 octaves = 2
 ofx = 0
 ofy = 0
+step = 1
 seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 
 
@@ -58,23 +59,23 @@ while True:
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'q':
         clearscreen()
-        scale -= 1
+        scale -= step
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'w':
         clearscreen()
-        ofx -= 1
+        ofx -= step
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 's':
         clearscreen()
-        ofx += 1
+        ofx += step
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'a':
         clearscreen()
-        ofy -= 1
+        ofy -= step
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'd':
         clearscreen()
-        ofy += 1
+        ofy += step
         seed = render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 'r':
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
