@@ -28,7 +28,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
     noise = PerlinNoise(octaves=octaves, seed=seed)
     for x in range(resx):
         for y in range(resy):
-            symbol = get_symbol(noise([x+offsetx/scale, y+offsety/scale]))
+            symbol = get_symbol(noise([x/scale, y/scale]))
             sys.stdout.write(symbol)
         print('')
     if printdebuginfo:
