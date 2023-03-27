@@ -22,14 +22,12 @@ def get_symbol(noisevalue):
     else:
         return '🟦'
 
-def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
+def render(resx, resy, scale, seed, octaves, printdebuginfo):
     if seed == 0:
         seed = random.randint(-999999999999, 999999999999)
     noise = PerlinNoise(octaves=octaves, seed=seed)
     for x in range(resx):
         for y in range(resy):
-            x = x + offsetx
-            y = y + offsety
             symbol = get_symbol(noise([x/scale, y/scale]))
             sys.stdout.write(symbol)
         print('')
@@ -45,27 +43,15 @@ scale = 50
 resx = 100
 resy = 100
 octaves = 2
-seed = render(resx, resy, scale, 0, octaves, True, 0, 0)
+seed = render(resx, resy, scale, 0, octaves, True)
 
 while True:
     key = getkey.getkey()
     if key == 'e':
         clearscreen()
         scale += 1
-        seed = render(resx, resy, scale, seed, octaves, True, 0, 0)
+        seed = render(resx, resy, scale, seed, octaves, True)
     elif key == 'q':
         clearscreen()
         scale -= 1
-        seed = render(resx, resy, scale, seed, octaves, True, 0, 0)
-    elif key == 'w':
-        clearscreen()
-        seed = render(resx, resy, scale, seed, octaves, True, 0, 1)
-    elif key == 's':
-        clearscreen()
-        seed = render(resx, resy, scale, seed, octaves, True, 0, -1)
-    elif key == 'a':
-        clearscreen()
-        seed = render(resx, resy, scale, seed, octaves, True, -1, 0)
-    elif key == 'd':
-        clearscreen()
-        seed = render(resx, resy, scale, seed, octaves, True, 1, 0)
+        seed = render(resx, resy, scale, seed, octaves, True)
