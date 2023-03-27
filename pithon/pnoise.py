@@ -36,10 +36,11 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
 
 render(20, 20, 16, 0, 2, True)
 
-startscale = 16
+scale = 16
 
 while True:
-    seed = render(20, 20, startscale, 0, 2, True)
+    seed = render(20, 20, scale, 0, 2, True)
     key = getkey.getkey()
     if key == 'e':
-        render(20, 20, startscale+1)
+        scale+=1
+        render(20, 20, scale, seed, 2, True)
