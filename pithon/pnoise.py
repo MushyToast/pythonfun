@@ -39,8 +39,8 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
 
 
 scale = 50
-resx = 100
-resy = 100
+resx = 300
+resy = 300
 octaves = 2
 ofx = 0
 ofy = 0
