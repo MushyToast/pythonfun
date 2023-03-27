@@ -13,14 +13,14 @@ def get_symbol(noisevalue):
     elif noisevalue < -0.2:
         return '⬛'
     elif noisevalue < 0.2:
-        if random.randint(1, 10) == 4:
+        if random.randint(1, 30) == 4:
             return '🟫'
         else:
             return '🟩'
     elif noisevalue < 0.3:
         return '🟨'
     else:
-        return '🔵'
+        return '🟦'
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo):
     if seed == 0:
@@ -39,7 +39,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo):
 
 
 
-scale = 16
+scale = 50
 resx = 100
 resy = 100
 octaves = 2
