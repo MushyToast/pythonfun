@@ -20,7 +20,11 @@ def get_symbol(noisevalue):
     else:
         return '🟨'
 
+cells = []
+
 for x in range(resx):
     for y in range(resy):
-        sys.stdout.write(get_symbol(noise([x/scale, y/scale])))
+        symbol = get_symbol(noise([x/scale, y/scale]))
+        sys.stdout.write(symbol)
+        cells[str(x) + ", " + str(y)] = symbol
     print('')
