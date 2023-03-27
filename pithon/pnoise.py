@@ -20,7 +20,7 @@ def get_symbol(noisevalue):
     else:
         return '🟨'
 
-cells = []
+cells = {}
 
 for x in range(resx):
     for y in range(resy):
@@ -28,3 +28,9 @@ for x in range(resx):
         sys.stdout.write(symbol)
         cells[str(x) + ", " + str(y)] = symbol
     print('')
+
+print("enter coordinate to get cell val")
+cellx = input("x: ")
+celly = input("y: ")
+
+print(cells[str(cellx) + ", " + str(celly)])
