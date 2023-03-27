@@ -15,7 +15,7 @@ def get_symbol(noisevalue):
     else:
         return '🟨'
 
-def render(resx, resy, scale, seed, octaves):
+def render(resx, resy, scale, seed, octaves, printdebuginfo):
     if seed == 0:
         seed = random.randint(0, 999999999999)
     noise = PerlinNoise(octaves=octaves, seed=seed)
@@ -24,28 +24,11 @@ def render(resx, resy, scale, seed, octaves):
             symbol = get_symbol(noise([x/scale, y/scale]))
             sys.stdout.write(symbol)
         print('')
+    if printdebuginfo:
+        print("seed: " + str(noise.seed))
+        print("octaves: " + str(noise.octaves))
+        print("scale: " + str(scale))
 
-customseed = 730961673295
-seed = 0
-if customseed == 0:
-    seed = random.randint(0, 999999999999)
-else:
-    seed = customseed
 
-noise = PerlinNoise(octaves=2, seed=seed)
-
-resx = 20
-resy = 20
-scale = 50
-
-for x in range(resx):
-    for y in range(resy):
-        symbol = get_symbol(noise([x/scale, y/scale]))
-        sys.stdout.write(symbol)
-    print('')
-
-print("seed: " + str(noise.seed))
-print("octaves: " + str(noise.octaves))
-print("scale: " + str(scale))
 
 
