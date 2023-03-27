@@ -6,17 +6,17 @@ noise = PerlinNoise(octaves=2, seed=random.randint(0, 999999999999))
 
 resx = 50
 resy = 50
-scale = 1000
+scale = 30
 
 def get_symbol(noisevalue):
-    if noisevalue < -0.5:
-        return 'a'
+    if noisevalue < -0.2:
+        return '⬜'
     elif noisevalue < 0:
-        return 'b'
-    elif noisevalue < 0.5:
-        return 'c'
+        return '🪨'
+    elif noisevalue < 0.3:
+        return '🟩'
     else:
-        return 'd'
+        return '🟦'
 
 for x in range(resx):
     for y in range(resy):
