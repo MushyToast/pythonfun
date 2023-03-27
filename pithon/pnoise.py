@@ -30,7 +30,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
         seed = random.randint(-999999999999, 999999999999)
     noise = PerlinNoise(octaves=octaves, seed=seed)
     for x in range(0+offsetx, resx+offsetx):
-        for y in range(resy):
+        for y in range(0+offsety, resy+offsety):
             symbol = get_symbol(noise([x/scale, y/scale]))
             sys.stdout.write(symbol)
         print('')
