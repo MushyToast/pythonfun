@@ -18,7 +18,7 @@ def get_symbol(noisevalue):
         return '🟩'
     elif noisevalue < -0.25:
         return '🟫'
-    elif noisevalue < -0.09:
+    elif noisevalue < -0.03:
         return '🟨'
     else:
         return '🟦'
