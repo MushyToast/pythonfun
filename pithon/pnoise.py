@@ -20,11 +20,11 @@ def get_symbol(noisevalue):
         return '🟩'
     elif noisevalue > 0.35:
         return '🟨'
-    elif noisevalue > 0.4:
+    elif noisevalue < 0.4:
         return '🟦'
     else:
         return '🟩'
-
+cells = {}
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -> int:
     if seed == 0:
@@ -39,9 +39,11 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
             iteratory += 1
             if iteratorx == 10 and iteratory == 10:
                 sys.stdout.write('🧍')
+                cells[str(x) + ', ' + str(y)] = '🧍'
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
                 sys.stdout.write(symbol)
+                cells[str(x) + ', ' + str(y)] = symbol
             
         print('')
     if printdebuginfo:
