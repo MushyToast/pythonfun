@@ -12,19 +12,20 @@ def clearscreen():
 
 
 def get_symbol(noisevalue):
-    if noisevalue < -0.5:
+    if noisevalue < -0.34:
         return '⬜'
-    elif noisevalue < -0.4:
+    elif noisevalue < -0.2:
         return '⬛'
     elif noisevalue < 0:
         return '🟩'
-    elif noisevalue < 0.3:
+    elif noisevalue < 0.2:
         return '🟩'
-    elif noisevalue < 0.4:
+    elif noisevalue < 0.3:
         return '🟨'
     else:
         return '🟦'
 cells = {}
+playerpos = [0, 0]
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -> int:
     if seed == 0:
@@ -39,6 +40,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
             iteratory += 1
             if iteratorx == 10 and iteratory == 10:
                 sys.stdout.write('🧍')
+                playerpos = [x, y]
                 cells[str(x) + ', ' + str(y)] = '🧍'
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
@@ -46,6 +48,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
                 cells[str(x) + ', ' + str(y)] = symbol
             
         print('')
+    print('Pos: ' + str(playerpos))
     if printdebuginfo:
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
