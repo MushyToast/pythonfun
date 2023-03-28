@@ -46,6 +46,8 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
             if iteratorx == 10 and iteratory == 10:
                 sys.stdout.write('🧍')
                 playerpos = [x, y]
+            elif (str(x) + ', ' + str(y)) in itemCells:
+                sys.stdout.write(itemCells[str(x) + ', ' + str(y)])
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
                 sys.stdout.write(symbol)
