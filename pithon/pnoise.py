@@ -107,5 +107,4 @@ while True:
         clearscreen()
         itemCells[str(playerpos[0]) + ', ' + str(playerpos[1]+1)] = '🐷'
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-        print(itemCells)
 
