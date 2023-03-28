@@ -31,9 +31,11 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety):
     for x in range(0+offsetx, resx+offsetx):
         for y in range(0+offsety, resy+offsety):
             if x == resx+offsetx/2 and y == resy+offsety/2:
-                sys.stdout.write()
-            symbol = get_symbol(noise([x/scale, y/scale]))
-            sys.stdout.write(symbol)
+                sys.stdout.write('👤')
+            else:
+                symbol = get_symbol(noise([x/scale, y/scale]))
+                sys.stdout.write(symbol)
+            
         print('')
     if printdebuginfo:
         print("seed: " + str(noise.seed))
