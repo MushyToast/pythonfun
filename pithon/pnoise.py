@@ -34,9 +34,10 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
     iteratory = 0
     for x in range(0+offsetx, resx+offsetx):
         iteratorx += 1
+        iteratory = 0
         for y in range(0+offsety, resy+offsety):
             iteratory += 1
-            if iteratorx == 50 and iteratory == 50:
+            if iteratorx == 49 and iteratory == 49:
                 sys.stdout.write('🧍')
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
