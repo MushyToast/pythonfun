@@ -27,6 +27,11 @@ def get_symbol(noisevalue):
 cells = {}
 playerpos = [0, 0]
 
+def getcell(x, y, seed, octaves, scale):
+    noise = PerlinNoise(octaves=octaves, seed=seed)
+    symbol = get_symbol(noise([x/scale, y/scale]))
+    return symbol
+
 def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -> int:
     if seed == 0:
         seed = random.randint(-999999999999, 999999999999)
@@ -67,6 +72,10 @@ step = 1 #the increment that you move in (cells) for the zooming and moving syst
 seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 
 #MAIN
+
+[-132, -22]
+seed: -551139510177
+
 
 while True:
     key = getkey.getkey()
