@@ -37,7 +37,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
         iteratory = 0
         for y in range(0+offsety, resy+offsety):
             iteratory += 1
-            if iteratorx == 49 and iteratory == 49:
+            if iteratorx == 10 and iteratory == 10:
                 sys.stdout.write('🧍')
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
@@ -53,12 +53,12 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
 #VARIABLES
 
 scale = 25 #the scale of the world, think of it as zoom, higher it is = more zoomed in
-resx = 100 #the resolution of the display, higher it is = more cells, i reccomend keeping it at 100 but you can play around with it
-resy = 100
+resx = 20 #the resolution of the display, higher it is = more cells, i reccomend keeping it at 100 but you can play around with it
+resy = 20
 octaves = 3 #the amount of octaves for the perlin noise, higher it is = more detail
 ofx = 0 #the offset of the x axis. this is for the moving system, dont mess with this or the ofy variable
 ofy = 0
-step = 20 #the increment that you move in (cells) for the zooming and moving system
+step = 1 #the increment that you move in (cells) for the zooming and moving system
 seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 
 #MAIN
