@@ -76,6 +76,7 @@ seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 [-132, -22]
 seed: -551139510177
 
+print(getcell(-132, -22, -551139510177, octaves, scale))
 
 while True:
     key = getkey.getkey()
