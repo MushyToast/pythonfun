@@ -25,7 +25,8 @@ def get_symbol(noisevalue):
     else:
         return '🟦'
 itemCells = {}
-
+for x in range(900):
+    itemCells[str(random.randint(-100, 100)) + ', ' + str(random.randint(-100, 100))] = '🪙'
 def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
     symbol = get_symbol(noise([x/scale, y/scale]))
