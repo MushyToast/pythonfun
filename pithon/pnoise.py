@@ -18,10 +18,12 @@ def get_symbol(noisevalue):
         return '⬛'
     elif noisevalue < 0:
         return '🟩'
-    elif noisevalue > 0.4:
+    elif noisevalue > 0.35:
         return '🟨'
-    else:
+    elif noisevalue > 0.4:
         return '🟦'
+    else:
+        return '🟩'
 
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -> int:
