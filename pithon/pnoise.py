@@ -25,7 +25,7 @@ def get_symbol(noisevalue):
     else:
         return '🟦'
 itemCells = {}
-playerpos = [19, 19]
+playerpos = [9, 9]
 
 def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
@@ -42,17 +42,14 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
         iteratorx += 1
         iteratory = 0
         for y in range(0+offsety, resy+offsety):
-            playerpos = [x, y]
             iteratory += 1
             if iteratorx == 10 and iteratory == 10:
+                playerpos = [x, y]
                 sys.stdout.write('🧍')
-                playerpos = [x, y]
             elif (str(x) + ', ' + str(y)) in itemCells:
-                playerpos = [x, y]
                 sys.stdout.write(itemCells[str(x) + ', ' + str(y)])
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
-                playerpos = [x, y]
                 sys.stdout.write(symbol)
             
         print('')
@@ -107,7 +104,7 @@ while True:
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 't':
         clearscreen()
-        itemCells[str(playerpos[0]) + ', ' + str(playerpos[1])] = '🐷'
+        itemCells[str(playerpos[0]) + ', ' + str(playerpos[1]+1)] = '🐷'
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
         print(itemCells)
 
