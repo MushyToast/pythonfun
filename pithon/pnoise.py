@@ -25,7 +25,6 @@ def get_symbol(noisevalue):
     else:
         return '🟦'
 itemCells = {}
-playerpos = [9, 9]
 
 def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
@@ -58,7 +57,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
         print("scale: " + str(scale))
-        return seed
+        return [seed, playerpos]
 
 #VARIABLES
 
@@ -69,7 +68,9 @@ octaves = 3 #the amount of octaves for the perlin noise, higher it is = more det
 ofx = 0 #the offset of the x axis. this is for the moving system, dont mess with this or the ofy variable
 ofy = 0
 step = 1 #the increment that you move in (cells) for the zooming and moving system
-seed = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
+data = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
+seed = data[0]
+playerpos = data[1]
 
 #MAIN
 
@@ -78,33 +79,33 @@ while True:
     if key == 'e':
         clearscreen()
         scale += step
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 'q':
         clearscreen()
         scale -= step
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 'w':
         clearscreen()
         ofx -= step
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 's':
         clearscreen()
         ofx += step
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 'a':
         clearscreen()
         ofy -= step
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 'd':
         clearscreen()
         ofy += step
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 'r':
         clearscreen()
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
     elif key == 't':
         clearscreen()
         itemCells[str(playerpos[0]) + ', ' + str(playerpos[1]+1)] = '🐷'
-        render(resx, resy, scale, seed, octaves, True, ofx, ofy)
+        playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
         print(itemCells)
 
