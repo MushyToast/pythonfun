@@ -104,7 +104,7 @@ while True:
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
     elif key == 't':
         clearscreen()
-        itemCells[str(playerpos[0]) + ', ' + str(playerpos[1] + 1)] = '🐷'
+        itemCells[str(playerpos[0]) + ', ' + str(playerpos[1])] = '🐷'
         render(resx, resy, scale, seed, octaves, True, ofx, ofy)
         print(itemCells)
 
