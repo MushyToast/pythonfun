@@ -12,18 +12,18 @@ def clearscreen():
 
 
 def get_symbol(noisevalue):
-    if noisevalue < -0.6:
+    if noisevalue < -0.5:
         return '⬜'
-    elif noisevalue < -0.55:
+    elif noisevalue < -0.4:
         return '⬛'
     elif noisevalue < 0:
         return '🟩'
-    elif noisevalue > 0.35:
-        return '🟨'
-    elif noisevalue < 0.4:
-        return '🟦'
-    else:
+    elif noisevalue < 0.3:
         return '🟩'
+    elif noisevalue < 0.4:
+        return '🟨'
+    else:
+        return '🟦'
 cells = {}
 
 def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -> int:
