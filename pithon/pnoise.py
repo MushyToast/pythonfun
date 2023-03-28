@@ -84,19 +84,19 @@ while True:
         clearscreen()
         scale -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-    elif key == 'w':
+    elif key == 'w' and getcell(playerpos[0]-step, playerpos[1], seed, octaves, scale) != '⬛' or getcell(playerpos[0]-step, playerpos[1], seed, octaves, scale) != '🟦':
         clearscreen()
         ofx -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-    elif key == 's':
+    elif key == 's' and getcell(playerpos[0]+step, playerpos[1], seed, octaves, scale) != '⬛' or getcell(playerpos[0]+step, playerpos[1], seed, octaves, scale) != '🟦':
         clearscreen()
         ofx += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-    elif key == 'a':
+    elif key == 'a' and getcell(playerpos[0], playerpos[1]-step, seed, octaves, scale) != '⬛' or getcell(playerpos[0], playerpos[1]-step, seed, octaves, scale) != '🟦':
         clearscreen()
         ofy -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-    elif key == 'd':
+    elif key == 'd' and getcell(playerpos[0], playerpos[1]+step, seed, octaves, scale) != '⬛' or getcell(playerpos[0], playerpos[1]+step, seed, octaves, scale) != '🟦' :
         clearscreen()
         ofy += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
