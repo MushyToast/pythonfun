@@ -24,7 +24,7 @@ def get_symbol(noisevalue):
         return '🟨'
     else:
         return '🟦'
-cells = {}
+itemCells = {}
 playerpos = [0, 0]
 
 def getcell(x, y, seed, octaves, scale):
@@ -46,14 +46,12 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
             if iteratorx == 10 and iteratory == 10:
                 sys.stdout.write('🧍')
                 playerpos = [x, y]
-                cells[str(x) + ', ' + str(y)] = '🧍'
             else:
                 symbol = get_symbol(noise([x/scale, y/scale]))
                 sys.stdout.write(symbol)
-                cells[str(x) + ', ' + str(y)] = symbol
             
         print('')
-    print('Pos: ' + str(playerpos))
+    print('pos: ' + str(playerpos))
     if printdebuginfo:
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
