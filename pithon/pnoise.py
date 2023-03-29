@@ -93,7 +93,7 @@ while True:
         clearscreen()
         scale -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-    elif key == 'w':
+    elif key == 'w' and getcell(playerpos[0]-1, playerpos[1], seed, octaves, scale) != '⬛':
         clearscreen()
         ofx -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
