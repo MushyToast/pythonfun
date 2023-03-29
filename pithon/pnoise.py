@@ -33,7 +33,7 @@ def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
     symbol = get_symbol(noise([x/scale, y/scale]))
     return symbol
-
+playerCash = 0
 def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -> int:
     if seed == 0:
         seed = random.randint(-999999999999, 999999999999)
