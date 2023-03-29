@@ -52,10 +52,6 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
             iteratory += 1
             if iteratorx == 10 and iteratory == 10:
                 playerpos = [x, y]
-                if str(x) + ', ' + str(y) in itemCells:
-                    if itemCells[str(x) + ', ' + str(y)] == '💵':
-                        playerCash += 1
-                        del itemCells[str(x) + ', ' + str(y)] 
                 sys.stdout.write('🧍')
             elif (str(x) + ', ' + str(y)) in itemCells:
                 sys.stdout.write(itemCells[str(x) + ', ' + str(y)])
@@ -66,7 +62,6 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
         print('')
     print('pos: ' + str(playerpos))
     if printdebuginfo:
-        print("💵: " + str(playerCash))
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
         print("scale: " + str(scale))
