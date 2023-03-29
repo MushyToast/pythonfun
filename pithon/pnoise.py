@@ -89,37 +89,46 @@ while True:
         clearscreen()
         scale += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 'q':
         clearscreen()
         scale -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 'w' and getcell(playerpos[0]-1, playerpos[1], seed, octaves, scale) != '⬛':
         clearscreen()
         ofx -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 's':
         clearscreen()
         ofx += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 'a':
         clearscreen()
         ofy -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 'd':
         clearscreen()
         ofy += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 'r':
         clearscreen()
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     elif key == 't':
         clearscreen()
         itemCells[str(playerpos[0]) + ', ' + str(playerpos[1]+1)] = '🐷'
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+        print("cash: " + str(playerCash))
     if checkcell(playerpos[0], playerpos[1]) == '💵':
         playerCash += 1
         del itemCells[str(playerpos[0]) + ', ' + str(playerpos[1])]
         clearscreen()
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
-    print("cash: " + str(playerCash))
+        print("cash: " + str(playerCash))
+    
 
