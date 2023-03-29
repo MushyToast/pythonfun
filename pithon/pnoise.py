@@ -25,8 +25,13 @@ def get_symbol(noisevalue):
     else:
         return '🟦'
 itemCells = {}
-
 playerCash = 0
+
+def checkcell(x, y):
+    if str(x) + ', ' + str(y) in itemCells:
+        return itemCells[str(x) + ', ' + str(y)]
+    else:
+        return False
 
 for x in range(9000):
     itemCells[str(random.randint(-1000, 1000)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
