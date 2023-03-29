@@ -25,6 +25,8 @@ def get_symbol(noisevalue):
     else:
         return '🟦'
 itemCells = {}
+playerCash = 0
+
 for x in range(9000):
     itemCells[str(random.randint(-1000, 1000)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
 def getcell(x, y, seed, octaves, scale):
@@ -45,6 +47,10 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
             iteratory += 1
             if iteratorx == 10 and iteratory == 10:
                 playerpos = [x, y]
+                if str(x) + ', ' + str(y) in itemCells:
+                    if itemCells[str(x) + ', ' + str(y)] == '💵':
+                        playerCash += 1
+                        del itemCells[str(x) + ', ' + str(y)] 
                 sys.stdout.write('🧍')
             elif (str(x) + ', ' + str(y)) in itemCells:
                 sys.stdout.write(itemCells[str(x) + ', ' + str(y)])
@@ -55,6 +61,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
         print('')
     print('pos: ' + str(playerpos))
     if printdebuginfo:
+        print("💵: " + str(playerCash))
         print("seed: " + str(noise.seed))
         print("octaves: " + str(noise.octaves))
         print("scale: " + str(scale))
@@ -72,6 +79,7 @@ step = 1 #the increment that you move in (cells) for the zooming and moving syst
 data = render(resx, resy, scale, 0, octaves, True, ofx, ofy)
 seed = data[0]
 playerpos = data[1]
+playerCash = 0
 
 #MAIN
 
