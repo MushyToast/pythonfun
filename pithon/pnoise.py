@@ -95,22 +95,22 @@ while True:
         scale -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
         print("cash: " + str(playerCash))
-    elif key == 'w' and getcell(playerpos[0]-1, playerpos[1], seed, octaves, scale) != '⬛':
+    elif key == 'w' and getcell(playerpos[0]-1, playerpos[1], seed, octaves, scale) != '⬛' and getcell(playerpos[0]-1, playerpos[1], seed, octaves, scale) != '🟦':
         clearscreen()
         ofx -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
         print("cash: " + str(playerCash))
-    elif key == 's':
+    elif key == 's' and getcell(playerpos[0]+1, playerpos[1], seed, octaves, scale) != '⬛' and getcell(playerpos[0]+1, playerpos[1], seed, octaves, scale) != '🟦':
         clearscreen()
         ofx += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
         print("cash: " + str(playerCash))
-    elif key == 'a':
+    elif key == 'a' and getcell(playerpos[0], playerpos[1]-1, seed, octaves, scale) != '⬛' and getcell(playerpos[0], playerpos[1]-1, seed, octaves, scale) != '🟦':
         clearscreen()
         ofy -= step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
         print("cash: " + str(playerCash))
-    elif key == 'd':
+    elif key == 'd' and getcell(playerpos[0], playerpos[1]+1, seed, octaves, scale) != '⬛' and getcell(playerpos[0], playerpos[1]+1, seed, octaves, scale) != '🟦':
         clearscreen()
         ofy += step
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
