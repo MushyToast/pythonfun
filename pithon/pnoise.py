@@ -27,7 +27,7 @@ def get_symbol(noisevalue):
 itemCells = {}
 playerCash = 0
 
-def checkcell(x, y):
+def checkcell(x, y, cash):
     if str(x) + ', ' + str(y) in itemCells:
         return itemCells[str(x) + ', ' + str(y)]
     else:
@@ -116,4 +116,5 @@ while True:
         clearscreen()
         itemCells[str(playerpos[0]) + ', ' + str(playerpos[1]+1)] = '🐷'
         playerpos = render(resx, resy, scale, seed, octaves, True, ofx, ofy)[1]
+    print("cash: " + str(playerCash))
 
