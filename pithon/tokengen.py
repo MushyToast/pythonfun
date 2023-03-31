@@ -16,4 +16,4 @@ print("\n\n\n\n\n")
 
 while True:
     print("Token:")
-    print(generate_token(1000))
+    print(generate_token(10000))
