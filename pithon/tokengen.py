@@ -4,7 +4,7 @@ letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 digits = '0123456789'
 
 def generate_token(length):
-    token = 'OTG:-'
+    token = 'DO-NOT-SHARE-THIS:-|OTG:-'
     for i in range(length):
         if random.randint(0, 1):
             token += random.choice(letters)
