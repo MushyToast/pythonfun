@@ -15,5 +15,7 @@ def generate_token(length):
 print("\n\n\n\n\n")
 
 while True:
-    print("Token:")
-    print(generate_token(10000))
+    print(generate_token(4096))
+    print("\n\n\n\n\n")
+    if random.randint(1, 100) == 34:
+        break
