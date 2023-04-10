@@ -18,8 +18,12 @@ def generate_token(length):
 print("\n\n\n\n\n")
 
 while True:
-    print(generate_token(4096))
-    if random.randint(1, 100) == 34:
+    length = 5
+    token1 = generate_token(length)
+    token2 = generate_token(length)
+    print('\n')
+    print(token1)
+    print(token2)
+    if token1 == token2:
+        print("Token collision detected!")
         break
-    else:
-        os.system('clear')
