@@ -18,7 +18,7 @@ def generate_token(length):
 print("\n\n\n\n\n")
 
 while True:
-    length = 2048
+    length = 5
     token1 = generate_token(length)
     token2 = generate_token(length)
     print('\n')
