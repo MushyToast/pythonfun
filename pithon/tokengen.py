@@ -15,14 +15,14 @@ def generate_token(length):
         else:
             if token.count("_") < 8:
                 token += "_"
-    if token.count("_") < 8:
-        token = setletter("_", token, random.randint(0, len(token)))
+    while token.count("_") < 8:
+        token = setletter("_", token, random.randint(23, len(token)-1))
     return token
 
 print("\n\n\n\n\n")
 
 while True:
-    length = 64
+    length = 2048
     token1 = generate_token(length)
     token2 = generate_token(length)
     print('\n')
