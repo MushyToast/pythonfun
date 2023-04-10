@@ -5,7 +5,7 @@ letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 digits = '0123456789'
 
 def generate_token(length):
-    token = 'DO-NOT-SHARE-THIS|OTG:-'
+    token = 'DO-NOT-SHARE-THIS|OTG:- '
     for i in range(length):
         if random.randint(0, 1):
             token += random.choice(letters)
@@ -18,7 +18,7 @@ def generate_token(length):
 print("\n\n\n\n\n")
 
 while True:
-    length = 5
+    length = 3
     token1 = generate_token(length)
     token2 = generate_token(length)
     print('\n')
