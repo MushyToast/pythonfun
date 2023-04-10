@@ -1,5 +1,6 @@
 import random
 import os
+from pyquery import setletter
 
 letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 digits = '0123456789'
@@ -14,6 +15,8 @@ def generate_token(length):
         else:
             if token.count("_") < 8:
                 token += "_"
+    if token.count("_") < 8:
+        token = setletter("_", token, random.randint(0, len(token)))
     return token
 
 print("\n\n\n\n\n")
