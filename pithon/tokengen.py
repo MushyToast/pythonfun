@@ -12,7 +12,8 @@ def generate_token(length):
         elif random.randint(0, 10) != 10:
             token += random.choice(digits)
         else:
-            token += "_"
+            if token.count("_") < 8:
+                token += "_"
     return token
 
 print("\n\n\n\n\n")
