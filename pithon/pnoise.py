@@ -12,10 +12,10 @@ def clearscreen():
 
 
 def get_symbol(noisevalue):
-    if noisevalue < -0.2:
+    if noisevalue < -0.3:
         return '⬜'
-    elif noisevalue < -0.1:
-        return '🟩'
+    elif noisevalue < -0.2:
+        return '⬛'
     elif noisevalue < 0:
         return '🟩'
     elif noisevalue < 0.2:
@@ -33,7 +33,7 @@ def checkcell(x, y):
     else:
         return False
 
-for x in range(1000):
+for x in range(1000000):
     itemCells[str(random.randint(-1000, 1000)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
 def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
