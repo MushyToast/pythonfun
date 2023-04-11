@@ -33,8 +33,8 @@ def checkcell(x, y):
     else:
         return False
 
-for x in range(1000000):
-    itemCells[str(random.randint(-1000, 1000)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
+for x in range(30):
+    itemCells[str(random.randint(-100, 100)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
 def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
     symbol = get_symbol(noise([x/scale, y/scale]))
