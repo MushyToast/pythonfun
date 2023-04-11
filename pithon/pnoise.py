@@ -33,11 +33,11 @@ def checkcell(x, y):
     else:
         return False
 
-for x in range(500):
-    itemCells[str(random.randint(-100, 100)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
+for x in range(5000):
+    itemCells[str(random.randint(-1000, 1000)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
 
-for x in range(500):
-    itemCells[str(random.randint(-100, 100)) + ', ' + str(random.randint(-1000, 1000))] = '💵'
+for x in range(7500):
+    itemCells[str(random.randint(-1000, 1000)) + ', ' + str(random.randint(-1000, 1000))] = '🌸'
 def getcell(x, y, seed, octaves, scale):
     noise = PerlinNoise(octaves=octaves, seed=seed)
     symbol = get_symbol(noise([x/scale, y/scale]))
@@ -75,7 +75,7 @@ def render(resx, resy, scale, seed, octaves, printdebuginfo, offsetx, offsety) -
 scale = 25 #the scale of the world, think of it as zoom, higher it is = more zoomed in
 resx = 20 #the resolution of the display, higher it is = more cells, i reccomend keeping it at 100 but you can play around with it
 resy = 20
-octaves = 1 #the amount of octaves for the perlin noise, higher it is = more detail
+octaves = 3 #the amount of octaves for the perlin noise, higher it is = more detail
 ofx = 0 #the offset of the x axis. this is for the moving system, dont mess with this or the ofy variable
 ofy = 0
 step = 1 #the increment that you move in (cells) for the zooming and moving system
