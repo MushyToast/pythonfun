@@ -2,7 +2,7 @@ import random
 import numpy 
 
 class testObject:
-    def new(a, b):
+    def new(a, b, self):
         self.a = a
         self.b = b
         self.id = str(random.randint(0, 10000) ) + str(random.randint(0, 10000) ) 
