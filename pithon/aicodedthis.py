@@ -1,15 +1,19 @@
-import time
+import random
+import numpy 
 
-def typing_test(sentence):
-    start_time = time.time()
-    user_input = input(f"Type the following sentence:\n{sentence}\n")
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    if user_input.lower() == sentence.lower():
-        print("Correct!")
-    else:
-        print("Incorrect!")
-    wpm = len(sentence.split()) / (elapsed_time / 60)
-    print(f"You typed at a speed of {wpm:.2f} words per minute.")
+class testObject:
+    def new(a, b):
+        self.a = a
+        self.b = b
+        self.id = str(random.randint(0, 10000) ) + str(random.randint(0, 10000) ) 
+        return self
 
-typing_test("The quick brown fox jumps over the lazy dog")
+class test:
+    def __init__(self):
+        self.a = random.randint(0, 100)
+        self.b = random.randint(0, 100)
+
+        return testObject.new(self.a, self.b)
+    
+
+print (test())
