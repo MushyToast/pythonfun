@@ -1,4 +1,5 @@
-
+import json
 
 with open ('pithon/simpleai/data.json', 'r') as f:
-    print(f)
+    a = json.load(f)
+    print(a)
