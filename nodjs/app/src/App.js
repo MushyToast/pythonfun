@@ -7,7 +7,7 @@ function App() {
   function toggleColorscheme() {
     setColorscheme(colorscheme === 'light' ? 'dark' : 'light');
   }
-  document.getElementsByClassName('App-header').style.backgroundColor = colorscheme === 'light' ? 'white' : 'black';
+  document.getElementsByClassName('App-header')[0].style.background = colorscheme === 'light' ? 'white' : 'black';
   return (
     <div className="App">
       <header className="App-header">
