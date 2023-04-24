@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function toggleStyle() {
-  
+  document.getElementsByClassName("App-header").style.backgroundColor = "red";
 }
 
 function App() {
@@ -25,5 +25,5 @@ function App() {
     </div>
   );
 }
-
+toggleStyle()
 export default App;
