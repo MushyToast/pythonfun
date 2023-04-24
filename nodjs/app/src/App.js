@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
 
 function App() {
+  const [colorscheme, setColorscheme] = useState('light');
+  function toggleColorscheme() {
+    setColorscheme(colorscheme === 'light' ? 'dark' : 'light');
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,9 +22,9 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={toggleColorscheme}>Toggle colorscheme</button>
       </header>
     </div>
   );
 }
-
 export default App;
