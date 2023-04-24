@@ -1,5 +1,6 @@
 :root {
-  --color-scheme: #3f3333;
+  --darkScheme: #282c34;
+  --lightScheme: #d4d4d4;
 }
 
 .App {
@@ -18,7 +19,7 @@
 }
 
 .App-header {
-  background-color: var(--color-scheme);
+  background-color: var(--darkScheme);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

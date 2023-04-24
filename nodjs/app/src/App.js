@@ -7,6 +7,7 @@ function App() {
   function toggleColorscheme() {
     setColorscheme(colorscheme === 'light' ? 'dark' : 'light');
   }
+  document.getElementsByClassName('App-header').style.backgroundColor = colorscheme === 'light' ? 'white' : 'black';
   return (
     <div className="App">
       <header className="App-header">
@@ -23,8 +24,11 @@ function App() {
           Learn React
         </a>
         <button onClick={toggleColorscheme}>Toggle colorscheme</button>
+        <p>Colorscheme: {colorscheme}</p>
       </header>
     </div>
+    
   );
 }
+
 export default App;
