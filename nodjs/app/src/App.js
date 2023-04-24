@@ -7,10 +7,12 @@ function App() {
   function toggleColorscheme() {
     setColorscheme(colorscheme === 'light' ? 'dark' : 'light');
   }
-  document.getElementsByClassName('App-header')[0].style.background = colorscheme === 'light' ? 'white' : 'black';
+  document.onload = function() {
+    document.getElementById('ah').style.backgroundColor = colorscheme === 'light' ? 'rgb(255, 255, 255)' : 'black';
+  }
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" id="ah">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
