@@ -5,6 +5,7 @@
     "axois": "^0.0.1-security",
     "blooket": "^0.1.0",
     "mathjs": "^11.5.0",
+    "react-router-dom": "^6.10.0",
     "ws": "^8.13.0"
   }
 }
