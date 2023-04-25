@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  background-color: #282c34;
+  color: white;
+}
+
+.navbarButton {
+  background-color: #282c34;
+  color: white;
+  border: none;
+  font-size: calc(10px + 2vmin);
+}
