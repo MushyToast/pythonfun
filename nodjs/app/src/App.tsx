@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const loggedIn = true;
+const loggedIn = false;
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        {loggedIn && <p>Logged in!</p>}
       </header>
     </div>
   );
