@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 import logo from './logo.svg';
 import './App.css';
 
@@ -22,5 +23,20 @@ function App() {
     </div>
   );
 }
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+function Test() {
+  return (
+    <div>
+      <h1>Test</h1>
+    </div>
+  )
+}
+
+root.render(<Test />)
+
 
 export default App;
