@@ -1,14 +1,12 @@
 import React from 'react';
-import Navbar from './Navbar';
 import logo from './logo.svg';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import About from './About';
 
-function Home() {
+const loggedIn = true;
+
+function App() {
   return (
     <div className="App">
-      <Navbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -27,14 +25,7 @@ function Home() {
   );
 }
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
-  )
-}
+
 
 
 export default App;
