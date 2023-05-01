@@ -1,0 +1,11 @@
+{
+    "BusinessName": "Test Business",
+    "EmployeeCount": 10,
+    "EmployeeSalary": 1000,
+    "Franchises": [
+        {
+            "FranchiseName": "Test Franchise",
+            "FranchiseSalary": 500
+        }
+    ]
+}
