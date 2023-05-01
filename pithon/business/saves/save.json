@@ -5,7 +5,21 @@
     "Franchises": [
         {
             "FranchiseName": "Test Franchise",
-            "FranchiseSalary": 500
+            "FranchiseSalary": 500,
+            "FranchiseDailyCustomers": 100,
+            "FranchiseCosts": 1000
+        }
+    ],
+    "Balance": 10000,
+    "DailyOutgoings": 1000,
+    "DailyIncome": 2000,
+    "inDebt": false,
+    "Products": [
+        {
+            "ProductName": "Test Product",
+            "ProductPrice": 5,
+            "ProductQuantity": 100,
+            "ProductCostToMake": 2
         }
     ]
 }
