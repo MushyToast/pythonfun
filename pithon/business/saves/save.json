@@ -1,17 +1,18 @@
 {
     "BusinessName": "Test Business",
     "EmployeeCount": 10,
-    "EmployeeSalary": 1000,
+    "EmployeeHourlyWage": 20,
+    "EmployeeDailyHours": 8,
     "Franchises": [
         {
             "FranchiseName": "Test Franchise",
             "FranchiseSalary": 500,
-            "FranchiseDailyCustomers": 100,
-            "FranchiseCosts": 1000
+            "FranchiseDailyCustomers": 1000,
+            "FranchiseCosts": 100
         }
     ],
     "Balance": 10000,
-    "DailyOutgoings": 1000,
+    "DailyOutgoings": 1800,
     "DailyIncome": 2000,
     "inDebt": false,
     "Products": [
