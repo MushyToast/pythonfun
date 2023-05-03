@@ -5,9 +5,14 @@ import { useState } from 'react';
 document.cookie = "liked=1;"
 document.cookie = "like=Like;"
 
+function getCookie(name : string) {
+  const value = `; ${document.cookie}`;
+  const parts : any = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
 
 function App() {
-  const [likes, setLikes] = useState(0);
+  const [likes, setLikes] = useState(getCookie());
   const [btnText, setBtnText] = useState("Like");
   const [liked, setLike] = useState(0);
   function toggleLike() {
