@@ -2,6 +2,9 @@
 import './App.css';
 import { useState } from 'react';
 
+document.cookie = "test=hello"
+
+
 function App() {
   const [likes, setLikes] = useState(0);
   const [btnText, setBtnText] = useState("Like");
