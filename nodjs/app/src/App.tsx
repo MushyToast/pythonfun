@@ -1,27 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 const loggedIn = false;
 
 function App() {
+  const [likes, setLikes] = useState(0);
+  const [liked, setLike] = useState(0);
+  function toggleLike() {
+    if (liked === 1) {
+      setLike(0);
+      setLikes(likes - 1)
+    } else {
+      setLike(1);
+      setLikes(likes + 1)
+    } 
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {loggedIn && <p>Logged in!</p>}
-      </header>
+      <button onClick={toggleLike}>
+        Like
+      </button>
+      <p>{likes}</p>
     </div>
   );
 }
