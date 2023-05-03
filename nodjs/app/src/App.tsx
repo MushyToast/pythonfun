@@ -2,7 +2,7 @@
 import './App.css';
 import { useState } from 'react';
 
-document.cookie = "liked=1;"
+document.cookie = "liked=0;"
 document.cookie = "like=Like;"
 
 function getCookie(name : string) {
@@ -12,9 +12,9 @@ function getCookie(name : string) {
 }
 
 function App() {
-  const [likes, setLikes] = useState(getCookie());
-  const [btnText, setBtnText] = useState("Like");
-  const [liked, setLike] = useState(0);
+  const [likes, setLikes] = useState(getCookie("liked"));
+  const [btnText, setBtnText] = useState(getCookie("like"));
+  const [liked, setLike] = useState(getCookie("liked"));
   function toggleLike() {
     if (liked === 1) {
       setLike(0);
