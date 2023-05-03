@@ -2,7 +2,8 @@
 import './App.css';
 import { useState } from 'react';
 
-document.cookie = "liked=1; like=Like;"
+document.cookie = "liked=1;"
+document.cookie = "like=Like;"
 
 
 function App() {
