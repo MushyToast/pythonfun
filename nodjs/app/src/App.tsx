@@ -19,7 +19,7 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={toggleLike}>
+      <button className="likeBtn" onClick={toggleLike}>
         {btnText}
       </button>
       <p>{likes}</p>
