@@ -50,7 +50,22 @@
 }
 
 .likeBtn {
-  
-  background-color: #282c34;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
 
+.likeBtn:hover {
+  background: linear-gradient(to right, #ffad06, #ff105f);
+}
+
+.likeBtn:active {
+  background: linear-gradient(to right, #ff105f, #ffad06);
 }
