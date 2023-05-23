@@ -9,3 +9,6 @@ def fetchData():
         data = json.load(f)
     return data
 
+def calculateOutgoings(data):
+    outgoings = 0
+    
