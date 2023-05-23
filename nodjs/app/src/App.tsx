@@ -3,9 +3,9 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [likes, setLikes] = useState(1);
+  const [likes, setLikes] = useState(0);
   const [btnText, setBtnText] = useState("Like");
-  const [liked, setLike] = useState(1);
+  const [liked, setLike] = useState(0);
   function toggleLike() {
     if (liked === 1) {
       setLike(0);

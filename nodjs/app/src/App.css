@@ -63,9 +63,9 @@
 }
 
 .likeBtn:hover {
-  background: linear-gradient(to right, #ffad06, #ff105f);
+  transform: scale(1.05);
 }
 
 .likeBtn:active {
-  background: linear-gradient(to right, #ff105f, #ffad06);
+  transform: scale(1);
 }
